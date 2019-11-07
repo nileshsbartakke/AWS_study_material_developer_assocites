@@ -1,0 +1,140 @@
+﻿ /* REMOVE CLICK ACTION ON POWERED BY EXECUTIVE APPROVAL GIVEN */
+
+.PoweredBy {
+pointer-events: none;
+}
+
+/* END POWERED BY */
+
+.EdgeBgColor{
+  background-color: #000000;
+}
+
+
+.marqueeBackground,
+.marquee{
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 14px;
+}
+
+
+
+.EdgeFontColor
+{ 
+  color: #;
+}
+
+
+.MarqueeFontColor
+{ 
+  color: #;
+}
+
+
+#ToolbarLeftImg{background-image:url(https://presentations.akamaized.net/FileLibrary/3070/24/155x45_AWS_logo_RGB_REV_new.png);}
+
+
+
+.EventAbstractHeader {
+display:none;
+}
+ 
+
+.RCMedia_Date { display:none; }
+
+
+
+/***** custom css update: added 10.18.17 JC *****/
+#FilterText
+{
+  display: none;
+}
+#TimezoneContainer #Timezone, #TimezoneContainer #Timezone a
+{
+  font-size: 12px;
+  font-weight: bold;
+  color: #ff9900;
+}
+/***** end custom css update *****/
+
+
+/*Hide the Login ID and Password fields on a mobile browser*/
+
+.UserProfileFieldsHolder p:nth-child(1), .UserProfileFieldsHolder input:nth-child(2) {
+display:none;
+}
+
+.MB_UserProfileChangePasswordSection {
+display:none;
+}
+
+.ChangePasswordButton {
+display:none;
+}
+
+
+/*****Login Page Enter button color change***/
+
+.LoginSubmit {
+background-color: #FF9900;
+}
+
+
+div.RCButton.Source58{
+display: none !important;
+}
+
+
+/*Save button remove from Handouts Panel*/
+
+.HandoutsLink[title="Add this Document/Link To My Briefcase"] 
+{ 
+display: none !important; 
+}
+
+
+.ActionButtonA[onclick*=AddDocumentLinkToMyBriefcase]
+{
+  display: none;
+}
+/*Top Menu Hover and Sub Menu Hover color Change*/
+
+.EdgeTopMenuItem:hover{
+  background-color: #F89D00 !important;
+}
+
+
+.EdgeSubMenuItem {
+
+background-color:#000000 !important;
+}
+
+.EdgeSubMenuItem:hover{
+
+background-color: #F89D00 !important;
+}
+
+/*Close Top Menu Hover and Sub Menu Hover color Change*/
+
+/*Hide the Login ID, Email Address and Password fields on a mobile browser*/
+
+.UserProfileFieldsHolder p:nth-child(1), .UserProfileFieldsHolder input:nth-child(2) {
+display:none;
+}
+
+.MB_UserProfileLoginIDSection {
+display:none;
+}
+
+.MB_UserProfileChangePasswordSection {
+display:none;
+}
+
+.ChangePasswordButton {
+display:none;
+}
+
+.UserProfileFieldsHolder input[name=EMailAddress] { 
+display:none;
+}

@@ -1,0 +1,2625 @@
+﻿/*common stuff that will get removed*/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+#foo
+{
+	position: relative;
+	height: 100vh;
+}
+
+#ModeratedChatFrame
+{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  color: #535D60;
+  text-transform: none;
+  font-family:Roboto, arial, sans-serif;
+  /*font-size:12px;*/
+}
+
+/************************************/
+
+/*generic styling*/
+.StudioModeratedChatContent 
+{
+	position: relative;
+	display: flex;
+	flex: 0 0 auto;
+}
+
+.StudioModeratedChatContent:nth-of-type(2)
+{
+  flex: 1;
+  min-width: 0;
+}
+.StudioModeratedChatContent[data-active="0"]
+{
+  display: none;
+}
+.StudioModeratedChatContentView
+{
+  flex: auto;
+  display: inline-flex;
+  min-width: 0;
+}
+.StudioModeratedChatListContainer 
+{
+	position: relative;
+	display: block;
+	flex-direction: column;
+	flex: 1 1 auto;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+/*Folder view*/
+.StudioModeratedChatContentContainer 
+{
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.StudioModeratedChatFolderListContainer 
+{
+	position: relative;
+	height: 100%;
+	background-color: #808080;
+	display: flex;
+	flex-direction: column;
+}
+.StudioModeratedChatFolderList 
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 15rem;
+  max-width:17rem;
+  overflow: auto;
+  /*border-right: 1px solid #E4ECF3;*/
+  background-color: #FFF;
+  transition: .5s transform cubic-bezier(0.54, 0.35, 0.45, 0.94), .5s opacity cubic-bezier(0.54, 0.35, 0.45, 0.94);
+  box-shadow: 0 0 20px rgba(0,0,0,.1);
+}
+.StudioModeratedChatFolderContainer 
+{
+	position: relative;
+  padding:.5rem .28rem .5rem 1.5rem;
+	cursor: pointer;
+	background-color: #fff;
+	color: #8D9CA2;
+  transition:all ease .25s;
+}
+.StudioModeratedChatFolderContainer[data-publicname="All"]
+{
+	padding:1rem 1.2rem;
+}
+.StudioModeratedChatFolderContainer[data-active="1"] 
+{
+  background-color: #E4ECF3;
+  color: #3baef0;
+}
+.StudioModeratedChatFolderContainer[data-dragenter="1"] 
+{
+ 	background-color:#E4ECF3;
+}
+.StudioModeratedChatFolder 
+{
+  position: relative;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+}
+.StudioModeratedChatFolderName 
+{
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	margin-right: 0.2rem;
+}
+.StudioModeratedChatFolderCountContainer
+{
+	position: relative;
+	display: inline-block;
+	flex: 1 1 auto;
+}
+.StudioModeratedChatFolderItemCount 
+{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+.StudioModeratedChatFolderActions
+{
+  position: relative;
+  flex: 0 0 auto;
+  margin:0 0 0 .28rem;
+}
+.StudioModeratedChatFolderActions .AxiomShowMore
+{
+  align-items:flex-end;
+  position:  absolute;
+  right: 0;
+  top: 0;
+  padding: 0.4rem 0.5rem;
+}
+.StudioModeratedChatFolderActionsDots
+{
+  height: 18px;
+  width: 4px;
+  cursor: pointer;
+  vertical-align: middle;
+  opacity: .7;
+  background: url(/cfr/images/VTS/Axiom/Assets/ShowMore.svg) no-repeat center center / 4px 18px;
+  align-items: flex-end;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.4rem 0.5rem;
+  transform:translateX(0);
+  transition:transform ease .25s;
+}
+.StudioModeratedChatFolderActions[data-active="1"] .StudioModeratedChatFolderActionsDots
+{
+  transform: translateX(2rem);
+}
+.StudioModeratedChatActionsBucket
+{
+  position: relative;
+  transition: transform .25s linear;
+  transform: translateX(4rem);
+}
+.StudioModeratedChatFolderActions[data-active="1"] .StudioModeratedChatActionsBucket
+{
+  transform: translateX(-0.2rem);
+}
+
+/*Item View*/
+.StudioModeratedChatListDisplay 
+{
+	position: relative;
+	display: flex;
+	height: 100%;
+}
+.StudioModeratedChatItem 
+{
+	position: relative;
+	display: block;
+	padding: 15px;
+	background-color: #fff;
+}
+.StudioModeratedChatItemModEditLayer 
+{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background:transparent;
+  opacity: 0;
+  transition: .5s transform cubic-bezier(0.54, 0.35, 0.45, 0.94), .5s opacity cubic-bezier(0.54, 0.35, 0.45, 0.94);
+  cursor: pointer;
+  opacity:0;
+}
+.StudioModeratedChatItem:hover .StudioModeratedChatItemModEditLayer 
+{
+	opacity: 1;
+}
+.StudioModeratedChatItemModEditLayer .AxiomAuxiliaryActionButton 
+{
+  flex: 0 0 auto;
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+  display:none;
+}
+.StudioModeratedChatItemModEditPlaceHolder 
+{
+	flex: 1;
+}
+/*Bucket Specific Styling*/
+.StudioModeratedChatAttendeeView .StudioModeratedChatItem 
+{
+	margin:0 10px 10px 10px;
+}
+.StudioModeratedChatItem .StudioModeratedChatItem 
+{
+  margin:0 10px 0px 10px;
+}
+.StudioModeratedChatItem .StudioModeratedChatItem:first-child
+{
+  padding:10px 0 10px 0;
+}
+.StudioModeratedChatItem .StudioModeratedChatItem:last-child
+{
+  margin-bottom:0;
+}
+.StudioModeratedChatItem .StudioModeratedChatItem 
+{
+  margin: 0 10px 0px 10px;
+  padding: 0 0 10px 0;
+}
+.StudioModeratedChatItemMoreInfo + .StudioModeratedChatSubmitContainer
+{
+  margin-top: 10px;
+}
+.StudioModeratedChatItemQuestionTextName 
+{
+  font-family: "Roboto Bold";
+  color: #4D5558;
+}
+.StudioModeratedChatItemMoreInfo .StudioModeratedChatItemQuestionTextName 
+{
+  color: #869195;
+}
+
+.StudioModeratedChatItemMoreInfo .StudioModeratedChatItem .StudioModeratedChatItemQuestionText,
+.StudioModeratedChatItemMoreInfo .StudioModeratedChatItem .StudioModeratedChatQuestionText,
+.StudioModeratedChatItemMoreInfo .StudioModeratedChatItem .StudioModeratedChatItemQuestionDate
+{
+  color: #869195;
+}
+
+.StudioModeratedChatItem .StudioModeratedChatItemQuestionText 
+{
+  color: #4D5558;
+}
+.StudioModeratedChatModeratorItem .StudioModeratedChatItemQuestionDate {
+    display: none;
+}
+.StudioModeratedChatListViewContainer .StudioModeratedChatItem 
+{
+	margin: 0 10px;
+	border-bottom: 2px solid #E6EDF3;
+}
+/*************************/
+.StudioModeratedChatItemQuestionText 
+{
+	position: relative;
+	display: block;
+  word-break: break-word;
+  color:#4D5558;
+}
+.StudioModeratedChatItemQuestionDate 
+{
+  color: #535D60;
+  margin: .2rem 0 0 0;
+  font-size: .875rem;
+  position:relative;
+}
+.StudioModeratedChatItemView 
+{
+	position: relative;
+	display: flex;
+	flex: 0 0 100%;
+	flex-direction: column;
+}
+.StudioModeratedChatItemList 
+{
+	position: relative;
+	flex: 1 auto;
+	background-color: #fff;
+	overflow: auto;
+}
+/*Attendee View*/
+.StudioModeratedChatAttendeeView 
+{
+  position: absolute;
+  height: 100%;
+  width: 300px;
+  right: 0;
+  background-color: #E8EEF0;
+  transition: .5s transform cubic-bezier(0.54, 0.35, 0.45, 0.94), .5s opacity cubic-bezier(0.54, 0.35, 0.45, 0.94);
+  white-space: nowrap;
+  transform: translateX(100%);
+}
+.StudioModeratedChatAttendeeView[data-active="1"]
+{
+  transform: translateX(0);
+} 
+.StudioModeratedChatContent[data-active="0"] + .StudioModeratedChatContent[data-active="1"] .StudioModeratedChatAttendeeView,
+.StudioModeratedChatContent[data-active="0"] + .StudioModeratedChatContent[data-active="1"] .StudioModeratedChatAttendeeContent
+{
+  width: 100%;
+}
+.StudioModeratedChatAttendeeContent
+{
+  position: static;
+  display: inline-flex;
+  flex-direction: column;
+  white-space: normal;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.StudioModeratedChatAttendeeViewHeader 
+{
+	position: relative;
+	flex: 0 0 0px;
+	background: #fff;
+}
+.StudioModeratedChatAttendeeMessageContainer 
+{
+  display: flex;
+  position: absolute;
+  bottom: 49px;
+  width: 100%;
+}
+.StudioModeratedChatUserMessage 
+{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	overflow: hidden;
+	flex: 1 1 auto;
+	height: 0px;
+	opacity: 0;
+	transition: all .5s linear;
+  background-color:#869195;
+}
+.StudioModeratedChatUserMessage[data-announce] 
+{
+  animation: announce;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+}
+.StudioModeratedChatUserMessage[data-active] 
+{
+  opacity: 1;
+}
+@keyframes announce {
+	0% {
+		background-color: #ADB8BF;
+	}
+
+	50% {
+		background-color: #4D5558;
+	}
+
+	100% {
+		background-color: #ADB8BF;
+	}
+}
+/*There is some script at work here with how height gets set for the message to display smoothly*/
+.StudioModeratedChatUserMessageDisplay 
+{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 20px);
+  padding: 1rem;
+  flex: 1;
+
+  color: #ffffff;
+}
+.StudioModeratedChatUserMessageText
+{
+	position: relative;
+	flex: 1 1 auto;
+}
+.StudioModeratedChatUserMessageClose 
+{
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(/cfr/images/VTS/AXIOM/Console/PresenterTool/CardCloseIcon.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  display: flex;
+  background-size: 14px 14px;
+  padding: 0 .2rem 0 0;
+}
+
+/*This is a generic use element. If you change this, see how it effects Attendee View, Mdoerator Chat row, and Edit View*/
+.StudioModeratedChatSubmitContainer 
+{
+	position: relative;
+	display:flex;
+	flex: 1;
+}
+.StudioModeratedChatListContainer .StudioModeratedChatSubmitContainer 
+{
+  border: 2px solid #e7ecef;
+}
+
+.StudioModeratedChatListContainer .StudioModeratedChatSubmitContainer .StudioModeratedChatInputWrap input.AxiomInput
+{
+    margin:0;
+}
+.StudioModeratedChatFiltersContainer .StudioModeratedChatSubmitContainer,
+.StudioModeratedChatFiltersContainer .StudioModeratedChatClearBtnWrapper
+{
+	display: inline-block;
+}
+
+.StudioModeratedChatSubmitContainer .dgFilter
+{
+	margin:0 1rem 0 0;
+}
+.StudioModeratedChatSubmitContainer .AxiomDGFeatures .dgFilter input[type="text"]
+{
+	width:10rem;
+  font-size:inherit;
+}
+.StudioModeratedChatAttendeeViewInputContainer 
+{
+	display: none;
+}
+.StudioModeratedChatAttendeeViewInputContainer[data-active="1"] 
+{
+	position: relative;
+	display: block;
+	background-color: #fff;
+  border-top: 2px solid #e8eef0;
+}
+.StudioModeratedChatInputWrap 
+{
+	position: relative;
+	flex: 1 1 auto;
+}
+.StudioModeratedChatSubmitBtnWrapper 
+{
+	position: relative;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 10px;
+}
+.StudioModeratedChatSubmitBtn 
+{
+	position: relative;
+	flex: 0 0 80%;
+	width: 50px;
+	background: blue;
+	cursor: pointer;
+}
+.StudioModeratedChatSubmitBtnWithText 
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+  align-items:center;
+	flex:1 1 auto;
+	background: #fff;
+	border-left: 2px solid #E6EDF3;
+	padding: 0 15px;
+	cursor: pointer;
+  margin:.28rem 0;
+}
+.StudioModeratedChatSubmitBtnText 
+{
+  font-size: .875rem;
+  text-transform: uppercase;
+  color: #4e4e4e;
+  font-family: "Roboto Bold";
+  white-space: nowrap;
+}
+
+/*Mod Item List*/
+.StudioModeratedChatListViewContainer 
+{
+	position: relative;
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+  min-width: 0px;
+}
+.StudioModeratedChatListViewFooter 
+{
+	position: relative;
+	display: flex;
+	flex: 0 0 auto;
+	border-top: 2px solid #E6EDF3;
+}
+
+/*Filter header items*/
+.StudioModeratedChatChevron 
+{
+	position: relative;
+	height: 18px;
+	width: 18px;
+	cursor: pointer;
+	text-align: center;
+	margin-right: 10px;
+  padding:.4rem .18rem
+}
+.StudioModeratedChatChevron:after 
+{
+  content: '';
+  position: relative;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  transform-origin: center;
+}
+.StudioModeratedChatChevron[data-state="0"]:after
+{
+  border-right: 2px solid #869195;
+  border-bottom: 2px solid #869195;
+  transform: rotate(45deg);
+}
+
+.StudioModeratedChatChevron[data-state="1"]:after 
+{
+  border-left: 2px solid #869195;
+  border-top: 2px solid #869195;
+  transform: rotate(45deg);
+}
+.StudioModeratedChatFiltersContainer 
+{
+	position: relative;
+	overflow: hidden;
+	height: 0;
+  margin:0 1.5rem 0 1.5rem;
+}
+.StudioModeratedChatFiltersContainer > * 
+{
+  display: inline-block;
+}
+.StudioModeratedChatFiltersContainer[data-state="0"] 
+{
+  height: 0;
+  transition:height ease .25s;
+  margin:0 1.2rem 0 1.2rem;
+}
+.StudioModeratedChatFiltersContainer[data-state="1"] 
+{
+  height: 7rem;
+  transition: height ease .25s;
+  margin: 0 1.2rem 1.5rem 1.2rem;
+  transform: scale3d(1,1,1);
+}
+.StudioModeratedChatAttendeeView .StudioModeratedChatFiltersContainer[data-state="1"] 
+{
+  margin: 0 1rem .28rem 1rem;
+  background-color:transparent;
+  height: 5rem;
+}
+.StudioModeratedChatAttendeeView  .AxiomDGFeatures 
+{
+  display: inline-block;
+}
+.StudioModeratedChatAttendeeView .AxiomDGFeatures .dgFilter input[type="text"] 
+{
+  width: 10rem;
+  background-color:transparent;
+  margin:0 1rem 0 0;
+  font-size:inherit;
+}
+.StudioModeratedChatListViewContainer .StudioModeratedChatFiltersContainer[data-state="1"] 
+{
+  height: 15.8rem;
+}
+.StudioModeratedChatFilterables 
+{
+  display: flex;
+  position:  relative;
+  flex-wrap:  wrap;
+  margin: 1rem 0 0 0;
+}
+.StudioModeratedChatFilterGroup 
+{
+  flex: 0 0 auto;
+  margin: 0 1rem 0 0;
+}
+
+
+	/*Custom styling for filters on MultiOptionsSingleSelect*/
+.StudioModeratedChatFiltersContainer .AxiomMultiOptionSingleSelectContainer 
+{
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 25px;
+}
+.StudioModeratedChatFiltersContainer .AxiomMultiOptionSingleSelectItems 
+{
+  z-index: 1;
+}
+.StudioModeratedChatFiltersContainer .AxiomMultiOptionSingleSelectItem 
+{
+  color: #535D60;
+  flex: 1 1 33.3%;
+}
+.StudioModeratedChatFiltersContainer .AxiomMultiOptionSingleSelectItem:hover 
+{
+  color: #535D60;
+  background-color: initial;
+}
+
+.StudioModeratedChatFiltersContainer .AxiomMultiOptionSingleSelectSliderContainer 
+{
+  background-color: initial;
+  height: 1.2rem;
+  margin-top: -1.1rem;
+}
+
+.StudioModeratedChatFiltersContainer .AxiomMultiOptionSingleSelectSlider 
+{
+  background-color: #FFF;
+  border-radius: 25px;
+  height: 1.2rem;
+  transition: .5s transform cubic-bezier(0.54, 0.35, 0.45, 0.94), .5s opacity cubic-bezier(0.54, 0.35, 0.45, 0.94);
+}
+.StudioModeratedChatFiltersContainer .AxiomMultiOptionSingleSelectItemText 
+{
+  position: relative;
+  display: block;
+  min-width: 100px; /*this is based on content.. I cant figure out another way*/
+  overflow: initial;
+  text-transform: uppercase;
+  font-size: .85rem;
+}
+/*End Custom styling for filters on MultiOptionsSingleSelect*/
+
+.StudioModeratedChatFiltersContainer .AxiomFilterToggle 
+{
+  margin:0.1rem 0 .4rem 0;
+  padding:0;
+}
+.StudioModeratedChatClearBtnWrapper 
+{
+  position: relative;
+}
+.StudioModeratedChatClearBtn 
+{
+	position: relative;
+	flex: 0 0 80%;
+	background: #8D9CA2;
+	cursor: pointer;
+}
+.StudioModeratedChatModeratorFilterSuiteContainer 
+{
+	position: relative;
+	flex: 1;
+  background-color: #FFF;
+}
+.StudioModeratedChatSortContainer 
+{
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin:0 1.2rem 5px;
+	white-space: nowrap;
+}
+.StudioModeratedChatSortContainer .AxiomPagingNavSlim
+{
+	margin:0 0 0 auto;
+  display:flex;
+}
+.StudioModeratedChatSortContainer select 
+{
+  font-size: 12px;
+  padding: 0 1.5rem 0 .5rem;
+}
+.StudioModeratedChatSortContainer .AxiomPagingNav .AxiomGeneralActionButton
+{
+  padding: .57rem .9rem;
+}
+.StudioModeratedChatSortContainer .AxiomInput.Sized 
+{
+  padding: .2rem 1.8rem .2rem .28rem;
+  font-size: inherit;
+  background-position:right +.5rem center;
+  margin:0;
+}
+.StudioModeratedChatSortContainer .AxiomPagingNavSlim .AxiomPageBack 
+{
+  width: 22px;
+  height:22px
+}
+.StudioModeratedChatSortContainer .AxiomPagingNavSlim .AxiomPageForward
+{
+   width: 22px;
+   height:22px;
+}
+.StudioModeratedChatSortables
+{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-direction:column;
+}
+.StudioModeratedChatSortables .AxiomInput.Sized 
+{
+  display: inline-block;
+  margin-right: 5px;
+  width:100%;
+}
+..StudioModeratedChatSortables > *
+{
+  flex: 1;
+}
+/******************************************/
+
+.StudioModeratedChatModeratorItem 
+{
+	position: relative;
+	display: block;
+	padding:.8rem 0 .8rem 0;
+  border-top: 2px solid #E4ECF3;
+  margin: 0 1.2rem 0;
+}
+.StuioModeratedChatModeratorItem[data-active-edit="1"] 
+{
+}
+.StudioModeratedChatModeratorItem[aria-grabbed="true"] 
+{
+}
+.StudioModeratedChatModeratorItem[data-active-edit="1"]:before
+{
+  content: "";
+  display: block;
+  position: absolute;
+  height: calc(100% + 0.3rem);
+  background-color: #E6EDF3;
+  box-shadow: inset 4px 0 0 #3baef0;
+  bottom: 0;
+  z-index: 0;
+  width: calc(100% + 2.5rem);
+  margin: 0 0 -.15rem -1.2rem;
+  pointer-events:none;
+  user-select:none;
+}
+.StudioModeratedChatModeratorItem[aria-grabbed="true"]:before
+{
+  content: "";
+  display: block;
+  position: absolute;
+  height: calc(100% + 0.3rem);
+  background-color: #E6EDF3;
+  box-shadow: inset 4px 0 0 #3baef0;
+  bottom: 0;
+  z-index: 0;
+  width: calc(100% + 2.5rem);
+  margin: 0 0 -.15rem -1.2rem;
+  pointer-events: none;
+  user-select: none;
+}
+.StudioModeratedChatModeratorItem[data-ignored="1"]
+{
+  opacity: .5;
+}
+
+.SMCMIUpdate3
+{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-bottom: none;
+	display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+.SMCMIUpdate3
+{
+  flex-direction: column;
+}
+.SMCMIUpdate3 .StudioModeratedChatModeratorItemText
+{
+  white-space: normal;
+  overflow: unset;
+  text-overflow: unset;
+}
+
+.SMCMIUpdate3 .StudioModeratedChatModeratorItemExtras
+{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: 0;
+}
+
+.SMCMIUpdate3 .StudioModeratedChatModeratorActions
+{
+  float: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.SMCMIUpdate3 .StudioModeratedChatModeratorItemRow
+{
+  word-break: normal;
+  flex: 1;
+}
+
+.SMCMIUpdate3 .StudioModeratedChatModeratorIgnore
+{
+  position: relative;
+  background: none;
+  color: #869195;
+  padding: 0;
+  margin-left: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+  text-transform: uppercase;
+  vertical-align: initial;
+  height: auto;
+  width: auto;
+  border-radius: initial;
+  align-self: center;
+}
+.SMCMIUpdate3 .StudioModeratedChatModeratorItemPrioBtnContainer
+{
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.SMCMIUpdate3 select.AxiomInput.Sized
+{
+  border: none;
+  padding: 5px 2rem 5px 10px;
+  margin: 0;
+  background-color: #FFF;
+  color: #333;
+  max-width: 100px;
+  line-height: unset;
+  border: 1px solid #E4ECF3;
+}
+.SMCMIUpdate3 .StudioModeratedChatModeratorItemPrioBtnContainer
+{
+  flex: 0;
+  margin: 0;
+  flex-direction: column;
+  margin-right: 5px;
+}
+.SMCMIUpdate3 .StudioModeratedChatModeratorItemPrioBtnContainer[data-active="1"]:after,
+.SMCMIUpdate3 .StudioModeratedChatModeratorItemPrioBtnContainer:after
+{
+  position: absolute;
+  content: '';
+  width: 100%;
+  margin-right: 5px;
+  bottom: 0;
+  border-radius: unset;
+  height: 0;
+  transition: height .25s ease-in-out;
+}
+.SMCMIUpdate3 .StudioModeratedChatModeratorItemPrioBtnContainer[data-active="1"]:after,
+.SMCMIUpdate3 .StudioModeratedChatModeratorItemPrioBtnContainer:hover:after
+{
+  height: 5px;
+}
+.SMCMIUpdate3 .StudioModeratedChatModeratorItemPrioBtnText
+{
+  margin: 0 5px;
+  color: #333;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  max-width: 2.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.StudioModeratedChatSlimSearch
+{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 1.2rem;
+  border-bottom: 2px solid #E4ECF3;
+  border-top: 2px solid #E4ECF3;
+}
+.StudioModeratedChatSlimSearch input[type="text"].AxiomInput
+{
+  width: auto;
+  padding: 0;
+  border: none;
+  flex: 0 0 auto;
+  font-size: .875rem;
+  line-height: .875rem;
+  border-right: 2px solid #e7eeef;
+}
+.StudioModeratedChatSlimSearch .AxiomCardNavCloseButton
+{
+  position: relative;
+  right: 0;
+  top: 0;
+  padding: 0;
+  height: 1rem;
+  width: 1rem;
+  opacity: 1;
+  transition: opacity .25s linear;
+}
+
+.StudioModeratedChatSlimSearch input[type="text"].AxiomInput:-moz-placeholder + .AxiomCardNavCloseButton
+{
+  opacity: 0;
+  pointer-events: none;
+}
+.StudioModeratedChatSlimSearch input[type="text"].AxiomInput:-ms-input-placeholder + .AxiomCardNavCloseButton
+{
+  opacity: 0;
+  pointer-events: none;
+}
+.StudioModeratedChatSlimSearch input[type="text"].AxiomInput:placeholder-shown + .AxiomCardNavCloseButton
+{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.StudioModeratedChatSectionHeaderText
+{
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: .75rem;
+  font-size: 1.3rem;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid #E4ECF3;
+}
+
+.StudioModeratedChatContentContainer .StudioModeratedChatModalOptionsContainer
+{
+  width: auto;
+}
+
+.StudioModeratedChatUpdateState
+{
+  position: relative;
+  margin-left: 5px;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity cubic-bezier(0.4,0,1,1) .25s;
+  background: url(/cfr/images/VTS/AXIOM/Assets/ActionsPause.svg) center center no-repeat;
+}
+.StudioModeratedChatUpdateState[data-state="1"]
+{
+  background: url(/cfr/images/VTS/AXIOM/Assets/ActionsPlay.svg) center center no-repeat;
+}
+.StudioModeratedChatUpdateState:hover
+{
+  opacity: 1;
+}
+
+.StudioModeratedChatModeratorItemLeft
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  flex-basis: calc(100% - 100px);
+  min-width: 0px; /*to allow overflow ellipses*/
+}
+.StudioModeratedChatModeratorItemRight
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100px;
+}
+
+.StudioModeratedChatModeratorItemInfo
+{
+  position: relative;
+  display: flex;
+  flex: 0;
+  margin-bottom: 5px;
+}
+.StudioModeratedChatModeratorItemInfoDock
+{
+  position: relative;
+  display: inline-flex;
+  background-color: #E4ECF3;
+  color: #333 !important;
+  padding: 2px 5px;
+  border-bottom-right-radius: 5px;
+}
+.StudioModeratedChatModeratorItemInfoDock .StudioModeratedChatModeratorAnswersNotRead
+{
+  margin: auto;
+}
+.StudioModeratedChatModeratorItemInfoDock .StudioModeratedChatModeratorAnswersNotRead[data-active="1"]:after
+{
+  margin: 0 5px;
+}
+
+.StudioModeratedChatModeratorItemInfoDock .StudioModeratedChatQuestionNumContainer
+{
+  margin: 0 0 0 5px;
+}
+.StudioModeratedChatModeratorItemInfoDock .StudioModeratedChatQuestionNumContainer .StudioModeratedChatQuestionNum
+{
+  font-size: inherit;
+}
+.StudioModeratedChatModeratorItemInfoDock .StudioModeratedChatVerticalBreak
+{
+  height: auto;
+  margin: 0 .5rem;
+  background-color: #FFF;
+}
+
+.StudioModeratedChatQuestionLockedContainer
+{
+  position: relative;
+  display: inline-flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+}
+
+.StudioModeratedChatModeratorItemInfoDock .StudioModeratedChatQuestionLocked
+{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 12px;
+  opacity: 0;
+  background: url(/cfr/images/VTS/AXIOM/Assets/LockFlag.svg) #E4ECF3 no-repeat center center / cover;
+  transition: opacity .5s linear, width .5s linear;
+}
+.StudioModeratedChatModeratorItemInfoDock .StudioModeratedChatQuestionLocked[data-active="1"]
+{
+  opacity: 1;
+  width: 12px;
+  margin: 0 5px;
+}
+
+.StudioModeratedChatModeratorItemLeft .StudioModeratedChatModeratorItemRow
+{
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.StudioModeratedChatModeratorItemTextContainer
+{
+  flex: 1;
+  min-width: 0;
+}
+
+.StudioModeratedChatModeratorItemText
+{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.StudioModeratedChatModeratorItemExtras
+{
+  margin-top: 5px;
+}
+
+.StudioModeratedChatModeratorItemRight .StudioModeratedChatModeratorActions
+{
+  float: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  align-content: center;
+}
+
+.StudioModeratedChatModeratorActions > *
+{
+  background-color: #FFF;
+  color: #E4ECF3;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid #E4ECF3;
+  font-size: 1rem;
+}
+
+.StudioModeratedChatModeratorItemPrioBtnContainer
+{
+  position: relative;
+  display: flex;
+  flex: 1 0 25%;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.StudioModeratedChatModeratorItemPrioBtnContainer[data-active="1"]:after
+{
+  position: relative;
+  content: '';
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: #3baef0;
+  margin-right: 5px;
+}
+
+.StudioModeratedChatModeratorItemPrioBtnContainer.PRIO_HIGH:after
+{
+  background-color: #F05B5B;
+}
+.StudioModeratedChatModeratorItemPrioBtnContainer.PRIO_MED:after
+{
+  background-color: #FF9D3E;
+}
+.StudioModeratedChatModeratorItemPrioBtnContainer.PRIO_LOW:after
+{
+ background-color: #FECF24;
+}
+
+.StudioModeratedChatModeratorItemPrioBtnText
+{
+  position: relative;
+  margin-left: 5px;
+  flex: 1;
+}
+
+.StudioModeratedChatModeratorItemRight .AxiomInput.Sized
+{
+  position: relative;
+  border: none;
+  margin: 0;
+  flex: 1 0 25%;
+  width: 100%;
+  margin: 0;
+  padding: 5px 0 5px 1.5rem;
+  border: none;
+  font-size: inherit;
+  background-position: right +.2rem center;
+  background: url(/cfr/images/VTS/Axiom/Assets/ActionsFolder.svg) no-repeat #333 left +.25rem center / 14px 14px;
+  color: #E4ECF3;
+}
+
+.StudioModeratedChatQuestionNum 
+{
+  font-size: .71rem;
+  color: #869195;
+}
+.StudioModeratedChatQuestionNumContainer 
+{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 .5rem;
+}
+.StudioModeratedChatQuestionLocked
+{
+  position: relative;
+  display: none;
+  background: url(/cfr/images/VTS/AXIOM/Assets/LockFlag.svg) #FFF no-repeat center center / cover;
+  height: 12px;
+  width: 12px;
+  vertical-align: middle;
+}
+.StudioModeratedChatQuestionLocked[data-active="1"]
+{
+  display: inline-block;
+}
+.StudioModeratedChatModeratorActionsRow 
+{
+	position: relative;
+	display: block;
+	margin-bottom: 10px;
+	padding: 0;
+}
+.StudioModeratedChatModeratorActions .AxiomActionButtonDelete 
+{
+  margin: 0 0.5rem 0 0;
+}
+.StudioModeratedChatModeratorActions 
+{
+	float: right;
+}
+.StudioModeratedChatModeratorIgnore 
+{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	height: 24px;
+	width: 24px;
+	background: url(/cfr/images/VTS/Axiom/Assets/ActionsIgnore.svg) no-repeat center center / 20px 20px;
+	transition: all .25s linear;
+	cursor: pointer;
+	opacity: .7;
+	padding: .4rem;
+	border-radius: 20px;
+}
+.StudioModeratedChatModeratorIgnore:hover 
+{
+	opacity: 1;
+}
+.StudioModeratedChatModeratorIgnore[data-cancel] 
+{
+		transition: transform 2.8s linear;
+		transform: rotate(360deg);
+}
+.StudioModeratedChatFolderWidgetContainer 
+{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.StudioModeratedChatFolderWidget 
+{
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+	background: url(/cfr/images/VTS/Axiom/Assets/ActionsFolder.svg) no-repeat center center / 20px 20px;
+	transition: all ease .25s;
+	opacity: .7;
+	padding: .4rem;
+	border-radius: 20px;
+}
+.StudioModeratedChatFolderWidget:hover 
+{
+  opacity: 1;
+  background-color: #ecf1f6;
+}
+.StudioModeratedChatModeratorItemRow 
+{
+	position: relative;
+	display: block;
+	margin-bottom: 2px;
+	color: #4D5558;
+  word-break: break-word;
+}
+.StudioModeratedChatModeratorAnswerRow 
+{
+	position: relative;
+	display: flex;
+  color: #869195;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.StudioModeratedChatModeratorAnswerCount 
+{
+	position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.StudioModeratedChatVerticalBreak 
+{
+  width: 2px;
+  height: 1rem;
+  background-color: #e4ecf3;
+  display: inline-block;
+  vertical-align: middle;
+  margin:0 0 0 .5rem;
+  flex: 0 0 auto;
+}
+.StudioModeratedChatModeratorAnswerCount .AxiomInput 
+{
+  position: relative;
+  display: inline-block;
+  margin: 0 0 0 5px;
+  padding:.2rem .2rem .2rem 1.5rem;
+  border: none;
+  font-size: inherit;
+  /* border-bottom: 2px solid #e7ecef; */
+  background-position: right +.2rem center;
+  background: url(/cfr/images/VTS/Axiom/Assets/ActionsFolder.svg) no-repeat #FFF left +.25rem center / 14px 14px;
+  width: 100%;
+  flex: 1 1 auto;
+}
+.StudioModeratedChatFolderWidgetFolderList 
+{
+	position: absolute;
+	display: none;
+	margin-left: -150px;
+	z-index: 1;
+}
+.StudioModeratedChatFolderWidgetFolderList[data-state="1"] 
+{
+  display: inline-block;
+}
+.StudioModeratedChatFolderWidgetFolder 
+{
+	position: relative;
+	display: block;
+	width: 200px;
+	padding: 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background-color: #fff;
+	cursor: pointer;
+}
+.StudioModeratedChatFolderWidgetFolder:hover 
+{
+  background-color: aqua;
+}
+.StudioModeratedChatFolderWidgetFolder[data-hasitem="1"] 
+{
+  background-color: #8D9CA2;
+  color: #333;
+}
+
+.StudioModeratedChatModeratorAnswersNotRead
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: width .25s ease-in, opacity .25s linear;
+}
+.StudioModeratedChatModeratorAnswersNotRead[data-active="1"]
+{
+  width: 1rem;
+  opacity: 1;
+}
+.StudioModeratedChatModeratorAnswersNotRead:after
+{
+  position: relative;
+  content: '';
+  height: .6rem;
+  width: .6rem;
+  background-color: #21a508;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  /* margin: auto; */
+  margin-top: .3rem;
+}
+
+/*Generic Header stuff*/
+.StudioModeratedChatHeaderWrapper
+{
+  position: relative;
+  flex: 1;
+  white-space: nowrap;
+}
+.StudioModeratedChatHeaderContainer 
+{
+	position: relative;
+	display: none;
+	align-items: center;
+	flex: 0 0 auto;
+}
+.StudioModeratedChatHeaderContainer[data-active="1"] 
+{
+	display: flex;
+	flex-direction: row;
+}
+.AxiomModeratedChatNavRow 
+{
+  position: relative;
+  display: block;
+  text-align: right;
+  height: 28px;
+}
+.StudioModeratedChatModeratorFilterSuiteContainer .AxiomModeratedChatNavRow
+{
+  text-align: left;
+}
+.StudioModeratedChatAttendeeContent .AxiomModeratedChatNavRow
+{
+  text-align: right;
+}
+.AxiomModeratedChatNavRow .AxiomCardNavCloseButton 
+{
+  position: relative;
+  display: none;
+  padding: 0;
+  height: 1rem;
+  margin: 8px 8px 0 0;
+}
+.StudioModeratedChatHeader 
+{
+	position: relative;
+	display: flex;
+	flex: 1;
+	padding:1rem 1.2rem .5rem 1.2rem;
+}
+.StudioModeratedChatHeaderContainer .AxiomLabel 
+{
+	flex: 1;
+	font-size: .785rem;
+	text-transform: uppercase;
+  padding:0.5rem 0 0 0;
+}
+.StudioModeratedChatHeaderContainer .AxiomAddNewIconSmall 
+{
+  /*this is probably bad...*/
+  height: 1.2rem;
+  width: 1.2rem;
+  margin: .28rem 0 0 0;
+  background-size: .5rem .5rem;
+}
+.StudioModeratedChatCogContainer 
+{
+	position: relative;
+	display: inline-flex;
+	flex-direction: row;
+  padding:.4rem .18rem
+}
+.StudioModeratedChatCog 
+{
+	position: relative;
+	height: 18px;
+	width: 18px;
+	background-image: url(/cfr/Images/VTS/Axiom/Console/PresenterTool/SetupIcon.svg);
+	cursor: pointer;
+  opacity:.7;
+}
+.StudioModeratedChatCog:hover
+{
+  opacity:1;
+}
+
+.StudioModeratedChatFilter
+{
+	position: relative;
+	height: 18px;
+	width: 18px;
+	background: url(/cfr/Images/VTS/Axiom/Assets/ActionsFilter.svg) no-repeat center center / 18px 18px;
+	cursor: pointer;
+	opacity:.7;
+	display:inline-block;
+	vertical-align:middle;
+	padding: .4rem .18rem;
+	margin: 0 .4rem 0 0;
+}
+.StudioModeratedChatFilter:hover,
+.StudioModeratedChatFilter[data-state="1"]
+{
+  opacity:1;
+}
+.StudioModeratedChatCogOptionsWrapper 
+{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	transform: translateX(-100%);
+	z-index: 1;
+	background-color: #FFF;
+}
+.StudioModeratedChatCogContainer[data-active="1"] .StudioModeratedChatCogOptionsWrapper 
+{
+  box-shadow: 0 5px 18px rgba(0,0,0,.18);
+  padding: .8rem;
+}
+.StudioModeratedChatCogOptions 
+{
+	position: relative;
+	overflow: hidden;
+	flex: 0 0 0px;
+}
+.StudioModeratedChatCogOptions .AxiomSelectionWrapper 
+{
+  white-space: nowrap;
+  margin:0 .28rem;
+}
+
+.StudioModeratedChatCogOptions .AxiomFilterToggle 
+{
+  cursor: pointer;
+  margin:.28rem 0;
+  padding:0;
+}
+.StudioModeratedChatCogContainer[data-active="1"] .StudioModeratedChatCogOptions 
+{
+  flex: 0 0 auto;
+}
+
+.StudioModeratedChatActionButtonContainer 
+{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+/*Add Folder Dialogue*/
+.StudioModeratedChatAddFolderCard 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1;
+  transition: .5s transform cubic-bezier(0.54, 0.35, 0.45, 0.94), .5s opacity cubic-bezier(0.54, 0.35, 0.45, 0.94);
+  box-shadow: 0px 0px 28px rgba(0,0,0,.1);
+  display:flex;
+  flex-direction:column;
+}
+.StudioModeratedChatAddFolderCard[data-active="0"] 
+{
+	transform: translateX(-100%);
+}
+.StudioModeratedChatAddFolderCard[data-active="1"] 
+{
+	transform: translateX(0);
+}
+
+/*Edit Dialogue*/
+.StudioModeratedChatEditContainer 
+{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  right: 0;
+  overflow: hidden;
+  background: #fff;
+  height: 100%;
+  transition: .5s transform cubic-bezier(0.54, 0.35, 0.45, 0.94), .5s opacity cubic-bezier(0.54, 0.35, 0.45, 0.94);
+  transform: translateX(100%);
+  /*border:1px solid #e6edf3;*/
+  box-shadow:0 0 28px rgba(0,0,0,.1)
+}
+.StudioModeratedChatEditContainer[data-active="1"] 
+{
+  transform: translateX(0);
+}
+.StudioModeratedChatEditWrapper
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100%;
+}
+.StudioModeratedChatEditWrapper .AxiomCardHeaderTitle 
+{
+  margin: 1rem 0.6rem 1rem 1.2rem;
+}
+.StudioModeratedChatContentInfo
+{
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  align-items:center;
+}
+.StudioModeratedChatContentInfo .StudioModeratedChatEditViewEditors
+{
+  flex: 1 1 auto;
+}
+.StudioModeratedChatEditViewLockLayer
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  cursor: default;
+}
+[data-locked="1"] input, 
+[data-locked="1"] select,
+[data-locked="1"] textarea,
+[data-locked="1"] .AxiomToggleContainer,
+[data-locked="1"] .AxiomInput,
+[data-locked="1"] .StudioModeratedChatEditThreadContainer
+{
+  opacity: .5;
+}
+[data-locked="1"] > *:first-child
+{
+  margin-top: 18px;
+}
+.StudioModeratedChatEditViewLockLayer .AxiomErrorText
+{
+  display: block;
+  text-align: center;
+}
+
+.StudioModeratedChatEditWrapper .StudioModeratedChatActionButtonContainer,
+.StudioModeratedChatEditWrapper .StudioModeratedChatEditViewGeneralSettings
+{
+  flex: 0 0 auto;
+}
+.StudioModeratedChatEditViewEditors 
+{
+	position: relative;
+	display: block;
+	padding: 5px;
+	text-align: right;
+  align-items: flex-end;
+  white-space: nowrap;
+  overflow: auto;
+}
+.StudioModeratedChatEditViewEditors .AxiomUserIconLetter 
+{
+	display: inline-block;
+	text-align: center;
+	font-family: "Roboto Light";
+	color: #fff;
+	font-size: 1rem;
+	flex: 0 0 1rem;
+	margin: auto .25rem auto auto;
+	position: relative;
+	user-select: none;
+	text-transform: uppercase;
+	background-color: #3779ac;
+	border-radius: 50%;
+	line-height: 1rem;
+	box-shadow: 0px 2px 3px rgba(0,0,0,.28);
+	align-items: center;
+	justify-content: center;
+	padding: 7px 10px;
+  cursor: default;
+}
+.StudioModeratedChatEditViewGeneralSettings 
+{
+	position: relative;
+	display: flex;
+	margin-bottom: 10px;
+}
+.StudioModeratedChatEditViewGeneralSettingsHistory 
+{
+	position: relative;
+  display: flex;
+	flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  border-left:2px solid #e4ecf3;
+}
+.StudioModeratedChatEditViewGeneralSettingsPriority 
+{
+	position: relative;
+	flex: 0 0 auto;
+	padding: 5px;
+  margin:0 0 0 0.7rem;
+}
+.StudioModeratedChatViewHistoryIcon 
+{
+  position: relative;
+  height: 20px;
+  width: 25px;
+  background: url(/cfr/Images/VTS/Axiom/Assets/ActionsHistory.svg) no-repeat center center / 25px 20px ;
+  cursor: pointer;
+  opacity: .7;
+  padding: .4rem;
+  border-radius: 20px;
+}
+.StudioModeratedChatViewHistoryIcon:hover 
+{
+	opacity: 1;
+}
+.StudioModeratedChatEditViewQuestionText 
+{
+	position: relative;
+	display: block;
+  color:#869195;
+  margin:0 0 .4rem;
+}
+.StudioModeratedChatEditArea .StudioModeratedChatEditViewQuestionText
+{
+	color:#4D5558;
+	margin:.4rem 0 0 0;
+}
+.StudioModeratedChatEditArea .StudioModeratedChatItemQuestionDate
+{
+	margin: 0 1rem 0 0;
+}
+.StudioModeratedChatEditViewAnswer 
+{
+  border-bottom: 2px solid #e4ecf3;
+  margin: 0 0 .5rem 0;
+  white-space: normal;
+}
+.StudioModeratedChatEditViewAnswer:first-child 
+{
+  border-top: 2px solid #e4ecf3;
+  border-bottom: 2px solid #e4ecf3;
+  padding: .5rem 0 0 0;
+  margin:.2rem 0 .5rem 0;
+}
+/*.StudioModeratedChatPrivateFlag
+{
+	display:inline-block;
+	color:#4d5558;
+	background:#e4ecf3;
+	padding:.1rem .4rem;
+	font-size:.785rem;
+	text-transform:uppercase;
+	margin:0 .4rem 0 0
+}*/
+
+.StudioModeratedChatPrivateFlag
+{
+	background: url(/cfr/images/VTS/AXIOM/Assets/LockFlag.svg) center no-repeat;
+    transition: opacity cubic-bezier(0.4, 0, 1, 1) .25s;
+    opacity: .2;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 4px;
+    font-size:0;
+}
+.StudioModeratedChatPrivateFlagContainer 
+{
+  display: inline-block;
+}
+.StudioModeratedChatEditViewAnswer[data-active="1"] .StudioModeratedChatEditViewActions
+{
+}
+.StudioModeratedChatEditViewAnswer[data-active="1"] textarea.AxiomInput
+{
+	height:5rem;
+}
+.StudioModeratedChatEditViewAnswer[data-active="1"] .AxiomActionButtonEdit
+{
+  opacity: 1;
+}
+.StudioModeratedChatEditViewAnswer[data-active="0"] textarea.AxiomInput
+{
+  border:0px;
+  height:3.4rem;
+  padding:0;
+  margin:0 0 5px 0;
+  resize:none;
+  font-size: inherit;
+}
+.StudioModeratedChatEditViewAnswer[data-active="0"] .AxiomSelectionWrapper
+{
+  padding:0;
+}
+.StudioModeratedChatEditViewQuestionText span:first-of-type,
+.StudioModeratedChatModeratorItemRow span:first-of-type
+{
+	font-family: "Roboto Bold";
+	color: #4D5558;
+}
+.StudioModeratedChatEditViewQuestionText span 
+{	
+	color: #4D5558;
+}
+.StudioModeratedChatEditThreadContainer 
+{
+	position: relative;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.StudioModeratedChatEditThreadContainer .AxiomFilterToggle
+{
+	padding:0px;
+	margin:.1rem 0 1rem 0
+}
+
+.StudioModeratedChatEditViewAnswer[data-active="0"] .AxiomFilterToggle
+{
+	display:none;
+}
+.StudioModeratedChatEditViewAddNew 
+{
+	position: relative;
+	flex: 0 0 auto;
+}
+.StudioModeratedChatAnimatedEllipsis 
+{
+	position: relative;
+	display: inline-block;
+}
+.StudioModeratedChatAnimatedEllipsis div 
+{
+	animation: hop;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-duration: 2s;
+	display: inline-block;
+	height: 5px;
+}
+.StudioModeratedChatAnimatedEllipsis div:first-of-type 
+{
+}
+.StudioModeratedChatAnimatedEllipsis div:nth-of-type(2) 
+{
+	animation-delay: .25s
+}
+.StudioModeratedChatAnimatedEllipsis div:nth-of-type(3) 
+{
+	animation-delay: .5s;
+}
+@keyframes hop {
+	0% {
+		transform: translateY(0);
+	}
+
+	25% {
+		transform: translateY(-3px);
+	}
+
+	50% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+.StudioModeratedChatEditViewActions 
+{
+	float: right;
+	margin-top: -5px;
+}
+.StudioModeratedChatEditArea 
+{
+    padding: 1.2rem;
+    width: calc(100% - 2.4rem);
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+    flex:1 1 auto;
+}
+.StudioModeratedChatEditArea > .AxiomLabel:first-of-type 
+{
+  padding: 0 0 .2rem 0;
+}
+.AxiomLabel 
+{
+  padding: 1.8rem 0 .2rem;
+}
+.StudioModeratedChatHamburger 
+{
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  background: url(/cfr/images/VTS/Axiom/Assets/ActionsFolder.svg) no-repeat center center / 20px 20px;
+  transition: all ease .25s;
+  opacity: .7;
+  padding: .4rem .4rem .4rem 0;
+  margin: 0 .28rem 0 0;
+  vertical-align: middle;
+  display: inline-block;
+}
+/*History*/
+.StudioModeratedChatHistoryContainer 
+{
+  position: absolute;
+  display: flex;
+  min-width: 250px;
+  flex-direction: column;
+  background-color: #fff;
+  z-index: 10;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 5px;
+}
+.StudioModeratedChatHistoryCloseContainer 
+{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.StudioModeratedChatHistoryCloseContainer .AxiomCardNavCloseButton
+{
+  position: relative;
+  padding: 0;
+  top: 0;
+}
+.StudioModeratedChatHistoryItems 
+{
+	flex: 1;
+	max-height: 300px;
+	overflow: auto;
+}
+.StudioModeratedChatHistoryRow 
+{
+  position: relative;
+  display: block;
+  cursor: pointer;
+  border-top: 1px solid #8D9CA2;
+  padding: 5px 8px;
+  transition: .5s transform cubic-bezier(0.54, 0.35, 0.45, 0.94), .5s opacity cubic-bezier(0.54, 0.35, 0.45, 0.94);
+}
+.StudioModeratedChatHistoryRow:hover 
+{
+	background-color: #333;
+	color: #FFF;
+}
+.StudioModeratedChatHistoryText 
+{
+	display: block;
+	margin-bottom: 5px;
+}
+.StudioModeratedChatHistoryGeneric
+{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+}
+.StudioModeratedChatHistoryListView
+{
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction:column;
+  height: 100%;
+}
+.StudioModeratedChatHistoryThreadView
+{
+  position: absolute;
+  display: flex;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform .5s linear;
+  transform: translateX(100%);
+  background-color: #FFF;
+  flex-direction:column;
+}
+.StudioModeratedChatHistoryThreadView[data-active="1"]
+{
+  transform: translateX(0);  
+}
+.StudioModeratedChatHistoryListItem
+{
+  position: relative;
+  flex: 0 0 auto;
+  padding: 0.8rem 0;
+  border-bottom: 2px solid #E6EDF3;
+  cursor: pointer;
+}
+.StudioModeratedChatThreadViewAnswerText
+{
+	position: relative;
+	flex: 0 0 auto;
+	padding: 0.8rem 0;
+	border-bottom: 2px solid #E6EDF3;
+	cursor: pointer;
+  color:#869195;
+}
+/*Specific Overrides here*/
+/*
+
+  This works as a media Query, based off data-size-mode being the indicator of page width.
+  1 = single column, narrow view
+  2 = 2 column ("common") view
+  3 = 3 column wide view (what we originally developed in)
+*/
+
+/*Attendee View ONLY override*/
+[data-size-mode="1"] .StudioModeratedChatContent[data-active="0"] + .StudioModeratedChatContent[data-active="1"]
+{
+  flex: 1;
+}
+
+/*mode 2 and 3 specific*/
+[data-size-mode="2"] .AxiomModeratedChatNavRow,
+[data-size-mode="3"] .AxiomModeratedChatNavRow
+{
+  display: none;
+}
+
+.StudioModeratedChatSortables .AxiomInput.Sized 
+{
+  max-width: 248px;
+}
+
+/**************************/
+/*size mode 3 override*/
+/**************************/
+
+[data-size-mode="3"] [data-display-id="2"] .StudioModeratedChatContentView 
+{
+  width: 0;
+  position: relative;
+  transition: width .5s cubic-bezier(0.54, 0.35, 0.45, 0.94);
+  /*border-left: 1px solid #e4ecf3;*/
+}
+[data-size-mode="3"] [data-display-id="2"] .StudioModeratedChatContentView[data-active="1"]
+{
+  width: 300px;
+}
+
+[data-size-mode="3"], 
+[data-size-mode="3"] .StudioModeratedChatHeaderContainer .AxiomLabel
+{
+  font-size: 1rem;
+}
+
+/**************************/
+/*end size mode 3 override*/
+/**************************/
+
+/**************************/
+/*size mode 2 override*/
+/**************************/
+
+[data-size-mode="2"] .StudioModeratedChatContent[data-display-id="1"]
+{
+  width: 80%;
+}
+[data-size-mode="2"] .StudioModeratedChatContent[data-display-id="2"]
+{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: calc(100% - 238px);
+  pointer-events: none;
+}
+[data-size-mode="2"] .StudioModeratedChatAttendeeView,
+[data-size-mode="2"] .StudioModeratedChatEditContainer 
+{
+  width: 100%;
+  transform: translateX(100%);
+  transition: .5s transform cubic-bezier(0.54, 0.35, 0.45, 0.94), .5s opacity cubic-bezier(0.54, 0.35, 0.45, 0.94);
+}
+[data-size-mode="2"] .StudioModeratedChatAttendeeView[data-active="1"],
+[data-size-mode="2"] .StudioModeratedChatEditContainer[data-active="1"],
+[data-size-mode="2"] .StudioModeratedChatAttendeeContent,
+[data-size-mode="2"] .StudioModeratedChatEditWrapper
+{
+  pointer-events: all;
+  transform: translateX(0);
+}
+[data-size-mode="2"] .StudioModeratedChatEditContainer .StudioModeratedChatEditWrapper
+{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+[data-size-mode="2"] .StudioModeratedChatEditWrapper .StudioModeratedChatActionButtonContainer,
+/*[data-size-mode="2"] .StudioModeratedChatEditWrapper .StudioModeratedChatEditViewEditors,*/
+[data-size-mode="2"] .StudioModeratedChatEditWrapper .StudioModeratedChatEditViewGeneralSettings
+{
+  flex: 0 0 auto;
+}
+[data-size-mode="2"] .AxiomModeratedChatNavRow .AxiomCardNavCloseButton
+{
+  display: inline-block;
+}
+[data-size-mode="2"] .StudioModeratedChatAddFolderCard
+{
+  width: 250px;
+}
+[data-size-mode="2"] . .StudioModeratedChatFolderList
+{
+  min-width: initial;
+}
+[data-size-mode="2"] .StudioModeratedChatAttendeeView .AxiomModeratedChatNavRow
+{
+  display: block;
+}
+
+/**************************/
+/*end size mode 2 override*/
+/**************************/
+
+
+/**************************/
+/*size mode 1 override*/
+/**************************/
+
+[data-size-mode="1"] .StudioModeratedChatContent[data-display-id="0"]
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+[data-size-mode="1"] .StudioModeratedChatContent[data-display-id="1"]
+{
+  width: 100%;
+}
+[data-size-mode="1"] .StudioModeratedChatContent[data-display-id="2"]
+{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+[data-size-mode="1"] .StudioModeratedChatContent[data-display-id="2"] .StudioModeratedChatContentView
+{
+  justify-content: flex-end;
+}
+[data-size-mode="1"] .StudioModeratedChatAttendeeView,
+[data-size-mode="1"] .StudioModeratedChatEditContainer,
+[data-size-mode="1"] .StudioModeratedChatAttendeeContent,
+[data-size-mode="1"] .StudioModeratedChatEditWrapper 
+{
+  pointer-events: all;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: .5s transform cubic-bezier(0.54, 0.35, 0.45, 0.94), .5s opacity cubic-bezier(0.54, 0.35, 0.45, 0.94);
+}
+[data-size-mode="1"] .StudioModeratedChatAttendeeView[data-active="1"],
+[data-size-mode="1"] .StudioModeratedChatEditContainer[data-active="1"],
+[data-size-mode="1"] .StudioModeratedChatAttendeeContent,
+[data-size-mode="1"] .StudioModeratedChatEditWrapper
+{
+  transform: translateX(0);
+}
+[data-size-mode="1"] .StudioModeratedChatEditContainer .StudioModeratedChatEditWrapper
+{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+[data-size-mode="1"] .StudioModeratedChatEditWrapper .StudioModeratedChatActionButtonContainer,
+[data-size-mode="1"] .StudioModeratedChatEditWrapper .StudioModeratedChatEditViewGeneralSettings
+{
+  flex: 0 0 auto;
+}
+[data-size-mode="1"] .StudioModeratedChatEditWrapper .StudioModeratedChatEditArea
+{
+  flex: 1;
+  overflow: auto;
+}
+[data-size-mode="1"] .AxiomModeratedChatNavRow .AxiomCardNavCloseButton
+{
+  display: inline-block;
+}
+[data-size-mode="1"] .StudioModeratedChatFolderList 
+{
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: .5s transform cubic-bezier(0.54, 0.35, 0.45, 0.94), .5s opacity cubic-bezier(0.54, 0.35, 0.45, 0.94);
+  max-width:none;
+}
+[data-size-mode="1"] .StudioModeratedChatFolderList[data-active="1"] 
+{
+  transform: translateX(0);
+}
+[data-size-mode="1"] .StudioModeratedChatAddFolderCard
+{
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.StudioModeratedChatContentContainer[data-size-mode="1"] .StudioModeratedChatListViewContainer .StudioModeratedChatHeaderContainer .AxiomLabel 
+{
+	display:none;
+}
+[data-size-mode="1"] .StudioModeratedChatListViewContainer .StudioModeratedChatFiltersContainer[data-state="1"] 
+{
+  height: 21rem;
+}
+.StudioModeratedChatContentContainer[data-size-mode="1"] .StuioModeratedChatModeratorItem 
+{
+	margin: 0 1.2rem;
+}
+/**************************/
+/*end size mode 1 override*/
+/**************************/
+
+
+/**************************/
+/*Data Loading Animation*/
+/**************************/
+
+.StudioModeratedChatLoadingBGLayer
+{
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #FFF;
+  flex-direction: row;
+  align-items: center;
+  z-index: 10;
+}
+
+.AxiomLoadingAnimation
+{
+  margin: auto;
+}
+
+/*MODAL DISPLAY*/
+
+.AxiomContentMessage
+{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+  background-color: rgba(47, 52, 53, 0.94);
+  z-index: 2;
+}
+
+.AxiomContentMessageBody
+{
+  position: relative;
+  padding: 22% 1.4rem 1.4rem 1.4rem;
+}
+
+.AxiomContentMessageText,
+.AxiomSlideNodeOverlayText
+{
+  color: #ffffff;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.AxiomContentMessageBtns,
+.AxiomSlideNodeOverlayActionsContainer
+{
+  text-align:center;
+  margin:1rem 0 0 0;
+}
+/*Card Header Action Buttons*/
+
+.AxiomConsoleDetailButtonRow
+{
+ display:flex;
+ padding: 1rem 2.2rem;
+ width: calc(100% - 4.4rem);
+ align-items: center;
+}
+.AxiomConsoleDetailButtonRow .AxiomBackActionButtonSmall,
+.AxiomConsoleDetailButtonRow .AxiomSaveActionButton,
+.AxiomConsoleDetailButtonRow .AxiomGeneralActionButton,
+.AxiomConsoleDetailButtonRow .AxiomCancelActionButton,
+.AxiomConsoleDetailButtonRow .AxiomNextActionButtonSmall,
+.AxiomConsoleDetailButtonRow .AxiomAuxiliaryActionButton
+{
+  height: 1.5rem;
+  padding: 0.28rem 1.28rem;
+  min-width: 2.5rem;
+  align-items: center;
+  display: flex;
+}
+.AxiomConsoleDetailButtonRow .AxiomAuxiliaryActionButton
+{
+  height: 1.28rem;
+  font-size: .875rem;
+  margin: 0 0 0 0.58rem;
+  transform: translateX(0);
+  transition: all ease .5s;
+  display: flex;
+}
+.AxiomConsoleDetailButtonRow[change="true"] .AxiomAuxiliaryActionButton 
+{
+  transform: translateX(-8rem);
+  opacity: 0;
+}
+.AxiomConsoleDetailButtonRow .AxiomBackActionButtonSmall,
+.AxiomConsoleDetailButtonRow .AxiomNextActionButtonSmall
+{
+  height: 1.5rem;
+  padding: 0.15rem 1.28rem;
+  min-width: 2.5rem;
+  align-items:center;
+}
+.AxiomConsoleDetailButtonRow[change="false"] .AxiomBackActionButtonSmall
+{
+ display:flex;
+ opacity:1;
+ transform:translateX(0);
+ transition:all ease .5s;
+}
+.AxiomConsoleDetailButtonRow[change="true"] .AxiomBackActionButtonSmall
+{
+  display:flex;
+  opacity:0;
+  transform:translateX(-5rem);
+  transition:all ease .5s;
+}
+.AxiomConsoleDetailButtonRow[change="false"] .AxiomSaveActionButton,
+.AxiomConsoleDetailButtonRow[change="false"] .AxiomGeneralActionButton,
+.AxiomConsoleDetailButtonRow[change="false"] .AxiomCancelActionButton
+{
+  opacity:0;
+  /* transform:translateX(-4rem); */
+  transition:all ease .5s;
+}
+.AxiomConsoleDetailButtonRow[change="false"] .AxiomNextActionButtonSmall
+{
+  opacity:0;
+  transform: translateX(-18.4rem);
+  transition:all ease .5s;
+}
+.AxiomConsoleDetailButtonRow[change="true"] .AxiomSaveActionButton,
+.AxiomConsoleDetailButtonRow[change="true"] .AxiomGeneralActionButton,
+.AxiomConsoleDetailButtonRow[change="true"] .AxiomCancelActionButton
+{
+  display:flex;
+  margin-right:.5rem;
+  justify-content:center;
+  align-items:center;
+  opacity:1;
+  transform:translateX(-2rem);
+  transition:all ease .5s;
+  opacity:1;
+}
+.AxiomConsoleDetailButtonRow[change="true"] .AxiomNextActionButtonSmall
+{
+  display:flex;
+  margin-right:.5rem;
+  justify-content:center;
+  align-items:center;
+  opacity:1;
+  transform: translateX(0);
+  transition:all ease .5s;
+  opacity:1;
+}
+.AxiomConsoleDetailButtonRow[change="true"] .AxiomSaveActionButton,
+.AxiomConsoleDetailButtonRow[change="true"] .AxiomCancelActionButton
+{
+ display:flex;
+ opacity:1;
+ transform: translateX(0.3rem);
+ transition:all ease .5s;
+}
+.AxiomConsoleDetailButtonRow[change="false"] .AxiomSaveActionButton,
+.AxiomConsoleDetailButtonRow[change="false"] .AxiomCancelActionButton,
+.AxiomConsoleDetailButtonRow[change="false"] .AxiomNextActionButton
+{
+  display:flex;
+  opacity:0;
+  transition:all ease .5s;
+  z-index: -1;
+}
+.AxiomConsoleDetailButtonRow[change="true"] .AxiomGeneralActionButton
+{
+  border:2px solid #869195;
+}
+.AxiomConsoleDetailButtonRow[change="true"] .AxiomCancelActionButton
+{
+  /* border:2px solid #869195; */
+}
+.AxiomConsoleDetailButtonRow[change="true"] .AxiomNextActionButtonSmall
+{
+  border:2px solid #3baef0;
+}
+.AxiomConsoleDetailButtonRow .AxiomBackActionButtonSmallIcon,
+.AxiomConsoleDetailButtonRow .AxiomNextActionButtonSmallIcon
+{
+  margin: auto 0rem auto 0.05rem;
+}
+.AxiomConsoleDetailButtonRow .AxiomBackActionButtonSmallText,
+.AxiomConsoleDetailButtonRow .AxiomNextActionButtonSmallText 
+{
+  margin: auto 0.25rem;
+}
+.AxiomConsoleDetailButtonRow[change="true"] .ActionButtonSaveResetContainer {
+    display: flex;
+    transform: translateX(-0.3rem);
+    transition: all ease .5s;
+    position: absolute;
+}
+.AxiomConsoleDetailButtonRow[change="false"] .ActionButtonSaveResetContainer {
+    display: flex;
+    transform: translateX(-10.8rem);
+    transition: all ease .5s;
+    position: absolute;
+    z-index: -1;
+}
+.AxiomBackActionButtonSmallIcon {
+    background: url(/cfr/images/VTS/Axiom/Console/PresenterTool/CardNavBackBlue.svg) no-repeat;
+    background-size: 12px 10px;
+    display: block;
+    width: 12px;
+    height: 10px;
+}
+.AxiomBackActionButtonSmallText {
+    font-size: .857rem;
+    color: #3baef0;
+}
+.AxiomBackActionButtonSmall {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: .1rem .8rem .1rem .7rem;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border: 2px solid #3baef0;
+    border-radius: 1.8rem;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: background 300ms linear, border 300ms linear;
+    background-color: transparent;
+    box-shadow: 0px 2px 3px rgba(0,0,0,.1);
+}
+
+.AxiomContentMessageBtns .AxiomCancelActionButton,
+.AxiomSlideNodeOverlayActionsContainer .AxiomCancelActionButton,
+.AxiomContentMessageBtns .AxiomGeneralActionButton
+{
+  margin:0 .8rem
+}
+
+.StudioModeratedChatFilterGroup .AxiomFilterToggle .AxiomStandardText {
+    text-transform: capitalize;
+}
+
+
+.StudioModeratedChatModalOptionsBackground
+{
+  display: none;
+  position: absolute;
+  background: rgba(47, 52, 53, 0.8);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 10;
+  flex-direction: column;
+}
+.StudioModeratedChatModalOptionsBackground[data-state="1"]
+{
+  display: flex;
+}
+.StudioModeratedChatModalOptionsClose
+{
+  cursor: pointer;
+  background: url(/cfr/images/VTS/Axiom/Assets/CloseModalDark.svg) no-repeat center center;
+  background-size: 14px 14px;
+  padding: 0.75rem;
+  position: absolute;
+  top: .5rem;
+  right: 0.5rem;
+  opacity: 1;
+}
+.StudioModeratedChatModalOptionsContainer
+{
+  color: #535d60;
+  background: #ffffff;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 17px 22px 120px 0 rgba(47, 52, 53, 0.4);
+  width:20rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+.StudioModeratedChatModalOptionsTitle 
+{
+  color: #535d60;
+  font-size: 1.286rem;
+  text-transform: uppercase;
+}
+.StudioModeratedChatModalOptionsRow
+{
+  margin: 1rem 0;
+}
+.StudioModeratedChatModalOptionsRow .AxiomSelectionWrapper
+{
+  line-height: 0rem;
+  margin-bottom: 0.2857rem;
+}
+.StudioModeratedChatModalOptionsName 
+{
+  font-size: 1.214rem;
+}
+
+
+/**************************/
+/**************************/
+/**************************/
+/**************************/
+/**************************/
+/*AXIOM SPECIFIC SHOULD BE MOVED INTO AXIOM UI. DO NOT EDIT - RT*/
+.AxiomMultiOptionSingleSelectContainer
+{
+	position: relative;
+	display: inline-flex;
+  vertical-align: middle;
+	flex-direction: column;
+	background: #ffffff;
+	border: 2px solid #E6EDF3;
+}
+.AxiomMultiOptionSingleSelectItems 
+{
+	position: relative;
+	display: flex;
+	flex: 1;
+	justify-content: space-around;
+	padding: .2rem .2rem 0 .2rem;
+	background: #ffffff;
+}
+.AxiomMultiOptionSingleSelectItem 
+{
+	position: relative;
+	display: inline-flex;
+	padding: 0;
+	cursor: pointer;
+	flex: 1;
+}
+.AxiomMultiOptionSingleSelectItemText 
+{
+	position: relative;
+	width: 2.28rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: center;
+	font-size: .785rem;
+	color: #8D9CA2;
+	text-transform: uppercase;
+}
+.AxiomMultiOptionSingleSelectSliderContainer 
+{
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+}
+.AxiomMultiOptionSingleSelectSlider 
+{
+  position: relative;
+  display: inline-block;
+  height: 5px;
+  background-color: #FF9D3E;
+  transition: transform .25s ease-in-out, background .25s linear;
+}
+.AxiomGeneralActionButton.Disabled, .AxiomGeneralActionButton.Disabled:hover 
+{
+	visibility: hidden;
+}
+.StudioModeratedChatInputWrap input.AxiomInput 
+{
+	border: 0px !important;
+  background-color: transparent;
+  font-size:inherit;
+  outline:0;
+}
+#ModeratedChatFrame .EmptyList 
+{
+  padding: 1rem;
+}
+#ModeratedChatFrame .EmptyListText
+{
+  font-size:inherit;
+}
+#ModeratedChatFrame .AxiomConsoleDetailButtonRow 
+{
+  padding: 1rem;
+}
+#ModeratedChatFrame .AxiomConsoleDetailContent
+{
+  padding:1.2rem;
+  width:calc(100% - 2.4rem);
+  height: auto;
+  flex: 1 1 auto;
+}
+#ModeratedChatFrame .AxiomStandardText {
+    font-size: inherit;
+}
+#ModeratedChatFrame .AxiomGeneralActionButton
+{
+  font-size:inherit;
+}
+
+
+
+/**********************************************/
+/*
+
+  DONT PUT ANYTHING BELOW HERE!!!!!
+  Read comment block above.
+
+*/
+/**********************************************/

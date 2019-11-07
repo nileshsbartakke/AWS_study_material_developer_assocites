@@ -1,0 +1,612 @@
+﻿.AxiomGroupChat
+{
+  text-transform: none;
+  font-family:Roboto,Arial,sans-serif;
+}
+.AxiomGroupChatLine, .AxiomGroupChatUserListLine
+{
+  padding: 2px;
+  margin: 2px;
+  box-sizing: border-box;
+}
+.AxiomGroupChatLine[data-self="1"]
+{
+  flex-direction: row-reverse;
+}
+.AxiomGroupChatBubble
+{
+  background-color: #f0f0f0;
+  position: relative;
+  padding:0.4rem 0.7rem;
+  border-radius: 0.5rem;
+  display: flex;
+}
+.AxiomGroupChatLine[data-self="0"] .AxiomGroupChatUserIconHolder + .AxiomGroupChatBubble
+{
+  margin-left: 1rem;
+}
+.AxiomGroupChatLine[data-self="1"] .AxiomGroupChatUserIconHolder + .AxiomGroupChatBubble
+{
+  margin-right: 1rem;
+}
+.AxiomGroupChatLine[data-self="0"] .AxiomGroupChatUserIconHolder + .AxiomGroupChatBubble:before
+{
+  left: -0.8rem;
+}
+.AxiomGroupChatLine[data-self="1"] .AxiomGroupChatUserIconHolder + .AxiomGroupChatBubble:after
+{
+  right: -0.8rem;
+}
+.AxiomGroupChatLine[data-self="0"] .AxiomGroupChatUserIconHolder + .AxiomGroupChatBubble:before,
+.AxiomGroupChatLine[data-self="1"] .AxiomGroupChatUserIconHolder + .AxiomGroupChatBubble:after
+{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 1rem;
+  bottom: auto;
+  border: 0.8rem solid;
+  border-color: #EEEEEE transparent transparent transparent;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatUserIconHolder + .AxiomGroupChatBubble:before,
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatUserIconHolder + .AxiomGroupChatBubble:after
+{
+  border-color: #2F2F2F transparent transparent transparent;
+}
+.AxiomGroupChatLineTextName
+{
+  position: relative;
+  display: inline-block;
+  color: #797979;
+}
+.AxiomGroupChatLineTextName[data-self="0"]
+{
+  cursor: pointer;
+}
+.AxiomGroupChatLineMessage
+{
+  margin: 2px 0px 4px;
+  word-break:break-word;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatLineMessage a
+{
+  color: inherit;
+}
+.AxiomGroupChatUserIconHolder
+{
+  height: 2.95rem;
+  width: 2.95rem;
+  border-radius: 5rem;
+  flex-direction: column;
+  color: #FFFFFF;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .25);
+  position: relative;
+  overflow: hidden;
+}
+.AxiomGroupChatUserIconLetterHolder
+{
+  background-color: #3779AC;
+  width: 100%;
+  font-size: .785rem;
+  height: 100%;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.AxiomGroupChatUserIconLetterHolder[data-self="1"]
+{
+  background-color: gray;
+}
+.AxiomGroupChatUserImage
+{
+  height: 2.95rem;
+  width: 2.95rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.AxiomGroupChatLayout
+{
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  background-color: #FFFFFF;
+  height: 100%;
+  overflow: hidden;
+}
+.AxiomGroupChatHistoryArea
+{
+  flex-grow: 1;
+  height: calc(100% - 100px);
+  overflow: auto;
+  position: relative;
+  padding: 5px;
+}
+.AxiomGroupChatTypingArea
+{
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-top: 2px solid #f0f0f0;
+  position: relative;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatTypingArea
+{
+  padding: 10px 0 10px 15px;
+  background-color: #3c3c3c;
+  border-top: 2px solid transparent;
+}
+.AxiomGroupChatOptionsButton,
+.AxiomGroupChatTimeButton,
+.AxiomGroupChatMembersButton,
+.AxiomGroupChatEmojiBtn,
+.AxiomGroupChatReadingModeButton,
+.AxiomBannedUsersIcon,
+.AxiomGroupAgreeToTermsButton,
+.AxiomBannedUserSearchItemBanAction
+
+{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 7px 4px;
+  margin: 5px 2px;
+  cursor: pointer;
+  opacity: .7;
+}
+.AxiomGroupChatOptionsButton:hover,
+.AxiomGroupChatTimeButton:hover,
+.AxiomGroupChatMembersButton:hover,
+.AxiomGroupChatEmojiBtn:hover,
+.AxiomGroupChatReadingModeButton:hover,
+.AxiomGroupAgreeToTermsButton:hover,
+AxiomBannedUserSearchItemBanAction:hover
+{
+  opacity: 1;
+}
+.AxiomGroupAgreeToTermsButton
+{
+  background: url(/cfr/images/VTS/Axiom/Assets/ActionsAgreeToTerms.svg) no-repeat center center / 18px 20px;
+  margin: 5px 2px 5px 10px;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupAgreeToTermsButton
+{
+  background: url(/cfr/images/VTS/Axiom/Assets/DarkUI/ActionsAgreeToTermsLight.svg) no-repeat center center / 18px 20px;
+  margin: 5px 2px 5px 10px;
+}
+.AxiomBannedUserSearchItemBanAction
+{
+  background: url(/cfr/images/VTS/Axiom/Assets/ActionsRevert.svg) no-repeat center center / 18px 20px;
+  margin: 5px 2px 5px 10px;
+}
+.AxiomGroupChatOptionsButton
+{
+  background: url(/cfr/images/VTS/Axiom/Assets/ActionsTextStyling.svg) no-repeat center center / 18px 20px;
+  margin: 5px 2px 5px 10px;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatOptionsButton
+{
+  background: url(/cfr/images/VTS/Axiom/Assets/ActionsSettingsLight.svg) no-repeat center center / 20px 20px;
+}
+.AxiomGroupChatTimeButton
+{
+  background: url(/cfr/images/VTS/Axiom/Assets/ActionsCalendar.svg) no-repeat center center / 20px 20px;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatTimeButton
+{
+  background: url(/cfr/images/VTS/Axiom/Assets/ActionsCalendarLight.svg) no-repeat center center / 20px 20px;
+  margin:5px 2px 5px 10px;
+}
+.AxiomGroupChatReadingModeButton
+{
+  background: url(/cfr/images/VTS/Axiom/Assets/ActionsReadingMode.svg) no-repeat center center / 20px 20px;
+  background-size: 20px 20px;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"]  .AxiomGroupChatReadingModeButton
+{
+  background: url(/cfr/images/VTS/Axiom/Assets/ActionsReadingModeLight.svg) no-repeat center center / 20px 20px;
+}
+.AxiomGroupChatMembersButton
+{
+  background-color: limegreen;
+  background-size:20px 20px;
+}
+.AxiomBannedUsersIcon
+{
+  background: url(/cfr/Images/VTS/AXIOM/Assets/ActionsUsersBan.svg) no-repeat center center / 20px 20px;
+}
+.AxiomGroupChatTypeMessageBox
+{
+  border: none;
+  height: 24px;
+  resize: none;
+  background-color: transparent;
+}
+.AxiomGroupChatTypeMessageBox::-webkit-input-placeholder 
+{
+  /* WebKit, Blink, Edge */
+  color: #bdbdbd;
+  line-height: 1rem;
+}
+.AxiomGroupChatTypeMessageBox::-moz-placeholder 
+{
+  /* Mozilla Firefox 19+ */
+  color: #ababab;
+  opacity: 1;
+  line-height: 1rem;
+}
+.AxiomGroupChatTypeMessageBox:-ms-input-placeholder 
+{
+  /* Internet Explorer 10-11 */
+  color: #ababab;
+  line-height: 1rem;
+}
+.AxiomGroupChatTypeMessageBox:placeholder-shown 
+{
+  /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color: #ababab;
+  line-height: 1rem;
+}
+.AxiomGroupChatSendArea
+{
+  display: flex;
+}
+.AxiomGroupChatEmojiBtn
+{
+}
+.AxiomGroupChatEmojiBtn:after
+{
+  content: "😁";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.AxiomGroupChatActionBtn
+{
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 5px 5px 5px 9px;
+}
+.AxiomGroupChatSendPipe
+{
+  width: 2px;
+  background-color: #DADADA;
+  margin: 7px 0px;
+}
+.AxiomGroupChatSendBtn
+{
+  cursor: pointer;
+  padding: 0px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.AxiomGroupChatSendBtnText
+{
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #4e4e4e;
+  font-family: "Roboto Bold";
+}
+.AxiomGroupChatSendBtn[data-disabled]
+{
+  cursor: initial;
+  opacity: 0.2;
+}
+.AxiomGroupChatFontOptionsBackground
+{
+  display: none;
+}
+.AxiomGroupChatFontOptionsBackground[data-state="1"]
+{
+  position: absolute;
+  background: rgba(47, 52, 53, 0.8);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomActionButtonDelete 
+{
+  background: url(/cfr/images/VTS/AXIOM/Assets/ActionsDeleteLight.svg) center no-repeat;
+}
+.AxiomGroupChatActionsHolder 
+{
+  margin: .1rem 0.5rem 0 0;
+}
+.AxiomGroupChatFontOptionsContainer
+{
+  color: #535d60;
+  background: #ffffff;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 17px 22px 120px 0 rgba(47, 52, 53, 0.4);
+  width:20rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin:auto;
+}
+.AxiomGroupChatFontOptionsRow
+{
+  margin: 1rem 0;
+}
+.AxiomGroupChatFontOptionsRow .AxiomSelectionWrapper
+{
+  line-height: 0rem;
+  margin-bottom: 0.2857rem;
+}
+.AxiomGroupChatFontOptionsClose
+{
+  cursor: pointer;
+  background: url(/cfr/images/VTS/Axiom/Assets/CloseModalDark.svg) no-repeat center center;
+  background-size: 14px 14px;
+  padding: 0.75rem;
+  position: absolute;
+  top: .5rem;
+  right: 0.5rem;
+  opacity: 1;
+}
+.AxiomGroupChatAdditionalArea
+{
+  background: #E6EDF3;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatAdditionalArea
+{
+  background: #202020;
+  box-shadow: inset 0 2px 0 #2f2f2f;
+}
+.AxiomGroupChatPasswordParent
+{
+  background-color: #FFFFFF;
+  padding: 7px;
+  margin-top: 50px;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"]
+{
+  background-color: #202020 !important;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatBubble
+{
+  background-color: #2f2f2f !important;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatLineTextName
+{
+  color: #3baef0 !important;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatLineMessage span
+{
+  color: #d0d0d0 !important;
+  font-size: 16px !important;
+  font-family: inherit !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+}
+.AxiomGroupChatLineTimeStamp
+{
+  color: #797979;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatLineTimeStamp
+{
+  color: #FFFFFF !important;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatSendPipe
+{
+  width: 2px;
+  background-color: #4D4D4D;
+  margin: 7px 0px;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatSendBtnText
+{
+  color: #FFFFFF;
+}
+.AxiomGroupChatTranslatorArea
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.AxiomGroupChatTranslatorBranding
+{
+  font-size: 10px;
+  background:#ffffff;
+  padding: .2rem .5rem;
+  max-width: 7rem;
+  margin: 0 .5rem;
+  color: #4e4e4e;
+}
+.AxiomGroupChatFontOptionsTitle 
+{
+  color: #535d60;
+  font-size: 1.286rem;
+  text-transform: uppercase;
+}
+.AxiomGroupChatFontOptionsName 
+{
+  font-size: 1.214rem;
+}
+.AxiomGroupChatBubble
+{
+  word-break:break-word;
+  word-wrap: break-word;
+  font-size: 1rem;
+}
+.AxiomGroupChatLineMessageTranslation
+{
+ color:#333333;
+}
+.AxiomGroupChatComponents
+{
+  position: relative;
+  z-index:1;
+}
+.AxiomGroupChatOptInContainer
+{
+  position: absolute;
+  background-color:#ffffff;
+  bottom: 44px;
+  width: 100%;
+  transition: transform .25s ease-in-out;
+  box-shadow: 0 -5px 5px rgba(0,0,0,.1);
+  z-index:0;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100% - 3.8rem);
+  min-height: 100px;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatOptInContainer 
+{
+  background-color: #2f2f2f;
+}
+.AxiomGroupChatOptInContainer[data-state="0"]
+{
+  transform: translateY(105%) translateY(45px);
+}
+.AxiomGroupChatOptInCloseContainer
+{
+  margin: 5px 0px;
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+}
+.AxiomGroupChatOptInCloseContainer .AxiomGroupChatFontOptionsClose
+{
+  position: relative;
+  top: 0;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"]  .AxiomGroupChatOptInCloseContainer .AxiomGroupChatFontOptionsClose
+{
+  background-image:url(/cfr/images/VTS/Axiom/Assets/DarkUI/CardCloseIcon.svg);
+}
+.AxiomGroupChatCloseRow
+{
+  position: relative;
+  flex: 1 1 auto;
+}
+.AxiomGroupChatOptInText
+{
+  overflow: auto;
+  color: #869195;
+  padding: 5px 15px 10px;
+}
+.AxiomGroupChatLayout[data-reading-mode="1"] .AxiomGroupChatOptInText
+{
+  color:#ffffff
+}
+.AxiomChatUserContextContainer
+{
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+  min-width: 100px;
+  overflow: hidden;
+  margin-left: 10px;
+  margin-top: 5px;
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  z-index: 1;
+  padding: 5px 0;
+}
+
+.AxiomChatUserContextItems
+{
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.AxiomChatUserContextItems .AxiomStandardText
+{
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 7px 15px;
+}
+.AxiomChatUserContextItems .AxiomStandardText:hover
+{
+  background-color: #f0f4f7;
+}
+
+.BannedUserSearchInput
+{
+  margin: 0 10px;
+}
+
+.AxiomBannedUserSearchResults
+{
+  position: relative;
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+.AxiomBannedUsersContainer
+{
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.AxiomBannedUserSearchItem
+{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin-bottom: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-bottom: 2px solid #e7ecef;
+}
+
+.AxiomBannedUserSearchItemDetails
+{
+  flex: 1 1 auto;
+  position: relative;
+  width: calc(100% - 25px);
+}
+
+.AxiomBannedUserSearchItemDetails div
+{
+  white-space: nowrap;
+  margin: 5px 0;
+  width: calc(100% - 10px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.AxiomBannedUserSearchItemActions
+{
+  position: relative;
+  flex: 0 0 auto;
+  width: 25px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.AxiomBannedUserSearchItemBanAction
+{
+  margin: auto;
+}
+
+.AxiomBannedUserSearchItemBanAction[data-state="1"]
+{
+   background: url(/cfr/images/VTS/Axiom/Assets/ActionsBan.svg) no-repeat center center / 20px 20px;
+}
+
+.AxiomBannedUserSearchItemBanAction[data-state="0"]
+{
+  /*image for not banned or.... ?*/
+}

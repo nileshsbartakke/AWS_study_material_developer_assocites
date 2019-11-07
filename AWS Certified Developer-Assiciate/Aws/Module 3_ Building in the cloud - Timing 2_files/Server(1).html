@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://onlinexperiences.com/scripts/Server.nxp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, user-scalable=1">
+<meta name="apple-mobile-web-app-capable" content="no">
+<title>Test Result</title>
+<link rel="stylesheet" href="./master.css" type="text/css" crossorigin="anonymous">
+<link rel="stylesheet" href="./CourseTest.css" type="text/css" crossorigin="anonymous">
+<link rel="stylesheet" href="./SSCSS73372.css" type="text/css" crossorigin="anonymous">
+<script type="text/javascript" src="./XBrowser.js.download"></script>
+<script type="text/javascript" src="./RPC.js.download"></script>
+<script type="text/javascript">
+var g_iDeviceMode = parseInt("NULL");
+
+function window_onload()
+{
+  OverflowLayerInit();
+  
+  if (g_iDeviceMode == 2)
+    {
+      window.location.hash = "air|5|1|10276|0|";
+    }
+  else if (g_iDeviceMode == 4 && IsWindowsPhone())
+    {
+      window.external.Notify("wp|5|1|10276|0|");
+    }
+  else if (typeof parent.CourseTrackerCompletionData != "undefined")
+    {
+      parent.CourseTrackerCompletionData("TestComplete10276", {"FunctionID":1,"Int1":10276,"Int2":0});
+    }
+  else
+    {
+      RPC.Init("TestComplete10276",1);
+      RPC.Connect("Shell");
+      setTimeout(NotifyCourseTracker,10);
+    }
+
+  if (g_iDeviceMode != -1 && parent && parent.SlideIFrameLoaded)
+    parent.SlideIFrameLoaded();
+}
+
+function NotifyCourseTracker()
+{
+  try {
+    if (RPC.TargetExists("CourseTracker"))
+      RPC.Connect("CourseTracker").OnCompletionData({"FunctionID":1,"Int1":10276,"Int2":0});
+  }
+  catch(e){}
+}
+function SetPageSize(oPanelSize)
+{
+  if(IsIPad() || IsIPhone())
+    {
+      g_oOverflowLayer.style.width = oPanelSize.width + "px";
+      g_oOverflowLayer.style.height = oPanelSize.height + "px";
+    }
+}
+function CleanOverflowResizer()
+{
+  window.removeEventListener("resize", OverflowLayerResize);
+}
+</script>
+</head>
+<body class="TestCompleteBody" onload="window_onload()">
+<div id="OverflowLayer" style="">
+<div class="ContentBox">
+ <div class="StatusBox Fail"></div>
+ <p class="TestTitle" role="region" aria-label="Title" tabindex="0">Module 3: Building in the cloud - Timing 2</p>
+ <div class="TimeStats" role="region" aria-label="Time" tabindex="0">
+ <p class="DateTime"><span>Completed:</span>11/6/2019 12:08 AM</p>
+ <p class="Duration"><span>Time Spent:</span>02:48</p>
+ </div>
+ <p class="PassFailMessage"></p>
+<div class="Row"><div class="ScoreBox" role="region" aria-label="Score" tabindex="0">
+ <p class="Label">Passing Score</p>
+ <p class="PassScore">100%</p>
+</div><div class="ScoreBox" role="region" aria-label="Score" tabindex="0">
+ <p class="Label">Your Score</p>
+ <p class="UserScore Fail">66%</p>
+</div><div class="QuestionStats" role="region" aria-label="Questions" tabindex="0">
+ <p><span class="Label">Questions</span><span class="Count">3</span></p>
+ <p><span class="Label">Correct</span><span class="Count">2<span class="Hide" title="Only partial credit was earned for some questions">*</span></span></p>
+ <p><span class="Label">Incorrect</span><span class="Count">1</span></p>
+ <p class="Hide">* Only partial credit was earned for some questions</p>
+</div></div>
+</div>
+
+
+<div class="TestReviewSummary">
+ <p class="ReviewMessage"></p>
+ <p class="ReviewLabel" style="display:none;">Previous Completions</p>
+ <table id="CompletionList" role="region" aria-label="History" tabindex="0" border="0" style="display:none;">
+ <thead><tr><td>Test Date</td><td>Time Taken</td><td>Score</td><td>Marks</td><td>Result</td></tr></thead>
+ <tbody>
+ </tbody>
+ </table>
+ <div class="ReviewRow" role="region" aria-label="Score" tabindex="0">
+ <div class="ScoreBox">
+ <p class="Label">Passing Score</p>
+ <p class="PassScore">0%</p>
+ </div>
+ <div class="ScoreBox">
+ <p class="Label">Your Score</p>
+ <p class="UserScore Fail">0%</p>
+ </div>
+ </div>
+</div>
+<div class="QuestionBox" id="QuestionBox33882" role="region" aria-label="1" tabindex="0">
+ <input type="hidden" name="CourseTestQuestionKey" value="33882">
+ <p class="Number">1</p>
+ <div class="Question">Q1.  You have an application composed of individual services. You need to route a request to a service based on the content of the request.  What type of load balancer should you use?</div>
+  <div class="Answer">
+    <img class="Indicator" src="./1x1.gif">
+    <input type="radio" name="CourseTestAnswerKey33882" value="118860" disabled="disabled">
+    <p>A.	Auto Scaling Load Balancer </p>
+    <div>
+      <p class="ReviewText "></p>
+    </div>
+  </div>
+  <div class="Answer">
+    <img class="Indicator" src="./Incorrect.png">
+    <input type="radio" name="CourseTestAnswerKey33882" value="118861" disabled="disabled" checked="checked">
+    <p>B.	Network Load Balancer</p>
+    <div>
+      <p class="ReviewText "></p>
+    </div>
+  </div>
+  <div class="Answer">
+    <img class="Indicator" src="./Correct.png">
+    <input type="radio" name="CourseTestAnswerKey33882" value="118862" disabled="disabled">
+    <p>C.	Application Load Balancer</p>
+    <div>
+      <p class="ReviewText "></p>
+    </div>
+  </div>
+  <div class="Answer">
+    <img class="Indicator" src="./1x1.gif">
+    <input type="radio" name="CourseTestAnswerKey33882" value="118863" disabled="disabled">
+    <p>D.	Any type of load balancer</p>
+    <div>
+      <p class="ReviewText "></p>
+    </div>
+  </div>
+ <div class="QuestionSummary NoCredit">
+ <p class="QuestionStatus">Your Response: <span class="NoCredit">incorrect</span></p>
+ <p class="QuestionValue">Credit Earned: <span>0%</span></p>
+ <p class="ReviewText"></p>
+ </div>
+</div>
+<div class="QuestionBox" id="QuestionBox33883" role="region" aria-label="2" tabindex="0">
+ <input type="hidden" name="CourseTestQuestionKey" value="33883">
+ <p class="Number">2</p>
+ <div class="Question">Q2.  Which of the following is a key-value (NoSQL) database?</div>
+  <div class="Answer">
+    <img class="Indicator" src="./1x1.gif">
+    <input type="radio" name="CourseTestAnswerKey33883" value="118864" disabled="disabled">
+    <p>A.	Amazon Aurora</p>
+    <div>
+      <p class="ReviewText "></p>
+    </div>
+  </div>
+  <div class="Answer">
+    <img class="Indicator" src="./Correct.png">
+    <input type="radio" name="CourseTestAnswerKey33883" value="118865" disabled="disabled" checked="checked">
+    <p>B.	Amazon DynamoDB</p>
+    <div>
+      <p class="ReviewText "></p>
+    </div>
+  </div>
+  <div class="Answer">
+    <img class="Indicator" src="./1x1.gif">
+    <input type="radio" name="CourseTestAnswerKey33883" value="118866" disabled="disabled">
+    <p>C.	Amazon RDS</p>
+    <div>
+      <p class="ReviewText "></p>
+    </div>
+  </div>
+  <div class="Answer">
+    <img class="Indicator" src="./1x1.gif">
+    <input type="radio" name="CourseTestAnswerKey33883" value="118867" disabled="disabled">
+    <p>D.	Amazon NoSQL-DB</p>
+    <div>
+      <p class="ReviewText "></p>
+    </div>
+  </div>
+ <div class="QuestionSummary FullCredit">
+ <p class="QuestionStatus">Your Response: <span class="FullCredit">correct</span></p>
+ <p class="QuestionValue">Credit Earned: <span>100%</span></p>
+ <p class="ReviewText"></p>
+ </div>
+</div>
+<div class="QuestionBox" id="QuestionBox33884" role="region" aria-label="3" tabindex="0">
+ <input type="hidden" name="CourseTestQuestionKey" value="33884">
+ <p class="Number">3</p>
+ <div class="Question">Q3.  What is the first step in getting started with AWS Lambda?</div>
+  <div class="Answer">
+    <img class="Indicator" src="./1x1.gif">
+    <input type="radio" name="CourseTestAnswerKey33884" value="118868" disabled="disabled">
+    <p>A.	Provision EC2 instances.</p>
+    <div>
+      <p class="ReviewText "></p>
+    </div>
+  </div>
+  <div class="Answer">
+    <img class="Indicator" src="./1x1.gif">
+    <input type="radio" name="CourseTestAnswerKey33884" value="118869" disabled="disabled">
+    <p>B.	Deploy an OS image.</p>
+    <div>
+      <p class="ReviewText "></p>
+    </div>
+  </div>
+  <div class="Answer">
+    <img class="Indicator" src="./1x1.gif">
+    <input type="radio" name="CourseTestAnswerKey33884" value="118870" disabled="disabled">
+    <p>C.	Pay for estimated compute time.</p>
+    <div>
+      <p class="ReviewText "></p>
+    </div>
+  </div>
+  <div class="Answer">
+    <img class="Indicator" src="./Correct.png">
+    <input type="radio" name="CourseTestAnswerKey33884" value="118871" disabled="disabled" checked="checked">
+    <p>D.	Upload your code.</p>
+    <div>
+      <p class="ReviewText "></p>
+    </div>
+  </div>
+ <div class="QuestionSummary FullCredit">
+ <p class="QuestionStatus">Your Response: <span class="FullCredit">correct</span></p>
+ <p class="QuestionValue">Credit Earned: <span>100%</span></p>
+ <p class="ReviewText"></p>
+ </div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,609 @@
+﻿
+.ShareWidget
+{
+visibility:hidden;
+cursor:pointer;
+}
+img.ShareWidget
+{
+vertical-align:middle;
+}
+.SocialMediaWidgetContainer, .SocialMediaWidgetContainerMBR
+{
+  position:absolute;
+  /* Updated to display over Powered by */
+  z-index:10001;
+  box-shadow: 2px 0px 3px rgba(0,0,0,0.2);
+}
+.SocialMediaWidgetContainer
+{
+  background:url(/cfr/Images/SocialMedia/ShareWidget/SWBg.png) repeat;
+  width:158px;
+  min-width:130px;
+  min-height:20px;
+  margin-top:-2px;
+  padding-bottom:4px;
+  overflow:hidden;
+  background-color:#ffffff;
+  border: 1px solid #B9B9B9;
+}
+.SocialMediaWidgetContainerMBR
+{
+  width: 220px;
+  background: #313131;
+}
+.SocialMediaBackgroundDiv
+{
+position:absolute;
+min-height:100%;
+min-width:100%;
+top:0;
+right:0;  
+/*  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+filter:alpha(opacity=60);
+-moz-opacity:0.60;
+-khtml-opacity: 0.60;
+opacity: 0.60; */
+}
+.SocialMediaWidgetClose
+{
+float:right;
+height:12px;
+width:12px;
+background-image:url(/cfr/Images/SocialMedia/ShareWidget/ShareCloseIcon.png);
+background-repeat:no-repeat;
+background-position:top;
+margin: 2px 5px 0 0;
+cursor:pointer;
+}
+.SocialMediaWidgetCloseMBR
+{
+  float: right;
+  height: 24px;
+  width: 24px;
+  background-image: url(/cfr/Images/Mobile/TopTitleClose.png);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+.SocialMediaLink, .SocialMediaLinkMBR
+{
+position:relative;
+padding:4px 8px;
+overflow:visible;
+}
+.SocialMediaLinkMBR
+{
+  margin-bottom: 4px;
+}
+.SocialMediaLink
+/* {
+position:relative;
+padding-top:3px;
+color:white;
+margin-right:2px;
+margin-left:2px;
+margin-top:2px;
+overflow:visible;
+} */
+#NoMedia
+{
+position:relative;
+clear:both;
+color:White;
+border:none;
+max-width:200px;
+padding:3px;
+}
+#SWLoading
+{
+width:100%; 
+height:100%; 
+position:absolute; 
+display:none; 
+background-color:black;
+top:0px;
+vertical-align:middle;
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+filter:alpha(opacity=85);
+-moz-opacity:0.85;
+-khtml-opacity: 0.85;
+opacity: 0.85;
+}
+#SWLoading img 
+{
+position:absolute; 
+left:50%; 
+margin-left:-8px; 
+top:50%; 
+margin-top:-8px; 
+height:16px; 
+width:16px;
+}
+.SocialMediaLinkMBR .SWEmailButton
+{
+  text-decoration: none;
+}
+.SWEmailButton{
+background-image:url(/cfr/images/SocialMedia/ShareWidget/SWButtonBg.png);
+background-color:#fdfdfd;
+background-repeat:repeat-x;
+background-position: 0px bottom;
+display:inline-block;
+padding:0px 7px 0px 4px;  
+cursor:pointer;
+border-radius:3px;
+border:1px solid #CCCCCC;   
+}
+.SWEmail{
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+color:#333333;
+font-weight:bold;
+text-shadow: 0px 1px 0 rgba(255, 255, 255, 0.8);
+vertical-align:middle;
+}
+.SWEmailIcon
+{
+display:inline-block;
+background-image:url(/cfr/images/SocialMedia/ShareWidget/Email_Logo13px.png);
+background-repeat:no-repeat;
+margin:2px 3px 3px 0px;
+width:13px;
+height:13px;
+vertical-align:middle;
+}
+.SWFBButton
+{
+background-image:url(/cfr/images/SocialMedia/ShareWidget/SWButtonBg.png);
+background-color:#fdfdfd;
+background-repeat:repeat-x;
+background-position: 0px bottom;
+display:inline-block;
+padding:2px 4px 2px 4px;  
+cursor:pointer;
+border-radius:3px;
+border:1px solid #CCCCCC;  
+vertical-align:top;
+}
+
+.SWFBText{
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+color:#333333;
+font-weight:bold;
+text-shadow: 0px 1px 0 rgba(255, 255, 255, 0.8);
+vertical-align:middle;
+}
+.SWFBIcon
+{
+
+display:inline-block;
+background-image:url(/cfr/images/SocialMedia/ShareWidget/Facebook_Logo13px.png);
+background-repeat:no-repeat;
+margin:2px 3px 3px 0px;
+width:13px;
+height:13px;
+vertical-align:middle;
+}
+.SWFBShareCount
+{
+font-size:11px;
+background-color:White;
+color:#333333;
+height:16px;
+overflow:hidden;
+text-align:center;
+padding:2px 4px 1px 4px;
+margin:0 0px 0 2px;
+border-radius:3px;
+border:1px solid #c4c4c4;
+display:inline-block;
+vertical-align:top;
+}
+.SWLIButton
+{ 
+background-image:url(/cfr/images/SocialMedia/ShareWidget/SWButtonBg.png);
+background-color:#fdfdfd;
+background-repeat:repeat-x;
+background-position: 0px bottom;
+display:inline-block;
+padding:2px 4px 2px 4px;  
+cursor:pointer;
+border-radius:3px;
+border:1px solid #CCCCCC;  
+}
+.SWLIButtonImg
+{
+display:inline-block;
+background-image:url(/cfr/images/SocialMedia/ShareWidget/LinkedIn_Logo13px.png);
+background-repeat:no-repeat;
+margin:2px 3px 3px 0px;
+width:13px;
+height:13px;
+vertical-align:middle;
+}
+.SWLIButtonTxt{
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+color:#333333;
+font-weight:bold;
+text-shadow: 0px 1px 0 rgba(255, 255, 255, 0.8);
+vertical-align:middle;
+}
+.SWLIShareCount
+{
+font-size:12px;
+background-color:White;
+color:Black;
+height:16px;
+overflow:hidden;
+text-align:center;
+padding:3px 3px 1px 3px;
+margin:4px 0 0 1px;
+}
+/*#SWTwitter.SocialMediaLink{
+padding:4px 8px 0px 8px;
+}*/
+.TopBar
+{
+background-image:url(/cfr/images/SocialMedia/ShareWidget/HeaderBarBg.png);
+background-repeat:repeat-x;
+background-position: 0 bottom;
+position:relative;
+background-color:#2e76bb;
+width:100%;
+margin:0px 0px 5px 0px;
+padding:4px 0px;
+box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
+/* border-bottom: 1px solid rgba(0, 0, 0, 0.5); */
+  
+}
+.TopBarMBR
+{
+  position: relative;
+  margin:0px 0px 5px 0px;
+  padding: 7px 15px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
+}
+.TopBarText, .TopBarTextMBR
+{
+cursor:default;
+text-shadow: 1px 1px 1px rgba(0,0,0,0.65);
+}
+.TopBarText
+{
+color:#FFFFFF;
+margin:0 0 0 10px;
+font-size:13px;
+}
+.TopBarTextMBR
+{
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.TopBarTextHelperMBR
+{
+  display: inline-block;
+  height: 24px;
+  vertical-align: middle;
+}
+.LIPopUp, .LIPopUpMBR
+{
+  position:absolute;
+  display:none;
+  background-color:#cdcdcd;
+  z-index:10005;
+  border-radius:2px;
+  box-shadow: 5px 5px 10px 0 rgba(0,0,0,.50);
+}
+.LIPopUp
+{
+padding:5px;
+margin-left:50%;
+left:-225px;
+height:325px;
+width:450px;
+moz-border-radius:2px;
+}
+.LIPopUpMBR
+{
+  min-height:325px;
+  box-sizing: border-box;
+}
+.LIContainer, .LIContainerMBR
+{
+  background-repeat:repeat-x;
+  background-position:top;
+}
+.LIContainer
+{
+background-image:url(/cfr/images/SocialMedia/ShareWidget/LIGradient.png);
+position:relative;
+height:325px;
+width:450px;
+padding:0;
+}
+.LinkedInTop
+{
+position:relative;
+background-image:url(/cfr/images/SocialMedia/ShareWidget/LinkedIn_Logo60px.png);
+background-repeat:no-repeat;
+background-position:10px 7px;
+background-color:#333;
+padding:3px 0 2px 0;
+width:100%;
+height:60px;
+}
+.LIShareText
+{
+position:relative;
+font-size:26px;
+color:#FFF;
+margin-left:70px;
+top:50%;
+margin-top:-13px;
+}
+.LIContentBar
+{
+position:relative;
+height:85px;
+width:430px;
+padding:10px;
+}
+.LIContentBarMBR
+{
+}
+.LIContentImg, .LIContentImgMBR
+{
+  float:left;
+  margin-right:5px;
+}
+.LIContentImg
+{
+height:85px;
+width:95px;
+}
+.LIContentImgMBR
+{
+  height:64px;
+  width:64px;
+}
+.LIContentTitle, .LIContentTitleMBR
+{
+  font-weight:bold;
+  font-size:12px;
+}
+.LIContentTitle
+{
+position:relative;
+float:left;
+width:330px;
+overflow:hidden;
+word-break:normal;
+}
+.LIContentTitleMBR
+{
+  margin-left: 70px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-top: 5px;
+}
+.LIContentDesc
+{
+position:relative;
+float:left;
+width:330px;
+height:65px;
+overflow:hidden;
+word-break:normal;
+}
+.LIContentDescMBR
+{
+  font-size: 16px;
+  word-wrap: break-word;
+}
+.LinkedInBottom, .LinkedInBottomMBR
+{
+  position:relative;
+  color:#333;
+  font-size:12px;
+}
+.LinkedInBottom
+{
+margin-left:5px;
+padding:3px 0 0 10px;
+width:445px;
+height:80px;
+}
+.LinkedInBottomMBR
+{
+  padding: 5px;
+}
+.SWTextArea, .SWTextAreaMBR
+{
+  height: 70px;
+}
+.SWTextArea
+{
+width:420px;
+margin:3px 0 0 0;
+padding:3px 0 0 0;
+}
+.SWTextAreaMBR
+{
+  width: 100%;
+  resize: none;
+  font-size: 16px;
+}
+.SWSendContainer, .SWSendContainerMBR
+{
+  margin-top:20px;
+}
+.SWSendContainer
+{
+position:relative;
+text-align:right;
+width:420px;
+}
+.SWLIClose
+{
+position:relative;
+background-color:black;
+color:White;
+font-size:12px;
+padding:4px 8px;
+cursor:pointer;
+}
+.SWSend
+{
+position:relative;
+background-color:#24669e;
+color:White;
+font-size:12px;
+padding:4px 8px;
+cursor:pointer;
+margin-right:10px;
+}
+.LIConfirmed
+{
+position:relative;
+text-align:center;
+width:100%;
+height:20px;
+top:100px;
+padding:0;
+color:Black;
+font-size:15px;
+}
+.LIConfirmClose
+{
+font-size:12px;
+padding:3px 8px;
+color:White;
+background-color:black;
+cursor:pointer;
+}
+.LIConfirmCloseContainer
+{
+position:relative;
+width:100%;
+text-align:center;
+top:225px;
+}
+#SWModalPanelOverlayMBR
+{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#SWCopyLink
+{
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  margin: 0px 0 10px 0;
+}
+
+.SWCopyLinkContainer
+{
+  background-image: url(/cfr/images/SocialMedia/ShareWidget/SWButtonBg.png);
+  background-color: #fdfdfd;background-repeat: repeat-x;
+  background-position: 0px bottom;
+  display: inline-block;
+  padding: 2px 8px 2px 4px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid #CCCCCC;
+  vertical-align: top;
+}
+
+.SWCopyLinkContainer .SWCopyLinkText
+{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    color: #333333;
+    font-weight: bold;
+    text-shadow: 0px 1px 0 rgba(255, 255, 255, 0.8);
+    vertical-align: top;
+    display: inline-block;
+    margin: 2px 0 0 0;
+}
+
+.SWCopySuccess
+{
+  position: relative;
+  background:url(/cfr/images/VTS/ActionIconConnection.png) left center / contain no-repeat;
+  background-size: 15px 15px;
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  margin-right: 4px;
+  opacity: 1;
+  vertical-align: top;
+  transition: opacity .5s linear;
+}
+#SWCopyLink[copysuccess="1"] .SWCopySuccess
+{
+  background: url(/cfr/images/VTS/Axiom/Prime/MessageStatusCompleted.svg) center center / contain no-repeat;
+  margin-top:1px;
+}
+
+.PanelSMContainer ~ #SWCopyLink
+{
+  padding: 10px 0;
+  height: auto;
+  border-top: 2px solid #e8e8e8;
+  text-align: center;
+}
+
+.PanelSMContainer ~ #SWCopyLink .SWCopyLinkContainer
+{
+  background:transparent;
+  display: inline-block;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 3px;
+  border:0px;
+  vertical-align: top;
+}
+
+.PanelSMContainer ~ #SWCopyLink  .SWCopySuccess
+{
+  position: relative;
+  background:url(/cfr/images/VTS/Axiom/Prime/MessageStatusCompleted.svg) left center / contain no-repeat;
+  background-size: 18px 18px;
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  margin-right: 4px;
+  opacity: 0;
+  vertical-align: top;
+  transform:translateX(14px);
+  transition:transform ease .25s
+}
+
+.PanelSMContainer ~ #SWCopyLink[copysuccess="1"] .SWCopySuccess
+{
+ transform:translateX(0px);
+ opacity:1;
+}
+
+.PanelSMContainer ~ #SWCopyLink .SWCopyLinkContainer .SWCopyLinkText
+{
+  font-size:14px;
+  text-shadow: none;
+  font-weight:normal;
+  font-family:"Roboto Bold";
+  color:#325F92;
+  transform: translateX(-14px);
+  transition:transform ease .25s;
+}
+
+.PanelSMContainer ~ #SWCopyLink[copysuccess="1"] .SWCopyLinkContainer .SWCopyLinkText
+{
+ transform:translateX(0px);
+}

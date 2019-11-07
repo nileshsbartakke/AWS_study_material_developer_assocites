@@ -1,0 +1,111 @@
+function getQueryVariable(variable) { var query = window.location.search.substring(1); var vars = query.split('&'); for (var i = 0; i < vars.length; i++) { var pair = vars[i].split("="); if (pair[0] == variable) { return pair[1]; } } return (false); }
+var g_iInitialSlide = new Number(getQueryVariable("slideNumber")) - 1;
+
+if (!g_iInitialSlide || g_iInitialSlide < 0)
+  g_iInitialSlide = 0;
+
+var g_oPlayer, g_oView, g_oPresentation, g_oPlaybackController, g_oSlide, g_iTotalStates, g_iCurrentState, g_iCurrentSlide;
+
+window.ispringPresentationConnector =
+ {
+   register: function (player)
+   {
+     g_oPlayer = player;
+
+     g_oPlayer.gestureNavigationEnabled = false;
+
+     g_oPresentation = g_oPlayer.presentation();
+     g_oView = g_oPlayer.view();
+     g_oPlaybackController = g_oView.playbackController();
+
+     g_oView.displayObject().style.visibility = "hidden";
+     g_oPlayer.initialSlideShownEvent().addHandler(onInitialSlideShown);
+   }
+ };
+
+function onInitialSlideShown(iSlideIndex, b, c)
+{
+  document.body.setAttribute("oncontextmenu", "return false;");
+
+  g_oPlaybackController.slideChangeEvent().addHandler(onSlideChangeComplete);
+  g_oPlaybackController.stepChangeEvent().addHandler(onAnimationComplete);
+
+  if (iSlideIndex == g_iInitialSlide)
+    {
+      onSlideChangeComplete(iSlideIndex);
+      onAnimationComplete(0);
+    }
+  else
+    {
+      g_oPlaybackController.gotoSlide(g_iInitialSlide);
+    }
+}
+function onAnimationComplete(iStepIndex)
+{
+  g_iCurrentState = iStepIndex + 1;
+  g_iTotalStates = g_oSlide.animationSteps().count();
+
+  parent.postMessage({"Type":"SlideAnimationComplete", "SlideIndex":g_iCurrentSlide, "CurrentStep":g_iCurrentState, "TotalSteps":g_iTotalStates},"*");
+}
+function onSlideChangeComplete(iSlideIndex)
+{
+  g_oView.displayObject().style.visibility = "";
+
+  g_oSlide = g_oPresentation.slides().getSlide(iSlideIndex);
+  g_iTotalStates = g_oSlide.animationSteps().count();
+  g_iCurrentSlide = iSlideIndex + 1;
+  g_iCurrentState = 1;
+
+  parent.postMessage({"Type":"SlideComplete", "SlideIndex":g_iCurrentSlide, "CurrentStep":g_iCurrentState, "TotalSteps":g_iTotalStates},"*");
+}
+
+function onSlideLoad()
+{
+  parent.postMessage({"Type":"SlideLoaded"},"*");
+}
+window.addEventListener("load",onSlideLoad);
+
+function onReceiveMessage(oEvent)
+{
+  var oMessage = oEvent.data;
+  switch(oMessage.Type)
+    {
+      case "NextStep":
+        g_oPlaybackController.gotoNextStep();
+        break;
+      case "PreviousStep":
+        g_oPlaybackController.gotoPreviousStep();
+        break;
+      case "JumpToStep":
+        g_oPlaybackController.gotoTimestamp(g_iCurrentSlide-1, oMessage.StepIndex-1, 0, true);
+        break;
+      case "JumpToSlide":
+        g_oPlaybackController.gotoTimestamp(oMessage.SlideNumber - 1, 0, 0, true);
+        break;
+      case "Resize":
+        g_oView.resize(oMessage.Width, oMessage.Height);
+        break;
+      case "AllInfo":
+        parent.postMessage({ "Type": "AllInfo", "Slides": getAllSlideInfo() }, "*");
+        break;
+    }
+}
+window.addEventListener("message", onReceiveMessage);
+
+function getAllSlideInfo()
+{
+  var oSlideCollection = g_oPresentation.slides();
+  var iSlideCount = oSlideCollection.count();
+
+  var aoSlideInfo = [];
+  var oData;
+
+  var oSlideInfo;
+  for (var iLup = 0; iLup < iSlideCount; iLup++)
+    {
+      oSlideInfo = oSlideCollection.getSlide(iLup);
+      oData = { slideIndex: iLup, totalSteps: oSlideInfo.animationSteps().count() };
+      aoSlideInfo.push(oData);
+    }
+  return aoSlideInfo;
+}

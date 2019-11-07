@@ -1,0 +1,105 @@
+.AxiomUserMessageModalContentHeader[alert="false"]:before
+{
+  display:none;
+}
+
+.AxiomAudioOptionRow
+{
+  display: flex;
+  margin:1rem 0 0;
+  padding:1rem;
+}
+
+.AxiomAudioOptionRow:hover
+{
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.AxiomIcon 
+{
+  width: 70px;
+  height: 70px;
+  background-color: #abb2b5;
+  border-radius: 2.8rem;
+  margin: 0 .5rem 0 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.AxiomIcon[type=streaming] 
+{
+  background-image: url(/cfr/Images/VTS/Axiom/Assets/StreamingOption.svg);
+}
+
+.AxiomIcon[type=dialin] 
+{
+  background-image: url(/cfr/Images/VTS/Axiom/Assets/DialInOption.svg);
+}
+
+.AxiomAudioOptionDetails .AxiomHeading
+{
+  font-size: 18px;
+  font-family: "Roboto Medium";
+  margin: 0;
+}
+
+.AxiomAudioOptionDetails .AxiomDataText
+{
+  color: #869195;
+  margin: .3rem 0;
+}
+
+.AxiomAudioOptionDetails .AxiomSaveActionButton
+{
+  margin: .5rem 0;
+}
+
+.AxiomAudioOptionDetails .AxiomDataTitle
+{
+  color: #869195;
+  margin: .3rem 0;
+  font-family: "Roboto Medium";
+}
+
+.AxiomAudioOptionDetails
+{
+  margin: 0 1rem;
+}
+
+.AxiomAudioOptionMessage
+{
+  position:absolute;
+  top: 0;
+  bottom:0;
+  left:0;
+  right:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:#343839;
+  flex-direction:column;
+  padding: 2rem;
+}
+
+.AxiomAudioOptionMessageIcon
+{
+  width: 70px;
+  height: 80px;
+  margin: 0 1rem 1rem 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/cfr/Images/VTS/Axiom/Assets/DialInOption.svg);
+  background-size:65px 75px;
+}
+
+.AxiomAudioOptionMessageLabel
+{
+  text-transform:none;
+  font-size: 14px;
+  font-family: "Roboto";
+  color: #e6edf3;
+  max-width: 320px;
+  text-align: center;
+}
+

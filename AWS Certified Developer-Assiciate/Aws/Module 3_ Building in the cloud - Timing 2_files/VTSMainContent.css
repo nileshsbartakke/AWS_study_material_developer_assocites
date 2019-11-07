@@ -1,0 +1,4283 @@
+body{
+ margin:0px 0px 0px 0px;
+ padding:0px 0px 0px 0px;
+ font-family:Arial,Helvetica,sans-serif;
+}
+#OverflowLayer{
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+A
+{
+ color:black;
+ text-align:left;
+}
+A:hover
+{
+ color:#336699;
+ text-align:left;
+}
+
+
+.mainContentFrame{
+ margin-left:5px;
+ overflow:auto;
+ margin-right:5px;
+ background-color:#ffffff;
+}
+
+.mainContentTable{
+ font-size:9pt;
+ color:#000000;
+}
+.toolBarTable{
+ padding-right:5px;
+ padding-left:5px;
+ font-weight:bold;
+ font-size:7pt;
+ color:#0000cc;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ text-align:center;
+}
+.toolbarNotify{
+ float:right;
+ cursor:pointer;
+ background-repeat:no-repeat;
+ padding:4px 4px 4px 35px;
+ margin:4px 4px 0px 0px;
+ color:Black;
+ font-size:12px;
+ font-weight:bold;
+ white-space:nowrap;
+}
+.toolbarNotify1{
+ cursor:pointer;
+ background-repeat:no-repeat;
+ padding:2px 2px 1px 17px;
+ margin:0px 4px 0px 0px;
+ height:18px;
+ color:Black;
+ font-size:10px;
+ font-weight:bold;
+ white-space:nowrap;
+}
+
+.contentTableHeaderInactive
+{
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  color: #333355;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+  padding: 2px 5px 3px 4px;
+}
+
+#ContentTableHeader.contentTableHeaderInactive
+{
+  background-color: #545454;
+  border: 1px solid #CCCCCC;
+  color: #f7f7f7;
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 5px;
+  padding: 2px 0 2px 5px;
+  min-height: 20px;
+}
+
+#MessageBoardDescRow.contentTableHeaderInactive
+{
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  color: #545454;
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 5px;
+  padding: 2px 0 2px 5px;
+}
+
+.contentTableHeaderActive{
+ padding-left:15px;
+ font-weight:bold;
+ font-size:9pt;
+ background-image:url(/cfr/images/VTS/headerRowLeft.gif);
+ cursor:pointer;
+ color:yellow;
+ background-repeat:no-repeat;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ background-color:#003366;
+}
+.contentTableHeaderRight{
+ font-weight:bold;
+ font-size:10pt;
+ color: white;
+ background-color:Gray;
+ width:1px;
+ background-image:none;
+ display:none;
+}
+.panelToggleInactive{
+ border:solid 1px white;
+ cursor:pointer;
+ background-color:#dddddd;
+}
+.panelToggleActive{
+ border:solid 1px yellow;
+ cursor:pointer;
+ background-color:#dddddd;
+}
+.panelColumnHeader{
+ border:solid 1px white;
+ font-weight:normal;
+ font-size:11px;
+ color: #666666; 
+ background-color:#eeeeee;
+ text-align:left;
+	padding: 5px; 
+}
+.panelColumnHeaderCenter{
+ border:solid 1px white;
+ font-weight:normal;
+ font-size:11px;
+	color: #666666; 
+ background-color:#eeeeee;
+ text-align:center;
+	padding: 5px; 
+
+}
+.panelColumnHeaderRight{
+ border:solid 1px white;
+ font-weight:normal;
+ font-size:11px;
+color: #666666; 
+ background-color:#eeeeee;
+ text-align:right;
+	padding: 5px; 
+
+}
+.panelColumnHeaderNoSort{
+	font-weight:normal;
+	font-size:11px;
+	color:black;
+	text-align:left;
+	padding: 5px; 
+	border: 0px outset white; 
+	color: #666666; 
+	font-size: 11px; 
+	margin:0 20px 0 20px;
+	background-color: #EBEBEB; 
+
+}
+
+.panelColumnHeaderNoSort .InputField{
+ font-weight:normal;
+ font-size:11px;
+ color:#000000;
+ padding: 1px;  
+ font-weight: normal; 
+ margin-left: 3px; 
+}
+
+.panelColumnHeaderCenterNoSort{
+ border:solid 1px white;
+ font-weight:normal;
+ font-size:11px;
+ color:#666666;
+ background-color: #EBEBEB; 
+ text-align:center;
+ border:none;
+}
+
+.panelColumnHeaderRightNoSort{
+ border:solid 1px white;
+ font-weight:normal;
+ font-size:11px;
+ color:#666666;
+ background-color: #EBEBEB; 
+ text-align:center;
+ font-weight:bold;
+ border:none;
+}
+.panelColumnHeaderNoSortRight{
+ border:solid 1px white;
+ font-weight:normal;
+ font-size:11px;
+ color:black;
+ background-color: #EBEBEB; 
+ text-align:center;
+ font-weight:bold;
+ border:none;
+}
+
+.contentTableContainer{
+ border-right:solid 1px #0000cc;
+ border-left:solid 1px #0000cc;
+ border-bottom:solid 1px #0000cc;
+ font-weight:normal;
+ font-size:7pt;
+ color:#0000cc;
+ background-color:#fdfdfd;
+}
+.listBlock
+{
+ font-weight:normal;
+ font-size:12px;
+ font-weight:bold;
+ color:#000000;
+ background-color:#f2f2f2;
+}
+.listSubHeader{
+ font-weight:bold;
+ font-size:9pt;
+ color:#000000;
+ background-color:#dbdbdb;
+ text-align:left;
+ border-bottom:solid 1px #000000;
+}
+.listSubHeaderCenter{
+ font-weight:bold;
+ font-size:8pt;
+ color:#000000;
+ background-color:#dbdbdb;
+ text-align:center;
+}
+.panelTable{
+ font-weight:bold;
+ font-size:8pt;
+ color:#0000cc;
+ background-color:#eaeaea;
+}
+.fieldSubmit{
+ font-weight:bold;
+ font-size:8pt;
+ vertical-align:middle;
+ color:black;
+ background-color:#f4f4f4;
+}
+.pageHeader{
+ font-weight:bold;
+ color:#000000;
+ border-bottom:solid 1px #000000;
+ letter-spacing:0px;
+ background-image:none;
+ height:30px;
+ font-size:12px; 
+ text-transform:uppercase; 
+ border-bottom: 1px solid #333333; 
+ line-height: 16pt; 
+ letter-spacing: 0px; 
+ padding-left: 10px; 
+ background-color: #EBEBEB; 
+}
+.pageHeader img{
+ padding-right: 5px; 
+}
+.pageDetail{
+ padding-top:5px;
+ padding-left:15px;
+ font-size:11px;
+ color:#000000;
+}
+.headerUser{
+ font-size:9pt;
+ color:#000000;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.fieldName{
+ font-weight:bold;
+ font-size:11px;
+ color:#676767;
+ vertical-align:top;
+ padding:2px; 
+ background-color:#ffffff;
+}
+.fieldNameSmall{
+
+ font-weight:bold;
+ font-size:7pt;
+ color:#202020;
+ vertical-align:top;
+ background-color:#ffffff;
+}
+.fieldNameBanded{
+
+ font-weight:bold;
+ font-size:11px;
+ color:#676767;
+ padding:2px;
+ vertical-align:top;
+ background-color:#eeeeee;
+}
+.fieldNameSmallBanded{
+
+ font-weight:bold;
+ font-size:7pt;
+ color:#202020;
+ vertical-align:top;
+ background-color:#F6F6F6;
+}
+.fieldValue{
+ font-weight:normal;
+ font-size:11px;
+ color:black;
+ padding:2px;
+ vertical-align:top;
+ background-color:white;
+ text-align:left;
+ 
+}
+.fieldValue img{
+	vertical-align:middle;
+}
+
+.fieldValueHighlight{
+ font-weight:normal;
+ font-size:11px;
+ vertical-align:top;
+ color:#000000;
+ background-color:#e0ffe3;
+ text-align:left;
+}
+.fieldValueBold{
+ font-weight:bold;
+ font-size:11px;
+ vertical-align:top;
+ color:black;
+ background-color:white;
+ text-align:left;
+}
+.fieldValueCenter{
+ font-weight:normal;
+ font-size:11px;
+ vertical-align:top;
+ color:black;
+ background-color:white;
+ text-align:center;
+}
+.fieldValueCenterHighlight{
+ font-weight:normal;
+ font-size:11px;
+ vertical-align:top;
+ color:#000000;
+ background-color:#e0ffe3;
+ text-align:center;
+}
+.fieldValueRight{
+ font-weight:normal;
+ font-size:11px;
+ vertical-align:top;
+ color:black;
+ background-color:white;
+ text-align:right;
+}
+.fieldValueRightHighlight{
+ font-weight:normal;
+ font-size:11px;
+ vertical-align:top;
+ color:#000000;
+ background-color:#e0ffe3;
+ text-align:right;
+}
+.fieldValueBanded{
+ font-weight:normal;
+ font-size:11px;
+ vertical-align:top;
+ color:black;
+ padding:2px;
+ background-color:#f6f6f6;
+ text-align:left;
+}
+.fieldValueBanded img{
+ vertical-align:middle;
+}
+.fieldValueBandedHighlight{
+ font-weight:normal;
+ font-size:11px;
+ vertical-align:top;
+ color:#000000;
+ background-color:#d3ffd9;
+ text-align:left;
+}
+.fieldValueCenterBanded{
+ font-weight:normal;
+ font-size:11px;
+ vertical-align:top;
+ color:black;
+ background-color:#F6F6F6;
+ text-align:center;
+}
+.fieldValueCenterBandedHighlight{
+ font-weight:normal;
+ font-size:11px;
+ vertical-align:top;
+ color:#000000;
+ background-color:#d3ffd9;
+ text-align:center;
+}
+.fieldValueRightBanded{
+ font-weight:normal;
+ font-size:11px;
+ vertical-align:top;
+ color:black;
+ background-color:#F6F6F6;
+ text-align:right;
+}
+.fieldValueRightBandedHighlight{
+ font-weight:normal;
+ font-size:11px;
+ vertical-align:top;
+ color:#000000;
+ background-color:#d3ffd9;
+ text-align:right;
+}
+.fieldHeader{
+ padding:2px;
+ background-color:#dddddd;
+ font-size:12px;
+}
+.fieldHeaderLabel{
+ margin-top:8px;
+ margin-bottom:0px;
+ font-weight:bold;
+ color:#202020;
+}
+.fieldWidgets{
+ float:right;
+ border:solid 1px Silver;
+ padding:2px;
+ height:16px;
+ background-color:White;
+}
+.headerLogo{
+ background-image:url(/cfr/images/vts/headerLogoShowBG.jpg);
+ background-repeat:no-repeat;
+ text-align:center; 
+ width:202px;
+}
+.headerUser{
+ font-weight:bold;
+ font-size:7pt;
+ color:#000000;
+ text-align:left;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.TopBarBackground{
+ background-image:url(/cfr/images/vts/TopMenuBarHeaderBG.gif);
+}   
+.TopBarIcon{
+ text-align:center;
+ cursor:pointer;
+}
+.TopBarIconCell{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:7pt;
+ font-weight:normal;
+ color:black;
+ text-align:center;
+ vertical-align:top;
+}
+.marquee{
+ font-size:16px;
+ color:#fff;
+ margin:5px 0 0 0;
+ vertical-align:middle;
+}
+.marqueeBackground{
+ background-color:#2f76bc;
+}
+.showMenuBar{
+
+ font-weight:bold;
+ font-size:9pt;
+ color:white;
+ background-color:#bdbdbd;
+}
+.Save{
+/*  border:none;
+ font-weight:bold;
+ font-size:11px;
+ color:#ffffff;
+ background-color:#777777;
+ padding:4px;
+  margin:0 5px 0 0;
+*/
+  background-color: #d1d1d1;
+  background-image: url(/cfr/Images/VTS/Express/ButtonBGTile.jpg);
+  background-repeat: repeat-x;
+  border: 1px solid #999999;
+  color: Black;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  font-family:arial;
+  padding: 3px 5px;
+  text-decoration: none;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+
+.SaveHighlight{
+  background-color: #000000;
+  background-image: url(/cfr/Images/VTS/Express/ButtonBGTileHighlight.jpg);
+  background-repeat: repeat-x;
+  border: 1px solid #000000;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  font-family:arial;
+  padding: 3px 5px;
+  text-decoration: none;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+.SaveDown{
+ border:outset 3px #999999;
+ font-weight:bold;
+ font-size:8pt;
+ cursor:pointer;
+ color:#003366;
+ background-color:#ffcc00;
+}
+
+.Save[disabled=disabled]{
+  color:Silver;
+}
+
+.InputField{
+ font-weight:normal;
+ font-size:11px;
+ color:#000000;
+}
+td select.InputField{
+ padding:1px;
+}
+td input.InputField{
+ padding:2px;
+}
+div.EditPage textarea{
+ padding:2px;
+ width:100%;
+ box-sizing:border-box;
+}
+#EventVCalendarLocation{
+ width:100%;
+ box-sizing:border-box;
+}
+.FormTextAreaControl{
+ font-weight:normal;
+ font-size:8pt;
+ color:#000000;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.mainContentLink{
+ font-weight:normal;
+ font-size:12px;
+ color:#000000;
+ text-decoration:underline;
+}
+.mainContentLink:hover{
+ font-weight:normal;
+ font-size:12px;
+ color:#777777;
+ text-decoration:none;
+}
+#ConfigurationLink{
+  display: block;
+  float: right;
+  margin: 0 5px 3px 0;
+
+}
+.mainContentLinkBold{
+ font-weight:bold;
+ font-size:8pt;
+ color:#f7f7f7;
+ text-decoration:underline;
+ margin:2px 0px;
+ display:block;
+}
+html body div table#HeaderTable.mainContentTable tbody tr#ContentTableHeader.contentTableHeaderInactive td span#ConfigurationLink a.mainContentLinkBold
+div.mainContentLinkBold{
+ cursor:pointer;
+
+}
+a.mainContentLinkBold img{
+  float:left;
+}
+.mainContentLinkBold:hover{
+ font-weight:bold;
+ font-size:8pt;
+ color:#ffffff;
+}
+.mainContentLinkSmall{
+ font-weight:bold;
+ font-size:6pt;
+ color:#0000cc;
+}
+
+.MessageCenterMenu{
+ background-image:url(/cfr/images/VTS/tabBG_Blue.gif); 
+ background:no-repeat;
+ background-color:#f5f2df;
+ font-weight:normal;
+ font-size:8pt;
+ color:#000000;
+ margin:7px;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.MessageCenterMenuSection{
+ font-weight:bold;
+ font-size:9pt;
+ color:#000000;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ padding-left:3px;
+}
+.MessageCenterMenuItem{
+ font-weight:normal;
+ font-size:8pt;
+ color:#000000;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-weight:bold;
+}
+.MessageCenterActionBtn{
+ color:#ffffff;
+ background-color:#003366;
+ width:80px;
+ font-weight:normal;
+ font-size:8pt;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.MessageCenterActionBtnHighlight{
+ color:#ffcc00;
+ background-color:#003366;
+ width:80px;
+ font-weight:normal;
+ font-size:8pt;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ cursor:pointer;
+}
+.MailboxRow{
+ color:black;
+ background-color:white;
+ font-weight:normal;
+ font-size:8pt;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ cursor:default;
+}
+.MailboxRowUnRead{
+ color:black;
+ background-color:white;
+ font-weight:bold;
+ font-size:8pt;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ cursor:default;
+}
+.MailboxRowHighlight{
+ color:white;
+ background-color:#2F76BC;
+ font-weight:normal;
+ font-size:8pt;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ cursor:default;
+}
+.MailboxRowHighlightCenter{
+ color:white;
+ background-color:#4380bb;
+ font-weight:normal;
+ font-size:8pt;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ cursor:default;
+ text-align:center;
+}
+.MailboxRowUnReadHighlight{
+ color:white;
+ background-color:#4380bb;
+ font-weight:bold;
+ font-size:8pt;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ cursor:default;
+}
+.MailMessageActionBar{
+ background-color:#eeeeee;
+ color:black;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ font-weight:normal;
+}
+.MailMessageSubject {
+ color:black;
+ font-size:12px;
+ font-weight:bold;
+ padding:4px 0px 0px 8px;
+ 
+}
+.MailMessageText {
+ color:black;
+ background-color:white;
+ font-size:12px;
+ font-weight:bold;
+}
+.MailMessageRepliedText{
+ color:black;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ font-weight:normal;
+}
+.tabExhibit{
+ background-image:url(/cfr/images/VTS/tabBG_Blue.gif); 
+ background:no-repeat;
+ background-color:transparent;
+}
+.tab{
+ border:solid 1px #cccccc;
+ padding-left:5px; 
+ background-image:none; 
+ background-color:#dddddd;
+ font-weight:normal;
+ font-size:11px;
+ color:#000000;
+ text-transform:uppercase;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ height:22px;
+ vertical-align:middle;
+ cursor:pointer;
+}
+.tabHighlight{
+ border:solid 1px #666666;
+ padding-left:5px; 
+ background-image:none; 
+ background-color:#414141;
+ font-weight:normal;
+ font-size:11px;
+ color:#d0d0d0;
+ text-transform:uppercase;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ height:22px;
+ vertical-align:middle;
+ cursor:pointer;
+
+}
+.tabDown{
+ border:outset 1px #999999;
+ font-weight:normal;
+ font-size:8pt;
+ color:#ffffff;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ background-color:#ffcc00;
+ cursor:pointer;
+ height:22px;
+ vertical-align:middle;
+}
+.tabList{
+ font-weight:bold;
+ font-size:7pt;
+ color:#000000;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.ChatRoomBackground{
+ text-align:left;
+ vertical-align:top;
+ font-size:8pt;
+ color:#000000;
+ background-color:#fafad2;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ text-decoration:none;
+}
+.ChatHeader{
+ height:26px;
+ text-align:left;
+ vertical-align:top;
+ font-size:10pt;
+ color:#000000;
+ background-color:#ffe4b5;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ text-decoration:none;
+}
+.ChatError{
+ position:relative;
+ font-family:Verdana,Arial,Helvetica,serif;
+ font-size:12pt;
+ font-weight:bold;
+ border:solid 1px black;
+ width:330px;
+ height:150px;
+ background-color:#eeeeee;
+}
+.ChatErrorMessage{
+ text-align:left;
+}
+.ChatErrorText{
+ font-family:Arial,Helvetica,serif;
+ font-size:8pt;
+ font-weight:normal;
+ color:#333333;
+ display:inline;
+ width:100%;
+ text-align:left;
+}
+.ChatErrorImage{
+ position:relative;
+ top:10px;
+}
+.ChatErrorBody{
+ margin:5px;
+ background-color:white;
+}
+.MsgHeader{
+ font-size:8pt;
+ font-weight:bold;
+ vertical-align:middle;
+ text-align:left;
+ color:white;
+ background-color:#4682b4;
+ text-decoration:none;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.MsgBand1{
+ font-weight:normal;
+ font-size:8pt;
+ vertical-align:top;
+ color:#000000;
+ background-color:#ffffff;
+ text-align:left;
+ padding-left:5px;
+}
+.MsgBand2{
+ font-weight:normal;
+ font-size:8pt;
+ vertical-align:top;
+ color:#000000;
+ background-color:#f6f6f6;
+ text-align:left;
+ padding-left:5px;
+}
+.MsgSubjectHeader{
+ height:26px;
+ text-align:left;
+ vertical-align:middle;
+ font-size:12pt;
+ color:#000000;
+ background-color:transparent;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ text-decoration:none;
+}
+.InfoFooter{
+ color:black;
+ height:16px;
+ background-color:white;
+ vertical-align:top;
+ text-align:left;
+ text-decoration:none;
+}
+.SearchRow{
+ height:35px;
+ text-align:left;
+ vertical-align:bottom;
+ font-size:7pt;
+ color:#000000;
+ background-color:#ffffff;
+ width:500px;
+ display:none;
+}
+.OrigPoster{
+ font-size:8pt;
+ color:Gray;
+ height:16px;
+ background-color:transparent;
+ vertical-align:top;
+ text-align:left;
+ text-decoration:none;
+}
+.BoardHeader{
+ height:26px;
+ text-align:left;
+ vertical-align:top;
+ font-size:10pt;
+ color:#000000;
+ background-color:#ffe4b5;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ text-decoration:none;
+}
+.BoardOptions{
+ height:26px;
+ text-align:center;
+ vertical-align:top;
+ font-size:8pt;
+ color:#000000;
+ background-color:#ffe4b5;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ text-decoration:none;
+}
+.MsgNavBar{
+ height:26px;
+ text-align:left;
+ font-size:9pt;
+ color:#000000;
+ background-color:#faf7e6;
+ text-decoration:none;
+ font-weight:bold;
+}
+.FontSample{
+ background-color:#ffffff;
+ text-align:center;
+ vertical-align:middle;
+}
+.OldTableBKExtraLight{
+ border:outset 5px white;
+ background-color:white;
+}
+.TableBKExtraLight{
+ background-color:#d1cba8;
+ border:outset 2px #cccccc;
+ font-size:8pt;
+ padding:3px;
+}
+.OldTableBKLight{
+ border:outset 3px #053c6d;
+ background-color:white;
+ font-size:8pt;
+}
+.TableBKLight{
+ background-color:silver;
+ font-size:8pt;
+ padding:3px;
+}
+.OldTableBKMedium{
+ border:outset 3px #053c6d;
+ font-size:8pt;
+ background-color:Gray;
+}
+.TableBKMedium{
+ font-size:8pt;
+ background-color:silver;
+}
+.SeparatorExtraLight{
+ color:#dcdcdc;
+}
+.SeparatorLight{
+ color:Silver;
+}
+.SeparatorMedium{
+ color:Gray;
+}
+.InvalidPassword{
+ height:26px;
+ text-align:center;
+ font-size:10pt;
+ text-decoration:none;
+ color:#ff0000;
+}
+.FormControl{
+ font-size:8pt;
+ color:#000000;
+ height:26px;
+ text-decoration:none;
+}
+.FormEditControl{
+ font-size:8pt;
+ color:#000000;
+ height:26px;
+ text-align:left;
+ text-decoration:none;
+}
+.FormTextAreaControl{
+ font-size:8pt;
+ color:#000000;
+ text-align:left;
+ text-decoration:none;
+}
+.wizardHeader{
+ border-bottom:solid 1px #000000;
+ background-repeat:no-repeat;
+ letter-spacing:0px;
+ padding-left:10px;
+ font-weight:bold;
+ font-size:10pt;
+ color:#003366;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ background-color:#ffcc33;
+}
+.TreeContainer{
+ font-size:8pt;
+ color:black;
+ background-color:white;
+ text-decoration:none;
+}
+.TreeContainerTable{
+ vertical-align:top;
+ font-size:8pt;
+ color:black;
+ background-color:white;
+ text-decoration:none;
+ cursor:default;
+}
+.TreeTextNode{
+ vertical-align:middle;
+ font-size:8pt;
+ color:black;
+ text-decoration:none;
+ cursor:default;
+}
+.SelectedTreeText{
+ color:#ffffff;
+ background-color:#000080;
+}
+.ExpandBtnImg{
+ width:22px;
+ height:22px;
+ cursor:pointer;
+}
+.ExpandCell{
+ width:22px;
+ background-image:url(/cfr/images/TreeConnector.gif);
+ background-repeat:repeat-y;
+ vertical-align:top;
+}
+.ExpandCellLast{
+ width:22px;
+ background-image:url(/cfr/images/TreeConnectorLast.gif);
+ background-repeat:no-repeat;
+ vertical-align:top;
+}
+.BlankExpandCell{
+ width:22px;
+ vertical-align:top;
+}
+.TreeToolTipWindowHeader{
+ border:solid 1px #bbbb88;
+ background-color:#8b4513;
+ font-size:8pt;
+ color:white;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ text-align:center;
+ text-decoration:none;
+}
+.TreeToolTipWindow{
+ border:solid 1px #bbbb88;
+ background-color:#eeeecc;
+ font-size:8pt;
+ color:black;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ text-decoration:none;
+}
+.PivotTreeTitleBar{
+ font-size:8pt;
+ font-family:Tahoma,Geneva,sans-serif;
+ color:#003366;
+ background-color:#003366;
+ vertical-align:middle;
+ text-align:left
+}
+.PivotTreeTitleBarName{
+ font-size:8pt;
+ font-family:Tahoma,Geneva,sans-serif;
+ color:white;
+ vertical-align:middle;
+ text-align:left
+}
+.PivotTreeTitleBarSubHead{
+ font-size:8pt;
+ font-family:Tahoma,Geneva,sans-serif;
+ color:#ffffff;
+ vertical-align:middle;
+ text-align:center
+}
+.PivotTreeTitleBarEditField{
+ font-size:8pt;
+ font-family:Tahoma,Geneva,sans-serif;
+ color:black;
+ vertical-align:middle;
+ text-align:left
+}
+.StandardLink{
+ color:white;
+ font-size:8pt;
+ text-decoration:none;
+ vertical-align:middle;
+ text-decoration:underline;
+}
+.StandardLink:hover{
+ color:yellow;
+ text-decoration:underline;
+ vertical-align:middle;
+}
+.BoothUserListWnd{
+ background-color:white;
+ height:90px;
+}
+.BoothUserListContainer{
+ background-color:white;
+ color:black;
+ font-size:8pt;
+ font-weight:normal;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ text-decoration:none;
+}
+.BoothUserList{
+ background-color:#ffcc00;
+}
+.BoothUserListItem{
+ border:solid 2px white;
+ background-color:white;
+ color:black;
+ cursor:pointer;
+ text-align:center;
+ vertical-align:top;
+ width:110px;
+}
+.BoothUserListItemHighlight{
+ border:solid 2px #ffcc00;
+ background-color:white;
+ color:black;
+ cursor:pointer;
+ text-align:center;
+ vertical-align:top;
+ width:110px;
+}
+.BoothUserListItemInRepChat{
+ border:solid 2px #ee0000;
+ background-color:#eeeecc;
+ color:black;
+ cursor:pointer;
+ text-align:center;
+ vertical-align:top;
+ width:110px;
+}
+
+.BoothUserListItemInRepChatHighlight{
+ border:solid 2px #ff0000;
+ background-color:#eeeecc;
+ color:black;
+ cursor:pointer;
+ text-align:center;
+ vertical-align:top;
+ width:110px;
+}
+.BoothUserListItemRep{
+ border:solid 2px white;
+ background-color:white;
+ color:black;
+ cursor:pointer;
+ text-align:center;
+ vertical-align:top;
+ width:110px;
+ -moz-outline-color:#ffcc00;
+ -moz-outline-width:1px;
+}
+.BoothUserListItemRepOffline{
+ border:solid 2px white;
+ background-color:white;
+ color:black;
+ cursor:pointer;
+ text-align:center;
+ vertical-align:top;
+ width:110px;
+ filter:alpha(opacity=35);
+ opacity:0.35;
+ -moz-opacity:0.35;
+ -khtml-opacity:0.35;
+}
+.BoothShowHideText{
+ font-weight:bold;
+ font-size:7pt;
+ color:#ffffff;
+}
+.BoothTitle{
+ padding-left:25px;
+ font-weight:bold;
+ font-size:12pt;
+ color:#ffffff;
+}
+.TabStrip{
+ border-left:1px solid white;
+ border-top:1px solid white;
+ border-right:1px solid #003366;
+ border-bottom:0px solid #003366;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ font-weight:normal;
+ height:19px;
+ background-color:#cccccc;
+ color:black;
+ text-align:center;
+ vertical-align:middle;
+ cursor:pointer;
+ padding-right:8px;
+ padding-left:8px;
+}
+.TabStripBottomBar{
+ position:absolute;
+ left:0px;
+ top:-10px;
+ height:4px;
+ width:200px;
+ background-color:#ffcc00;
+}
+.TabStripBottomBarLine{
+ color:#003366;
+}
+.TabStripCurrent{
+ border-left:1px solid white;
+ border-top:1px solid white;
+ border-right:1px solid #003366;
+ border-bottom:0px solid #003366;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ font-weight:bold;
+ height:23px;
+ background-color:#ffcc00;
+ color:black;
+ text-align:center;
+ vertical-align:middle;
+ cursor:pointer;
+ padding-right:8px;
+ padding-left:8px;
+}
+.eventComponentBody{
+ padding:0px 0px 0px 0px;
+ margin:0px 0px 0px 0px;
+ scrollbar-face-color:#cccccc;
+ scrollbar-highlight-color:#ffffff;
+ scrollbar-shadow-color:#003366;
+ scrollbar-3dlight-color:#cccccc;
+ scrollbar-arrow-color:#003366;
+ scrollbar-track-color:#ffffff;
+ scrollbar-darkshadow-color:#000000;
+ scrollbar-base-color:#cccccc;
+}
+.eventTabHeaderBar{
+ border:solid 1px black;
+ padding-left:10px;
+ font-weight:bold;
+ font-size:10pt;
+ background-image:url(/cfr/images/vts/EventHeaderBG.gif);
+ color:#ffffff;
+ background-repeat:repeat-x;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ background-color:#dedede;
+}
+.eventMainTabHeaderBar{
+ font-weight:bold;
+ font-size:11pt;
+ background-image:url(/cfr/images/vts/EventHeaderGrayBG.gif);
+ background-repeat:repeat;
+}
+.eventSectionContainer{
+ border:1px solid #003366;
+ width:100%;
+}
+.eventBodyBold{
+ font-weight:bold;
+ font-size:8pt;
+ color:#000000;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.eventBodyBoldLabel{
+ font-weight:bold;
+ font-size:8pt;
+ color:#000000;
+ background-color:#cccccc;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.eventSpeakerOnline0{
+ font-weight:bold;
+ font-size:8pt;
+ color:#c0c0c0;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ cursor:pointer;
+}
+.eventSpeakerOnline1{
+ font-weight:bold;
+ font-size:8pt;
+ color:#339933;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ cursor:pointer;
+}
+.SpeakerBioText{
+ font-weight:normal;
+ font-size:8pt;
+ color:black;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.eventBodyHeader{
+ font-weight:bold;
+ font-size:10pt;
+ color:#003366;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.eventQuestionEntryBackground{
+ font-weight:bold;
+ font-size:8pt;
+ background-image:url(/cfr/images/vts/EventHeaderGrayBG.gif);
+ background-repeat:repeat;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ color:#003366;
+}
+.eventQuestionEntrySubmittedText{
+ font-weight:bold;
+ font-size:8pt;
+ color:#003366;
+}
+.EventHeaderLogo{
+ width:201px;
+}
+
+.EventGenericQuestionQueueLink{
+ font-weight:normal;
+ font-size:8pt;
+ color:#000000;
+ text-decoration:underline;
+}
+.EventGenericQuestionQueueLink:hover{
+ font-weight:normal;
+ font-size:8pt;
+ color:#336699;
+ text-decoration:none;
+}
+.EventGenericAnswersLink{
+ font-weight:normal;
+ font-size:8pt;
+ color:#000000;
+ text-decoration:underline;
+}
+.EventGenericAnswersLink:hover{
+ font-weight:normal;
+ font-size:8pt;
+ color:#336699;
+ text-decoration:none;
+}
+
+.eventHeaderAttendeeCount{
+ font-weight:normal;
+ font-size:8pt;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ color:#000000;
+ text-align:center;
+}
+.eventScheduleDisplay{
+ font-weight:normal;
+ font-size:8pt;
+ vertical-align:top;
+ color:#000000;
+ background-color:#ffffff;
+ text-align:left;
+}
+.eventScheduleDisplayBanded{
+ font-weight:normal;
+ font-size:8pt;
+ vertical-align:top;
+ color:#000000;
+ background-color:#f6f6f6;
+ text-align:left;
+}
+.eventScheduleDisplayPastEvent{
+ font-weight:normal;
+ font-size:8pt;
+ vertical-align:top;
+ color:#cccccc;
+ background-color:#ffffff;
+ text-align:left;
+}
+.eventScheduleDisplayPastEventBanded{
+ font-weight:normal;
+ font-size:8pt;
+ vertical-align:top;
+ color:#cccccc;
+ background-color:#f6f6f6;
+ text-align:left;
+}
+.EventDate {
+ font-weight:bold;
+ font-size:10pt;
+ vertical-align:top;
+ color:#0000cc;
+ background-color:#ffffff;
+ text-align:left;
+}
+.EventTitle {
+ font-weight:bold;
+ font-size:12pt;
+ vertical-align:top;
+ color:#000000;
+ background-color:#ffffff;
+ text-align:left;
+
+}
+.eventButton {
+ background-color:#0033CC;
+ color:#ffffff;
+ font-weight:bold;
+}
+.EventAbstract {
+ font-size:10px;
+}
+.EventSpeakerText {
+ font-weight:bold;
+ font-size:8pt;
+ color:#000000;
+}
+.EventOuterTable{
+ border:solid 1px black;
+}
+.EventSurveyBody{
+ margin:5px;
+ background-color:white;
+}
+.EventSurveyTable{
+ font-weight:normal;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ vertical-align:top;
+ color:black;
+ background-color:white;
+ text-align:left;
+ width:100%;
+}
+.EventSurveyHeader{
+ font-weight:bold;
+ font-size:12pt;
+ border-bottom:solid 1px silver;
+ color:#333333;
+}
+.EventSurveySubmitButton{
+}
+.EventSurveyQuestion{
+ font-weight:bold;
+ font-size:10pt;
+ padding-top:15px;
+}
+.EventSurveyAnswer{
+ font-weight:normal;
+ font-size:8pt;
+}
+.EventSurveyCommentLabel{
+ font-size:8pt;
+ font-weight:bold;
+}
+.EventSurveyCommentEntry{
+ font-size:8pt;
+ font-weight:normal;
+ height:40px;
+}
+.EventSurveyResponseBody{
+ margin:5px;
+ background-color:white;
+}
+.EventSurveyResponseMsgTable{
+}
+.EventSurveyResponseMsgHeader{
+ font-weight:bold;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:10pt;
+}
+.EventSurveyResponseMsgContent{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ padding-bottom:20px;
+}
+.EventSurveyResultsTable{
+ text-align:left;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ background-color:#ffffff;
+ width:100%;
+ padding-left:5px;
+}
+.EventSurveyResultsHeading{
+ font-size:9pt;
+ font-weight:bold;
+ border-bottom:1px solid black;
+ color:#666666;
+}
+.EventSurveyResultsQuestionText{
+ font-size:9pt;
+ font-weight:bold;
+ padding:3px;
+ padding-top:20px;
+}
+.EventSurveyResultsQuestionResponses{
+ font-size:7pt;
+ font-family:Arial,Helvetica,serif;
+ vertical-align:bottom;
+ border-bottom:1px solid black;
+ padding:3px;
+ padding-bottom:1px;
+}
+.EventSurveyResultsQuestionTotalLabelLeft{
+ text-align:left;
+ background-color:silver;
+ font-style:italic;
+ padding:3px;
+}
+.EventSurveyResultsQuestionTotalLabel{
+ text-align:right;
+ font-weight:bold;
+ background-color:silver;
+ padding:3px;
+}
+.EventSurveyResultsQuestionTotalValue{
+ text-align:center;
+ font-size:9pt;
+ font-weight:bold;
+ background-color:silver;
+ padding:3px;
+}
+.EventSurveyResultsAnswerText{
+ vertical-align:top;
+ padding:3px;
+ padding-left:10px;
+}
+.EventSurveyResultsAnswerGraph{
+ vertical-align:top;
+}
+.EventSurveyResultsAnswerGraphBar{
+ border:outset 2px red;
+}
+.EventSurveyResultsAnswerPct{
+ color:red;
+ font-size:8pt;
+}
+.EventSurveyResultsAnswerValue{
+ text-align:center;
+ vertical-align:top;
+ font-size:8pt;
+ padding:3px;
+}
+.EventSurveyResultsSurveyTotalLabel{
+ background-color:#e0e0e0;
+ text-align:right;
+ display:none;
+}
+.EventSurveyResultsSurveyTotalValue{
+ background-color:#e0e0e0;
+ text-align:right;
+ display:none;
+}
+.EventSurveyResultsRow
+{
+  background-color:#ffffff;
+}
+.EventSurveyResultsRowBanded
+{
+  background-color:#eeeeee;
+}
+.EventSurveyResultsBar
+{
+  background-color:#4682b4;
+  height:15px;
+}
+.EventSurveyResultsOuterBar
+{
+  background-color:silver;
+}
+.EventSurveyResultsSelected
+{
+  color:green;
+}
+.TaskBarLabel{
+ border:outset 1px white;
+ font-weight:normal;
+ font-size:8pt;
+ color:black;
+ background-color:silver;
+ height:24px;
+ text-align:left;
+ overflow:hidden;
+}
+.TaskBarItem{
+ border:outset 2px white;
+ font-weight:normal;
+ font-size:8pt;
+ color:black;
+ background-color:silver;
+ height:22px;
+ text-align:left;
+ overflow:hidden;
+ cursor:pointer;
+}
+.TaskBarItemClicked{
+ border:inset 2px #dedede;
+ font-size:8pt;
+ font-weight:normal;
+ color:black;
+ background-color:#dedede;
+ height:22px;
+ text-align:left;
+ overflow:hidden;
+ cursor:pointer;
+}
+.TaskBarItemText{
+ font-weight:normal;
+ font-size:8pt;
+ color:black;
+ background-color:silver;
+ height:22px;
+ text-align:left;
+ overflow:hidden;
+ cursor:pointer;
+}
+.TaskBarItemTextClicked{
+ font-size:8pt;
+ font-weight:normal;
+ color:black;
+ background-color:#dedede;
+ height:22px;
+ text-align:left;
+ overflow:hidden;
+ cursor:pointer;
+}
+.TaskBarTrailer{
+ border:outset 1px white;
+ font-weight:normal;
+ font-size:8pt;
+ color:black;
+ background-color:silver;
+ height:24px;
+ text-align:left;
+ overflow:hidden;
+}
+.TaskBarItemFlash{
+ font-size:8pt;
+ font-weight:normal;
+ color:white;
+ background-color:activecaption;
+ height:22px;
+ text-align:left;
+ overflow:hidden;
+ cursor:pointer;
+}
+.PrivateChatMessageEntry{
+ font-size:8pt;
+ color:#000000;
+ background-color:white;
+ text-decoration:none;
+}
+.PrivateChatNotifyNewMessage{
+ background-color:#ff8c00;
+ text-align:left;
+ vertical-align:top;
+ font-size:8pt;
+ color:#000000;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ text-decoration:none;
+}
+.PrizeHeader {
+ border-left:outset 2px white;
+ border-top:outset 2px white;
+ border-bottom:outset 2px white;
+ font-size:14px;
+ font-weight:bold;
+ color:black;
+ background-color:#dedede;
+ text-align:left;
+ font-weight:normal;
+ padding-left:5px;
+}
+.PrizePoints {
+ font-size:16px;
+ font-weight:bold;
+ vertical-align:top;
+}
+.PrizeDetailTable {
+ font-size:12px;
+ font-weight:bold;
+ padding-left:20px;
+ border:1px solid #999999;
+ width:95%;
+ height:20px;
+}
+.PrizeDetailHeader {
+ font-size:10px;
+ font-weight:normal;
+ padding-left:20px;
+ border:solid 1px #999999;
+ background-color:#003366;
+ text-align:center;
+ color:white;
+}
+.PrizeDisplayHtml {
+ display:inline;
+}
+.PrizeDisplayTable{
+ text-align:left;
+ font-size:14px;
+ vertical-align:top;
+}
+.PrizeTitleDetailHeader{
+
+ font-size:13px;
+ vertical-align:top;
+}
+.NoEntryHeader{
+ font-weight:bold;
+ font-size:18px;
+ color:#ff9900;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.NoEntryMessage{
+ font-weight:bold;
+ font-size:18px;
+ color:#ff9900;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.NoEntryMessageBlack{
+ font-weight:bold;
+ font-size:18px;
+ color:black;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.NoEntryMessageSmall{
+ font-weight:bold;
+ font-size:12px;
+ color:black;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.NoEntryCode{
+ background-color:#eeeeee;
+ color:#eeeeee;
+ font-size:6pt;
+}
+.BoothHoursStaffedTable{
+ background-color:#4682b4;
+}
+.BoothHoursStaffedDayHdr{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ font-weight:normal;
+ background-color:#4682b4;
+ text-align:center;
+ vertical-align:top;
+ color:white;
+}
+.BoothHoursStaffedTimes{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ font-weight:normal;
+ background-color:white;
+ text-align:center;
+ vertical-align:top;
+ color:black;
+}
+.GiveawayListEntryBtn{
+ background-image:url(/cfr/Images/VTS/ManualGiveawayBtnBkg.png);
+ width:136px;
+ height:38px;
+ font-size:9pt;
+ font-weight:bold;
+ text-decoration:none;
+ color:#696969;
+ cursor:pointer;
+}
+.GiveawayListEntryText{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ text-align:center;
+}
+.GiveawayListFieldValue{
+ font-weight:normal;
+ font-size:8pt;
+ vertical-align:top;
+ color:#000000;
+ background-color:#ffffff;
+ text-align:left;
+}
+.GiveawayListFieldValueBanded{
+ font-weight:normal;
+ font-size:8pt;
+ vertical-align:top;
+ color:#000000;
+ background-color:#f6f6f6;
+ text-align:left;
+}
+.GiveawayListBlock{
+ font-weight:normal;
+ font-size:8pt;
+ color:#0000cc;
+ background-color:#dddddd;
+}
+.GiveawayListFieldLabel{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-weight:bold;
+ font-size:9pt;
+ color:Blue;
+ vertical-align:top;
+ background-color:#dddddd;
+}
+.GiveawayListFieldName{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-weight:bold;
+ font-size:8pt;
+ color:#000000;
+ vertical-align:top;
+ background-color:#ffffff;
+}
+.GiveawayListFieldNameBanded{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-weight:bold;
+ font-size:8pt;
+ color:#000000;
+ vertical-align:top;
+ background-color:#f6f6f6;
+}
+.ShowArchived{
+ background-color:#990000;
+}
+.PresentationTrack{
+ font-size:14px;
+ font-weight:bold;
+ color:#ffffff;
+ background-color:#3366CC;
+ border-top:3px outset #eeeeee;
+ border-right:3px outset #CCCCCC;
+ border-bottom:3px outset #CCCCCC;
+ border-left:3px outset #eeeeee;
+}
+.PresentationBody{
+ font-size:10px;
+}
+.PresentationBodyWhite{
+ font-size:10px;
+ color:#ffffff;
+}
+.PresentationBodyBold{
+ font-size:11px;
+ font-weight:bold;
+}
+.PresentationSession{
+ font-size:13px;
+ font-weight:bold;
+ padding-left:0px;
+ background-color:#eeeeee;
+}
+.PresentationSessionDetail{
+ font-size:12px;
+ font-weight:bold;
+ padding-left:20px;
+}
+.PresentationSessionHeader{
+ font-size:10px;
+ background-color:#eeeeee;
+}
+.PresentationTime{
+ font-size:14px;
+ font-weight:bold;
+ color:#3366CC;
+ background-color:#dedede;
+}
+.DynamicTableTitle{
+ font-weight:bold;
+ font-size:12px;
+ filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#6F8DB9', EndColorStr='#003366');
+ color:#ffffff;
+ background-color:#003366;
+ text-decoration:none
+}
+.ListTitle{
+ font-weight:bold;
+ font-size:12px;
+ filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#F3E2A7', EndColorStr='#FFB300');
+ color:#003366;
+ background-color:#ffcc66;
+ text-decoration:none
+}
+.SearchButton{
+ font-weight:bold;
+ font-size:13px;
+ text-decoration:underline;
+ filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#cccccc', EndColorStr='#eeeeee');
+ color:#000000;
+ background-color:#ffcc66;
+ text-decoration:none;
+ height:40px;
+ width:100%;
+}
+.SearchButtonResults{
+ font-weight:bold;
+ font-size:13px;
+ filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#003366', EndColorStr='#0000cc');
+ color:#ffcc00;
+ background-color:#ffffff;
+ text-decoration:none;
+ height:25px;
+ border:3px outset #ffcc00;
+}
+.SearchButtonResultsNew{
+ font-weight:bold;
+ font-size:13px;
+ text-decoration:underline;
+ filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#cccccc', EndColorStr='#eeeeee');
+ color:#000000;
+ background-color:#ffcc66;
+ text-decoration:none;
+}
+.HeaderBar{
+ font-size:12px;
+ font-weight:bold;
+ color:#ffffff;
+ background-color:#003366;
+}
+.EducationCenterOuterTable{
+ font-size:12px;
+ font-weight:bold;
+ color:#ffffff;
+ border:thin solid #003366;
+}
+.HeaderSubBar{
+ font-size:12px;
+ font-weight:bold;
+ color:#000000;
+ background-color:#cccccc;
+ text-align:center;
+}
+.PresScheduleList{
+ font-size:12px;
+ color:#000000;
+}
+.PresScheduleListBanded{
+ font-size:12px;
+ color:#000000;
+ background-color:#eeeeee;
+}
+.PresSpeakerBio{
+ font-size:10px;
+ background-color:#eeeeee;
+}
+A.back:link {color:#ffffff; text-decoration:none;}
+A.back:visited {color:#ffffff; text-decoration:none;}
+A.back:active {color:#ffffff; text-decoration:none;}
+A.back:hover {color:#ffcc00; text-decoration:underline; }
+A.top:link {color:#000000; text-decoration:none;}
+A.top:visited {color:#000000; text-decoration:none;}
+A.top:active {color:#000000; text-decoration:none;}
+A.top:hover {color:#000000; text-decoration:underline; font-weight:bold; }
+A.navlink:link {color:#000000; text-decoration:none;}
+A.navlink:visited {color:#000000; text-decoration:none;}
+A.navlink:active {color:#000000; text-decoration:none;}
+A.navlink:hover {color:#000000; text-decoration:underline; }
+.VCardDIV{
+ position:relative;
+ top:0px;
+ left:0px;
+ width:300px;
+ background-color:#fffff0;
+ border-top:solid 1px black;
+ border-left:solid 1px black;
+ border-bottom:outset 3px darkgrey;
+ border-right:outset 3px darkgrey;
+}
+.VCardTable{
+ background-color:#fffff0;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:10pt;
+}
+.VCardName{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:10pt;
+ font-weight:bold;
+ padding-top:10px;
+}
+.VCardUserType{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ font-weight:normal;
+}
+.VCardCompanyName{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:10pt;
+ font-weight:normal;
+}
+.VCardAddress{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ font-weight:normal;
+}
+.VCardPhone{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ font-weight:normal;
+}
+.VCardEmailAddress{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:7pt;
+ font-weight:bold;
+ text-decoration:none;
+}
+.VCardCell{
+ border-bottom:solid 1px silver;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ font-weight:normal;
+ background-color:white;
+}
+.VCardComments{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ font-weight:normal;
+}
+.PrivateChatCloseBtn{
+ font-size:8pt;
+ width:50px;
+}
+.CustomUDFInstruct{
+ font-size:9pt;
+}
+.EventSpeakerBio{
+ font-size:10pt;
+}
+.EventSpeakerLink{
+ cursor:pointer;
+}
+.EventSpeakerListName{
+ font-size:9pt;
+ font-weight:bold;
+}
+.EventSpeakerListEMail{
+ font-weight:normal;
+ font-size:8pt;
+}
+.MassRegExtendedResults{
+ font-size:8pt;
+ margin-bottom:5px;
+}
+.MassRegResultsLabel{
+ font-size:9pt;
+ font-weight:bold;
+}
+.UserProfileHeader{
+ background-image:url(/cfr/images/ProfileBGTile.jpg);
+ background-repeat:repeat-x;
+ width:100%;
+ border-bottom:1px solid black;
+ font-weight:bold;
+ font-size:10pt;
+}
+.UserProfileHeaderOnline{
+ font-weight:bold;
+ font-size:10pt;
+ color:#006600;
+}
+.UserProfileBioRow{
+ background-image:url(/cfr/images/ProfileBGTile.jpg);
+ background-repeat:repeat-x; width:100%;
+ border-bottom:solid 1px black;
+ font-weight:bold;
+ font-size:8pt;
+}
+.UserProfileName{
+ font-weight:bold;
+ font-size:12pt;
+}
+.UserProfileFieldLabel{
+ font-size:7pt;
+ font-weight:normal; 
+ text-align:right;
+}
+.UserProfileInputLabel{
+ font-weight:bold;
+ font-size:8pt;
+ text-align:left;
+ padding-left:2px;
+}
+.ExhibitorProfileLabel{
+ font-size:7pt;
+ font-weight:normal; 
+ text-align:right;
+ padding:2px 2px 2px 2px;
+}
+.ExhibitorProfileValue{
+ font-weight:bold;
+ font-size:8pt;
+ text-align:left;
+ padding:2px 2px 2px 2px;
+}
+.ExhibitorProfileHeader{
+ background-image:url(/cfr/images/ProfileBGTile.jpg);
+ background-repeat:repeat-x;
+ width:100%;
+ border-bottom:1px solid black;
+ font-weight:bold;
+ font-size:10pt;
+ padding:4px 4px 4px 4px;
+}
+.UD_Affiliate_Type{
+ font-weight:bold;
+ font-size:8pt;
+ text-align:left;
+ padding-left:65px;
+}
+.UserProfileCompanyName{
+ font-weight:bold;
+ font-size:9pt;
+ font-style:italic;
+}
+.ProfileChatButton{
+ display:block;
+ background-color:transparent;
+ background-image:url(/cfr/images/VTS/buttonChat.gif);
+ background-repeat:no-repeat;
+ width:132px;
+ height:30px;
+ margin:5px auto;
+ padding:5px 0px 0px 5px;
+ text-align:left;
+ font-size:95%;
+ font-weight:bold;
+ text-decoration:none;
+ border:none;
+ cursor:pointer;
+}
+.ProfileBuddyButton{
+ display:block;
+ background-color:transparent;
+ background-image:url(/cfr/images/VTS/buttonBuddy.gif);
+ background-repeat:no-repeat;
+ width:132px;
+ height:30px;
+ margin:5px auto;
+ padding:5px 0px 0px 5px;
+ text-align:left;
+ font-size:95%;
+ font-weight:bold;
+ text-decoration:none;
+ border:none;
+ cursor:pointer;
+}
+.ProfileMailButton{
+ display:block;
+ background-color:transparent;
+ background-image:url(/cfr/images/VTS/buttonMail.gif);
+ background-repeat:no-repeat;
+ width:132px;
+ height:30px;
+ margin:5px auto;
+ padding:5px 0px 0px 5px;
+ text-align:left;
+ font-size:95%;
+ font-weight:bold;
+ text-decoration:none;
+ border:none;
+ cursor:pointer;
+}
+.ProfileVCardButton{
+ display:block;
+ background-color:transparent;
+ background-image:url(/cfr/images/VTS/buttonVCard.gif);
+ background-repeat:no-repeat;
+ width:132px;
+ height:30px;
+ margin:5px auto;
+ padding:5px 0px 0px 5px;
+ text-align:left;
+ font-size:95%;
+ font-weight:bold;
+ text-decoration:none;
+ border:none;
+ cursor:pointer;
+}
+.ProfileTweetButton{
+ display:block;
+ background-color:transparent;
+ background-image:url(/cfr/images/VTS/buttonTwitter.gif);
+ background-repeat:no-repeat;
+ width:132px;
+ height:30px;
+ margin:5px auto;
+ padding:5px 0px 0px 5px;
+ text-align:left;
+ font-size:95%;
+ font-weight:bold;
+ text-decoration:none;
+ border:none;
+ cursor:pointer;
+}
+.BWHeaderRow{
+ font-size:9pt;
+ font-weight:bold;
+}
+.BWList{
+ font-size:7pt;
+ font-family:Arial,Helvetica;
+}
+.ApplicantProfileHeader{
+ background-repeat:repeat-x;
+ width:100%;
+ border-bottom:solid 1px black;
+ font-weight:bold;
+ font-size:9pt;
+}
+.ApplicantProfileBioRow{
+ background-image:url(/cfr/images/ProfileBGTile.jpg);
+ background-repeat:repeat-x;
+ width:100%;
+ border-bottom:solid 1px black;
+ font-weight:bold;
+ font-size:8pt;
+}
+.ApplicantProfileName{
+ font-weight:bold;
+ font-size:12px;
+ text-align:left;
+}
+.ApplicantProfileFieldLabel{
+ font-size:10px;
+ font-weight:normal; 
+ text-align:left;
+ max-width:125px;
+ width:expression(document.body.clientWidth > 125? "125px":"auto" );
+}
+.ApplicantProfileInputLabel{
+ font-weight:bold;
+ font-size:10px;
+ text-align:left;
+}
+.JobTableHeaderInactive{
+ background-color: #DEDEDE;
+ border: 1px solid #CCCCCC;
+ color: #333355;
+ font-size: 12px;
+ font-weight: bold;
+ margin-top: 5px;
+ padding: 2px 0 2px 5px;
+ white-space: nowrap;;
+}
+.JobColumnHeader{
+ background-color:#f7f7f7;
+ font-weight:normal;
+ font-size:8pt;
+ color:#676767;
+ text-align:left;
+ font-weight:bold;
+}
+.JobListBlock{
+ font-weight:normal;
+ font-size:8pt;
+ color:#000000;
+ background-color:#ffffff;
+}
+.JobPostingViewTable{
+ font-size:8pt;
+ border:solid 1px #DEDEDE;
+ background-color:#ffffff;
+ background-repeat:repeat-x;
+}
+.JobPostingViewTitle{
+ border-bottom:solid 1px #DEDEDE;
+ font-weight:bold;
+ font-size:14px;
+ color:#000000;
+ text-align:left;
+}
+.JobPostingViewRating{
+ font-weight:bold;
+ font-size:10pt;
+ color:#000000;
+ text-align:left;
+ vertical-align:middle;
+}
+.AvgJobPostingViewRating{
+ font-weight:bold;
+ font-size:8pt;
+ color:#000000;
+ text-align:right;
+ vertical-align:middle;
+}
+.JobPostingLabel{
+ font-weight:bold;
+ font-size:9pt;
+ color:#707070;
+ text-align:left;
+}
+.JobPostingViewLabel{
+ font-weight:bold;
+ font-size:9pt;
+ color:#707070;
+ text-align:left;
+}
+.JobPostingDetailsLabel{
+ font-size:11px;
+ color:#000000;
+ text-align:left;
+ max-width:50px;
+ width:expression(document.body.clientWidth > 50? "50px":"auto" );
+}
+.JobPostingRequirementsLabel{
+ font-size:11px;
+ color:#000000;
+ text-align:left;
+ max-width:125px;
+ width:expression(document.body.clientWidth > 150? "150px":"auto" );
+}
+.JobPostingViewValue{
+ font-size:11px;
+ color:#676767;
+ text-align:left;
+}
+.JobPostingViewDetails{
+ border:solid 1px #dedede;
+ background-color:#ffffff;
+ width:100%;
+ height:160px;
+ text-align:left;
+}
+.JobPostingViewRequirements{
+ border:solid 1px #dedede;
+ background-color:#ffffff;
+ width:100%;
+ height:160px;
+ text-align:left;
+}
+.JobPostingViewChecks{
+ border:solid 1px #dedede;
+ background-color:#ffffff;
+ width:100%;
+ height:160px;
+ text-align:left;
+}
+.JobPostingViewSubHeader{
+ font-weight:bold;
+ font-size:9pt;
+ color:#000000;
+ height:25px;
+ background-color:#DEDEDE;
+}
+.JobPostingViewHeader{
+ background-color:#DEDEDE;
+ font-weight:bold;
+ font-size:9pt;
+ color:#000000;
+}
+.JobPostingListTable{
+ 
+ border:solid 1px #CCCCCC;
+ background-color:#ffffff;
+}
+.JobPostingListHeaderRow{
+ vertical-align:top;
+ background-color:#dedede;
+}
+.JobPostingListDetailsRow{
+ border-top:solid 1px #3aa7fc;
+ vertical-align:top;
+ background-color:#ffffff;
+}
+.JobPostingListTitle{
+ font-weight:bold;
+ font-size:12px;
+ color:#000000;
+ text-align:left;
+ vertical-align:middle;
+ padding-left:5px;
+}
+.JobPostingListTitle a{
+ text-decoration:none;
+}
+.JobPostingListTitle a:hover{
+ text-decoration:underline;
+ color:#000000;
+}
+.JobPostingListSmallLabel{
+ font-size:11px;
+ color:#000000;
+ text-align:left;
+ font-weight:bold;
+}
+.JobPostingListSmallValue{
+ font-size:11px;
+ color:#666666;
+ text-align:left;
+ width:100%;
+}
+.JobPostingListLabel{
+ font-size:11px;
+ color:#000000;
+ text-align:left;
+}
+.JobPostingListValue{
+ font-size:11px;
+ color:#666666;
+ text-align:left;
+ width:100%;
+}
+.JobPostingListStatus{
+ display:none;
+}
+.JobPostingListStatusNULL{
+ display:none;
+}
+.JobPostingListStatusEdit{
+ font-weight:bold;
+ font-size:8pt;
+ color:#000000;
+ text-align:left;
+ padding-left:5px;
+ background-color:#f7f7f7;
+}
+.JobPostingListStatusSubmitted{
+ font-weight:bold;
+ font-size:8pt;
+ color:#000000;
+ text-align:left;
+ padding-left:5px;
+ background-image:url(/cfr/images/VTS/JobPostingListBGSubmitted.gif);
+ background-repeat:repeat-x;
+}
+.JobPostingListStatusApproved{
+ font-weight:bold;
+ font-size:8pt;
+ color:#000000;
+ text-align:left;
+ padding-left:5px;
+ background-image:url(/cfr/images/VTS/JobPostingListBGApproved.gif);
+ background-repeat:repeat-x;
+}
+.JobPostingListStatusRejected{
+ font-weight:bold;
+ font-size:8pt;
+ color:#000000;
+ text-align:left;
+ padding-left:5px;
+ background-image:url(/cfr/images/VTS/JobPostingListBGRejected.gif);
+ background-repeat:repeat-x;
+}
+.JobPostingListStatusPending{
+ font-weight:bold;
+ font-size:8pt;
+ color:#000000;
+ text-align:left;
+ padding-left:5px;
+ background-image:url(/cfr/images/VTS/JobPostingListBGPending.gif);
+ background-repeat:repeat-x;
+}
+.JobPostingListMessage{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-weight:bold;
+ font-size:16px;
+ color:#000000;
+ text-align:left;
+}
+.QuestionLinkHeader{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-weight:bold;
+ font-size:9pt;
+ color:#000000;
+ text-decoration:underline;
+ cursor:pointer;
+}
+.SpanLink{
+ text-decoration:underline;
+ cursor:pointer;
+}
+.SmallSpanLink{
+ font-family:"MS Sans Serif",sans-serif;
+ text-decoration:underline;
+ cursor:pointer;
+ font-size:8pt;
+ color:blue;
+}
+.CharCount{
+ font-family:"MS Sans Serif",sans-serif;
+ font-size:8pt;
+ font-weight:normal;
+}
+.CharCountLabel{
+ font-family:"MS Sans Serif",sans-serif;
+ font-size:8pt;
+ font-weight:normal; 
+}
+.SmallInstruct{
+ font-family:"MS Sans Serif",sans-serif;
+ font-size:8pt;
+ font-weight:normal;
+}
+.TemplateLibraryHeader{
+ border:outset 2px silver;
+ height:26px;
+ text-align:left;
+ vertical-align:middle;
+ font-size:8pt;
+ font-weight:bold;
+ color:#000000;
+ background-color:Silver;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ text-decoration:none
+}
+.TemplateLibraryCell{
+ border-bottom:outset 2px silver;
+ background-color:White;
+ text-align:left;
+ vertical-align:top;
+}
+.TemplateLibraryTitle{
+ height:26px;
+ vertical-align:top;
+ font-size:8pt;
+ color:#000000;
+ background-color:White;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ text-decoration:none
+}
+.TemplateLibraryTitleSeparator{
+ border-bottom:outset 2px silver;
+ background-color:Silver;
+}
+.TemplateLibraryDescription{
+ height:26px;
+ vertical-align:top;
+ font-size:7pt;
+ color:#000000;
+ background-color:White;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ text-decoration:none
+}
+.EditPage{
+ border:solid 1px black;
+ z-index:0;
+ width:100%;
+ overflow:auto;
+ clear:left;
+}
+.PageTabsContainer{
+ width:100%;
+ margin-top:5px;
+ background-image:none;
+ background-repeat:repeat;
+ padding-top:5px;
+}
+.EditPageTab{
+ position:relative;
+ float:left;
+ top:1px;
+ height:22px;
+ z-index:1;
+ margin-left:3px;
+ border:solid 1px black;
+ padding-left:6px;
+ padding-right:6px;
+ background-image:url(/cfr/images/VTS/PagHeaderTileBG.jpg);
+ background-repeat:repeat-x;
+ color:#333333;
+ font-size:9pt;
+ font-weight:normal;
+ cursor:pointer;
+}
+.EditPageTabSelected{
+ position:relative;
+ float:left;
+ top:1px;
+ height:22px;
+ z-index:1;
+ margin-left:3px;
+ border-top:solid 1px black;
+ border-left:solid 1px black;
+ border-right:solid 1px black;
+ border-bottom:solid 1px #dbdbdb;
+ padding-left:6px;
+ padding-right:6px;
+ background-image:none;
+ background-repeat:repeat-x;
+ color:black;
+ background-color:#dbdbdb;
+ font-size:9pt;
+ font-family:Arial, Geneva, Helvetica, sans-serif;
+ font-weight:bold;
+}
+.BuddyNotifyListHeader{
+ font-size:9pt;
+ font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+ text-align:center;
+ margin-top:10px;
+}
+.BuddyListTable{
+ border:1px solid black;
+ margin-bottom:2px;
+}
+.TB1_headerLogo{
+ background-image:url(/cfr/images/VTS/TB1_HeaderLogoInXpo.gif);
+ background-repeat:no-repeat;
+ width:195px;
+}
+.TB1_showMenuBar{
+ background-color:#ffffff;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-weight:bold;
+ font-size:9pt;
+ color:white;
+ background-image:url(/cfr/images/VTS/TB1_HeaderTile.jpg);
+ background-repeat:repeat-x;
+}
+.TB1_TopBarBackgroundTable{
+ background-image:none;
+ background-repeat:no-repeat;
+ height:23px;
+}
+.TB1_TopBarBackgroundCurveLeft{
+ background-image:url(/cfr/images/VTS/TB1_HeaderTableBarCurveLeft.jpg);
+ background-repeat:repeat-x;
+}
+.TB1_TopBarBackgroundCurveRight{
+ background-image:url(/cfr/images/VTS/TB1_HeaderTableBarCurveRight.jpg);
+ background-repeat:repeat-x;
+}
+.TB1_TopBarIconCell{
+ background-image:url(/cfr/images/VTS/TB1_HeaderTileTableBarBlack.jpg);
+ background-repeat:repeat-x;
+ color:white;
+ font-size:7pt;
+ font-weight:bold;
+ padding-top:3px;
+}
+.TB1_SearchLabel{
+ color:black;
+ font-size:8pt;
+ font-weight:bold;
+ text-align:center;
+ width:70px;
+ padding-left:35px;
+}
+.TB1_SearchFieldLabel{
+ color:black;
+ font-size:7pt;
+}
+.TB1_SearchLink{
+ color:black;
+ font-size:7pt;
+}
+A.TB1_CustomButtonLink
+{
+ color:white;
+ text-decoration:none;
+ cursor:pointer;
+}
+A.TB1_CustomButtonLink:visited
+{
+ color:white;
+ text-decoration:none;
+ cursor:pointer;
+}
+A.TB1_CustomButtonLink:hover
+{
+ color:white;
+ text-decoration:none;
+ cursor:pointer;
+}
+.TB2_SearchLabel{
+ background-image:url(/cfr/images/VTS/TB1_HeaderTileTableBarBlack.jpg);
+ background-repeat:repeat-x;
+ color:white;
+ font-size:7pt;
+ font-weight:bold;
+ padding-top:3px;
+ vertical-align:middle;
+}
+.TB2_SearchLink{
+ color:white;
+ font-size:7pt;
+ font-weight:normal;
+}
+.TB2_SubMenuLink{
+ color:black;
+ font-size:7pt;
+ font-weight:normal;
+ text-decoration:none;
+}
+.TB2_SubMenuLinkUnderline{
+ color:black;
+ font-size:7pt;
+ font-weight:normal;
+ text-decoration:underline;
+}
+.MyPointHeader{
+ font-weight:bold;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:10pt;
+ color:black;
+ border-bottom:solid 1px #999999;
+ background:url(/cfr/images/VTS/ActionButtonTile.gif) center center repeat-x;
+ text-align:left;
+}
+.MyPointDescription{
+ font-size:8pt;
+ color:black;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.MyPointPoints{
+ font-weight:normal;
+ font-size:8pt;
+ color:black;
+}
+.MyPointRow{
+ font-weight:normal;
+ font-size:8pt;
+ color:black;
+}
+.MyPointRowBanded{
+ font-weight:normal;
+ font-size:8pt;
+ color:black;
+ background:url(/cfr/images/VTS/RowBandBG.jpg) center center repeat-x;
+}
+.DetailDiv{
+ position:absolute;
+ width:420px;
+ height:250px;
+ right:30px;
+ background-color:#ffffff;
+ border:solid 2px black;
+ padding:5px;
+}
+.MyPointDetailTable{
+ font-weight:normal;
+ font-size:7pt;
+ color:black;
+}
+.MyPointHeaderEnding{
+ width:120px;
+}
+.MyPointHeaderEnding{
+ width:52px;
+}
+.MyPointHeaderInfo{
+ width:37px;
+}
+.RateStar_Half{
+ background-image:url(/cfr/images/VTS/RateStar_Half.png);
+ background-repeat:no-repeat;
+ width:18px;
+ height:18px;
+ cursor:pointer;
+}
+.RateStar_Half_User{
+ background-image:url(/cfr/images/VTS/RateStar_Half_User.png);
+ background-repeat:no-repeat;
+ width:18px;
+ height:18px;
+ cursor:pointer;
+}
+.RateStar_Off{
+ background-image:url(/cfr/images/VTS/RateStar_Off.png);
+ background-repeat:no-repeat;
+ width:18px;
+ height:18px;
+ cursor:pointer;
+}
+.RateStar_Off_User{
+ background-image:url(/cfr/images/VTS/RateStar_Off_User.png);
+ background-repeat:no-repeat;
+ width:18px;
+ height:18px;
+ cursor:pointer;
+}
+.RateStar_On{
+ background-image:url(/cfr/images/VTS/RateStar_On.png);
+ background-repeat:no-repeat;
+ width:18px;
+ height:18px;
+}
+.RateStar_On_User{
+ background-image:url(/cfr/images/VTS/RateStar_On_User.png);
+ background-repeat:no-repeat;
+ width:18px;
+ height:18px;
+}
+.RateLink{
+ font-size:7pt;
+ color:black;
+ text-decoration:underline;
+ cursor:pointer;
+}
+.RateAverage{
+ font-size:12px;
+ color:#777777;
+}
+.RateCount{
+ font-size:12px;
+ font-weight:bold;
+ color:#545454;
+ cursor:pointer;
+}
+.RateBreakdown{
+ background-color:#202020;
+ position:absolute;
+ font-size:12px;
+ color:#dedede;
+ cursor:pointer;
+ z-index:6000;
+ border-radius:2px;
+ padding:8px;
+}
+
+.RateBreakdownHeader{
+ font-size:12px;
+ color:#2f76bc;
+}
+.MMCenterBG{
+ background-image:url(/cfr/Images/VTS/Media_Center.jpg);
+ background-repeat:no-repeat;
+}
+.MMOuterTable{
+ width:70%;
+ height:100%;
+ float:right;
+}
+.MMOpacity{
+ float:right;
+ filter:alpha(opacity=70);
+ opacity:0.70; 
+ -moz-opacity:0.70;
+ -khtml-opacity:0.70;
+}
+.CCSectionContentArea{
+ width:100px;
+ text-align:right;
+}
+.BannerAdBody{
+ background-color:Transparent;
+}
+.BannerAdTable{
+ background-color:Transparent;
+}
+.BannerAdDisplayArea{
+ width:0%;
+ border:none;
+ text-align:center;
+ vertical-align:middle;
+ overflow:hidden;
+ padding:0px;
+ margin:0px;
+}
+.SelectDocumentLinkBody{
+ background-image:url(/cfr/Images/VTS/SelectDocumentsLinkBG.gif);
+ margin:5px 5px 5px 5px;
+ padding:5px 5px 5px 5px;
+}
+.SelectDocumentLinkTable{
+ background-color:#ffffff;
+}
+.SelectDocumentLinkTopLeft{
+ border-top:solid 2px #5076bb;
+ border-left:solid 2px #5076bb;
+ background-color:#ffffff;
+}
+.SelectDocumentLinkTopRight{
+ border-top:solid 2px #5076bb;
+ border-right:solid 2px #5076bb;
+ background-color:#ffffff;
+}
+.SelectDocumentLinkBottomLeft{
+ border-bottom:solid 2px #5076bb;
+ border-left:solid 2px #5076bb;
+ background-color:#ffffff;
+}
+.SelectDocumentLinkBottomRight{
+ border-bottom:solid 2px #5076bb;
+ border-right:solid 2px #5076bb;
+ background-color:#ffffff;
+}
+.SelectDocumentLinkContent{
+ background-color:#ffffff;
+ font-size:12px;
+}
+.SelectDocumentLinkContentLink{
+ font-weight:bold;
+ font-size:18px;
+ color:#000000;
+ text-decoration:underline;
+}
+.SelectDocumentLinkContentLink:hover{
+ font-weight:bold;
+ font-size:18px;
+ color:#3366cc;
+ text-decoration:none;
+}
+.SelectDocumentLinkDesc{
+ font-size:12px;
+}
+.SelectDocumentLinkFileSize{
+ font-size:10px;
+ color:#c40303;
+}
+.InlineFieldLabel{
+ font-weight:bold;
+ display:inline;
+ width:60px;
+}
+#DeclineMessageLayer{
+ position:absolute;
+ top:0px;
+ left:0px;
+ width:100%;
+ height:100%;
+ z-index:100;
+ text-align:center;
+}
+.DeclineMessageMask{
+ position:relative;
+ top:0px;
+ left:0px;
+ width:100%;
+ height:100%;
+ opacity:0.8; 
+ -moz-opacity:0.8;
+ -khtml-opacity:0.8;
+ filter:alpha(opacity=80);
+ background-color:silver;
+ z-index:100;
+}
+.DeclineMessageBox{
+ position:absolute;
+ top:0px;
+ left:0px;
+ width:90%;
+ margin:5%;
+ background-color:#ffffff;
+ border:outset 3px silver;
+ z-index:101;
+}
+.DeclineMessageInstruct{
+ font-size:9pt;
+ font-family:Verdana,Arial,Helvetica,serif;
+ text-align:left;
+ padding:20px 20px 0px 20px;
+}
+#DeclineMessageText{
+ font-size:8pt;
+ font-family:Verdana,Arial,Helvetica,serif;
+ width:90%;
+ height:40px;
+}
+.DeclineMessageBtns{
+ text-align:center;
+ padding-bottom:10px;
+}
+.DeclineMessageBtn{
+ font-size:9pt;
+ font-family:Verdana,Arial,Helvetica,serif; 
+}
+#MediaServerErrorDesc{
+ margin-bottom:0px;
+ padding:3px;
+ font-family:Verdana,Arial,Helvetica,serif;
+ font-size:10pt;
+}
+#MediaServerError{
+ font-weight:bold;
+ margin-top:0px;
+ margin-bottom:5px;
+ padding:3px;
+ font-family:Verdana,Arial,Helvetica,serif;
+ font-size:10pt;
+}
+.MediaServerErrorList{
+ margin-top:5px;
+ font-family:Verdana,Arial,Helvetica,serif;
+ font-size:8pt; 
+}
+.SuccessMessage{
+ color:green;
+ font-size:14pt;
+}
+.DisablePageLayer{
+ position:absolute;
+ top:0px;
+ left:0px;
+ background-color:black;
+ opacity:0.7; 
+ -moz-opacity:0.7;
+ -khtml-opacity:0.7;
+ filter:alpha(opacity=70);
+ text-align:center;
+ vertical-align:middle;
+ color:white;
+ font-family:Verdana,Arial,Helvetica,serif;
+ font-size:10pt;
+ font-weight:bold;
+ font-variant:small-caps;
+ z-index:1000;
+ width:100%;
+ height:100%;
+}
+.EventEditLabel{
+ padding-left:5px;
+ padding-top:2px;
+ padding-bottom:2px;
+ margin:0px 0px 5px 0px;
+ border:outset 1px black;
+ font-weight:bold;
+ font-size:9pt;
+ color:white;
+ background-color:#A9A9A9;
+ text-align:left;
+}
+.EventEditInstruct{
+ font-size:8pt;
+ font-weight:normal;
+ padding-left:5px;
+ margin:0px;
+ margin-bottom:10px;
+}
+.PasswordStatusImage{
+ margin-left:2px;
+}
+.PasswordStatus{
+ font-size:9px;
+ white-space:nowrap;
+ margin-left:2px;
+}
+.Row{
+ background-color:White;
+ color:Black;
+}
+.RowBanded{
+ background-color:#eeeeee;
+ color:Black;
+}
+.CCMenuBarBtn {
+  background-image: none;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 8pt;
+  color: white;
+  background-color:#708090;
+  text-decoration: none;
+  border:2px outset gray; 
+  vertical-align: middle;
+  cursor: pointer;
+}
+.CCMenuBarBtnHighlight {
+  background-image: none;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 8pt;
+  color: gold;
+  background-color:#708090;
+  text-decoration: none;
+  border:2px outset gray; 
+  vertical-align: middle;
+  cursor: pointer;
+}
+#chromemenu{
+ border:solid 1px #bbbbbb;
+ background-color:#eeeeee;
+ width:100%;
+ font-weight:bold;
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ color:#000000;
+}
+.ChatBtnAccept{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ font-weight:bold;
+ background:url(/cfr/images/vts/ChatAcceptBG.jpg) top center repeat-x;
+ border-right:#000000 1px outset;
+ border-top:#cccccc 1px outset; 
+ border-left:#cccccc 1px outset;
+ border-bottom:#000000 1px outset;
+ cursor:pointer;
+}
+.ChatBtnDecline{
+ font-family:Verdana,Arial,Helvetica,sans-serif;
+ font-size:8pt;
+ font-weight:normal;
+ background:url(/cfr/images/vts/ChatDeclineBG.jpg) top center repeat-x;
+ border-right:#000000 1px outset;
+ border-top:#cccccc 1px outset; 
+ border-left:#cccccc 1px outset;
+ border-bottom:#000000 1px outset;
+ cursor:pointer;
+}
+.BadgeListCell{
+ padding:2px 2px 2px 2px;
+ vertical-align:top;
+}
+.BadgeListCellMinWidth{
+ position:relative;
+ width:200px;
+ height:1px;
+}
+.BadgeListInfo{
+ padding:1px 1px 1px 1px;
+ margin:0px 0px 0px 0px;
+}
+.BadgeListOption{
+ padding:1px 1px 1px 1px;
+ margin:0px 0px 0px 0px;
+}
+.UserBadgeItemContainer0{
+ float:left;
+ width:280px;
+ height:60px;
+ padding:5px;
+ margin:3px;
+ border-top:solid 1px silver;
+ border-right:solid 2px gray;
+ border-bottom:solid 2px gray;
+ border-left:solid 1px silver;
+ background-color:#f2f2f2;
+ overflow:hidden;
+}
+.UserBadgeItemContainer1{
+ float:left;
+ width:280px;
+ height:60px;
+ padding:5px;
+ margin:3px;
+ border-top:solid 1px silver;
+ border-right:solid 2px gray;
+ border-bottom:solid 2px gray;
+ border-left:solid 1px silver;
+ background-color:#ccff99;
+ overflow:hidden;
+}
+.UserBadgeItem0{
+ border:solid 1px silver;
+ padding:2px 2px 2px 2px;
+ margin:2px 2px 2px 2px;
+ background-color:#f2f2f2;
+ font-size:12px;
+ color:Black;
+}
+.UserBadgeItem1{
+ border:solid 1px silver;
+ padding:2px 2px 2px 2px;
+ margin:2px 2px 2px 2px;
+ background-color:#ccff99;
+ font-size:12px;
+ color:Black;
+}
+.UserBadgeNameOnly{
+ height:42px;
+ font-weight:bold;
+ overflow:hidden;
+ cursor:pointer;
+}
+.UserBadgeName{
+ height:30px;
+ font-weight:bold;
+ overflow:hidden;
+ cursor:pointer;
+}
+.UserBadgeCompany{
+ height:14px;
+ font-size:11px;
+ font-style:italic;
+ overflow:hidden;
+}
+.UserBadgeImg{
+ float:left;
+ margin:2px 4px 2px 2px;
+ padding:44px 44px 0px 0px;
+ background-repeat:no-repeat;
+ background-position:center center;
+ background-size: 100%;
+ cursor:pointer;
+}
+.UserBadgeIcon{
+ margin:0px 2px 0px 0px;
+ cursor:pointer;
+}
+.UserBadgeIcon0{
+ margin:0px 2px 0px 0px;
+ cursor:pointer;
+ display:none;
+}
+.UserBadgeIcon1{
+ margin:0px 2px 0px 0px;
+ cursor:pointer;
+}
+.UserBadgeListIcon{
+ margin:0px 2px 0px 0px;
+ cursor:pointer;
+ float:right;
+}
+.UserBadgeListIcon0{
+ margin:0px 2px 0px 0px;
+ cursor:pointer;
+ display:none;
+ float:right;
+}
+.UserBadgeListIcon1{
+ margin:0px 2px 0px 0px;
+ cursor:pointer;
+ float:right;
+}
+.ResultContainer{
+ padding:5px 5px 10px 5px;
+ border-bottom:solid 1px silver;
+ width:auto;
+ background-color:White;
+ cursor:pointer;
+}
+.ResultContainer0{
+ padding:5px 5px 10px 5px;
+ border-bottom:solid 1px silver;
+ width:auto;
+ background-color:White;
+ cursor:pointer;
+}
+.ResultContainer1{
+ padding:5px 5px 10px 5px;
+ border-bottom:solid 1px silver;
+ width:auto;
+ background-color:#F3F8FD;
+ cursor:pointer;
+}
+.ResultBoothTitle{
+ height:16px;
+ overflow:hidden;
+ white-space:nowrap;
+ font-size:12px;
+ font-weight:bold;
+ color:#1A4C7D;
+ padding:0px 0px 0px 5px;
+}
+.ResultBoothTitle:hover{
+ color:#2F76BC;
+}
+.ResultBoothDesc{
+ height:60px;
+ overflow:hidden;
+ font-size:11px;
+ padding:2px 0px 6px 5px;
+ white-space:normal;
+}
+.ResultUserImg{
+ margin:2px 34px 2px 32px;
+ width:60px;
+ height:60px;
+ float:left;
+}
+.ResultUserName{
+ height:30px;
+ font-weight:bold;
+ overflow:hidden;
+ font-size:12px;
+ font-weight:bold;
+ color:#1A4C7D;
+}
+.ResultUserName:hover{
+ color:#2F76BC;
+}
+.ResultUserCompany{
+ height:14px;
+ font-size:11px;
+ font-style:italic;
+ overflow:hidden;
+}
+.ResultUserIcon{
+ margin:0px 2px 0px 0px;
+}
+.ResultUserIcon0{
+ margin:0px 2px 0px 0px;
+ display:none;
+}
+.ResultUserIcon1{
+ margin:0px 2px 0px 0px;
+}
+.ImageEdge{
+ float:left;
+}
+.ResultDocImg{
+ margin:7px 39px 7px 37px;
+ float:left;
+}
+.ResultDocTitle{
+ height:16px;
+ overflow:hidden;
+ white-space:nowrap;
+ font-size:12px;
+ font-weight:bold;
+ color:#1A4C7D;
+}
+.ResultDocTitle:hover{
+ color:#2F76BC;
+}
+.ResultDocInfo{
+ font-weight:normal;
+ font-size:11px;
+ font-style:italic;
+ overflow:hidden;
+}
+.ResultDocDesc{
+ height:34px;
+ overflow:hidden;
+ font-size:11px;
+ padding:2px 2px 6px 0px;
+}
+.ResultEventImg{
+ width:120px;
+ height:90px;
+ background-position:center center;
+ background-repeat:no-repeat;
+ background-size: 100%;
+ margin:2px 4px 2px 2px;
+ float:left;
+}
+.ResultEventTitle{
+ height:16px;
+ overflow:hidden;
+ white-space:nowrap;
+ font-size:12px;
+ font-weight:bold;
+ color:#1A4C7D;
+}
+.ResultEventTitle:hover{
+ color:#2F76BC;
+}
+.ResultEventDesc{
+ height:48px;
+ overflow:hidden;
+ font-size:11px;
+ padding:2px 2px 6px 0px;
+}
+.ResultEventSpeaker{
+ padding:4px 0px 0px 0px;
+ font-weight:normal;
+ font-size:11px;
+ overflow:hidden;
+}
+.ResultJobImg{
+ margin:8px 40px 8px 38px;
+ float:left;
+}
+.ResultJobTitle{
+ height:16px;
+ overflow:hidden;
+ white-space:nowrap;
+ font-size:12px;
+ font-weight:bold;
+ color:#1A4C7D;
+}
+.ResultJobTitle:hover{
+ color:#2F76BC;
+}
+.ResultJobDesc{
+ height:22px;
+ overflow:hidden;
+ font-size:11px;
+ padding:2px 2px 6px 0px;
+}
+.ResultJobCompany{
+ height:14px;
+ font-size:11px;
+ font-style:italic;
+ overflow:hidden;
+}
+.ResultProductImg{
+ margin:8px 40px 8px 38px;
+ float:left;
+}
+.ResultProductTitle{
+ height:16px;
+ overflow:hidden;
+ white-space:nowrap;
+ font-size:12px;
+ font-weight:bold;
+ color:#1A4C7D;
+}
+.ResultProductTitle:hover{
+ color:#2F76BC;
+}
+.ResultProductDesc{
+ height:34px;
+ overflow:hidden;
+ font-size:11px;
+ padding:2px 2px 6px 0px;
+}
+.ResultExhibitorImg{
+ margin:8px 40px 8px 38px;
+ float:left;
+}
+.ResultExhibitorTitle{
+ height:16px;
+ overflow:hidden;
+ white-space:nowrap;
+ font-size:12px;
+ font-weight:bold;
+ color:#1A4C7D;
+}
+.ResultExhibitorTitle:hover{
+ color:#2F76BC;
+}
+.ResultExhibitorAddress{
+ white-space:pre;
+ font-size:8pt;
+ overflow:hidden;
+ height:44px;
+}
+.ResultBlogImg{
+ margin:8px 40px 8px 38px;
+ float:left;
+}
+.ResultBlogTitle{
+ height:16px;
+ overflow:hidden;
+ white-space:nowrap;
+ font-size:12px;
+ font-weight:bold;
+ color:#1A4C7D;
+}
+.ResultBlogTitle:hover{
+ color:#2F76BC;
+}
+.ResultBlogDesc{
+ height:34px;
+ overflow:hidden;
+ font-size:11px;
+ padding:2px 2px 6px 0px;
+}
+.FlashBannerBox{
+ margin:auto;
+ overflow:hidden;
+}
+.FlashBannerLayer{
+ position:absolute;
+ top:0px;
+ left:0px;
+ background-image:url(/cfr/images/1x1.gif);
+ cursor:pointer;
+}
+.CommBtnLeft{
+ background-image:url(/cfr/Images/VTS/buttonLeft.png);
+ background-repeat:no-repeat;
+ width:7px;
+ height:28px;
+ cursor:pointer;
+}
+.CommBtnMid{
+ background-image:url(/cfr/Images/VTS/buttonMid.png);
+ background-repeat:repeat-x;
+ height:28px;
+ cursor:pointer;
+ white-space:nowrap;
+}
+.CommBtnRightBuddy{
+ background-image:url(/cfr/Images/VTS/buttonBuddy.png);
+ background-repeat:no-repeat;
+ width:35px;
+ height:28px;
+ cursor:pointer;
+}
+.CommBtnRightChat{
+ background-image:url(/cfr/Images/VTS/buttonChat.png);
+ background-repeat:no-repeat;
+ width:35px;
+ height:28px;
+ cursor:pointer;
+}
+.CommBtnRightMail{
+ background-image:url(/cfr/Images/VTS/buttonMail.png);
+ background-repeat:no-repeat;
+ width:35px;
+ height:28px;
+ cursor:pointer;
+}
+.CommBtnRightVCard{
+ background-image:url(/cfr/Images/VTS/buttonVCard.png);
+ background-repeat:no-repeat;
+ width:35px;
+ height:28px;
+ cursor:pointer;
+}
+.CommBtnRightTwitter{
+ background-image:url(/cfr/Images/VTS/buttonTwitter.png);
+ background-repeat:no-repeat;
+ width:35px;
+ height:28px;
+ cursor:pointer;
+}
+.CommBtnSpacer{
+ height:10px;
+}
+.ProfileCommunicateTaskTable{
+ font-weight:bold;
+ font-size:15px;
+}
+TABLE .ProfileCommunicateTaskTable{
+ direction:ltr;
+}
+.ProfileCommunicateTaskTD{
+ border:solid 2px #dedede;
+ vertical-align:middle;
+ padding:5px;
+}
+#FrameLayoutDetails {
+  height:150px;
+  background-position:10px 10px;
+  background-repeat:no-repeat;
+  background-color:White;
+  color:Black;
+}
+#FrameLayoutTitle {
+  margin:10px 0px 0px 175px;
+  font-weight:bold;
+}
+#FrameLayoutDesc {
+  margin:0px 0px 0px 175px;
+}
+.FrameLayoutInfo {
+  margin:5px 0px 0px 20px;
+}
+
+.EventEditLink
+{
+ font-weight:normal;
+ font-size:8pt;
+ font-style:italic;
+ vertical-align:top;
+ color:#000000;
+ background-color:#ffffff;
+ text-align:left;
+}
+.CropRect{
+  position:absolute;
+  border:solid 2px Yellow;
+  width:56px;
+  height:56px;
+  background-color:White;
+  filter:alpha(opacity=35);
+  opacity:0.35;
+  -moz-opacity:0.35;
+  -khtml-opacity:0.35;
+  cursor:move;
+}
+.LinkList{
+  margin:4px 0px 0px 0px;
+  white-space:nowrap;
+}
+.LinkListItem{
+  margin:0px;
+  padding-left:10px;
+  font-size:11px;
+  white-space:nowrap;
+}
+.EdgeServerList
+{
+  border:1px solid black;
+  width:100%;
+  height:100px;
+  overflow:auto;
+  background-color:white;
+  font-size:11px;
+}
+.EdgeServerItem
+{
+  padding:2px;
+  cursor:pointer;
+  background-color:white;
+  border-bottom:1px solid #666666;
+}
+.EdgeServerItemHighlight
+{
+  padding:2px;
+  cursor:pointer;
+  background-color:#add8e6;
+  border-bottom:1px solid #666666;
+}
+.EdgeServerItemSelected
+{
+  padding:2px;
+  cursor:pointer;
+  background-color:#90ee90;
+  border-bottom:1px solid #666666;
+}
+.EdgeServerListOptions
+{
+  margin:5px;
+  padding:0px;
+}
+.EdgeServerListButtons
+{
+  border:1px solid black;
+  background-color:#d3d3d3;
+}
+.EdgeServerListBtn
+{
+  cursor:pointer;
+  margin-top:5px;
+}
+.EdgeServerOptionsTable
+{
+  width:550px;
+  font-size:11px;
+  font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+.EdgeServerListOptionBtn
+{
+  text-decoration: underline;
+  color:black;
+  cursor:pointer;
+}
+.EdgeServerListOptionBtnDisabled
+{
+  text-decoration: none;
+  color:#666666;
+  cursor:default;
+}
+
+
+.UstreamPlayerPage
+{
+  background-color: #ffffff;  
+  overflow: hidden;
+}
+.UstreamPlayerIFrame
+{
+  overflow:hidden;
+  background-color: #ffffff;
+}
+
+.LivestreamPlayerPage
+{
+  background-color: White;
+}
+.LivestreamPlayerContainerDiv
+{
+  border: 0px solid White;
+  background-color: White;
+}
+
+#YouTubePlayerPage
+{
+  overflow:hidden;
+  background-color: White;
+}
+#YouTubePlayerDiv
+{
+  overflow:hidden;
+  background-color: White;
+}
+
+.AdobeConnectPlayerPage
+{
+  background-color: White;
+}
+.AdobeConnectPlayerContainerDiv
+{
+  width: 100%;
+  height: 100%;
+  border: 0px;
+}
+.AdobeConnectMessageSpan
+{
+  font-size:16px;
+  color:#000000;
+  font-weight:bold;
+  text-align:center;
+}
+
+#ProgressDisplay
+{
+  padding:4px;
+}
+.VideoUploadStatusMsg
+{
+  margin:0px;
+}
+
+
+.ErrorPageBody
+{
+  background-color: #FFFFFF;
+}
+.ErrorPageTitle
+{
+  font-size:14px;
+  color: #000000;
+  font-weight: bold;
+}
+.ErrorPageMessage
+{
+  font-size:12px;
+  color: #000000;
+  font-weight: normal;
+}
+.ErrorPageCurrentTime
+{
+  font-size:10px;
+  color: #808080;
+  font-weight: normal;
+}
+
+.LibImagePreview
+{ 
+ float:left; 
+ padding:5px; 
+ width:180px; 
+ height:195px; 
+ text-align:center;
+ background-color:White; 
+ font-size:11px;
+ color:black;
+ overflow:hidden;
+}
+.LibImagePreview img
+{ 
+ width:180px; 
+ height:180px; 
+}
+.MCDocumentImgCell img{
+ margin: 7px 39px 7px 37px;
+}
+.MobileColorPickerHeader{
+  font-size:11px;
+  font-weight:bold;
+  color:gray;
+  padding-bottom:5px;
+}
+.MulticastGroupContainer
+{
+  float:left;
+  width:150px;
+  margin-right:5px;
+}
+.MulticastGroupDetails
+{
+  float:left;
+}
+.SWSearch
+{
+color:#1a4c7d;
+text-decoration:underline;
+}
+.SWResult
+{
+height:48px;
+}
+.SWResultSmall
+{
+height:20px;
+}
+#EdgeServerAkamaiOption
+{
+  display:none;
+}
+.EditPage2
+{
+  background-color:#FFFFFF;
+  border-color: #333333;
+  border-style: solid;
+  border-width: 1px;
+  padding: 5px;
+}
+
+.SearchResultsTags
+{
+  margin:4px 0px 0px 150px;
+  position:relative;
+}
+
+.SearchResultsTags:after
+{
+  background: url(/cfr/images/VTS/LSContentTaggingIcon.png) repeat scroll 0 0 #2F76BC;
+  content: "";
+  display: inline-block;
+  height: 14px;
+  left: -27px;
+  position: absolute;
+  top: 1px;
+  vertical-align: middle;
+  width: 27px;
+}
+
+.MetaTagDisplay
+{
+  color:#545454;
+  display:inline-block;
+  text-decoration:none;
+  cursor:pointer;
+  margin:0px 7px 0px 0px;
+  font-size:11px;
+
+}
+.TagLabel
+{
+    background:url(/cfr/images/VTS/LSContentTaggingIcon.png) #2f76bc;
+    display:inline-block;
+    width:27px;
+    height:14px;
+    vertical-align:middle;
+    margin:10px 2px 9px 9px;
+}
+
+#MakeInput .NFOptionsButton,
+#MakeInput .NFOptionsButtonSelected
+{
+  float:right;
+}
+
+
+.DPShell
+{
+  background-color:#333333;
+  font-size: 12px;
+}
+.DPHeader
+{
+  overflow:hidden;
+  border-bottom:5px solid #b1b1b1;
+  height:42px;
+}
+
+.DPLogo 
+{
+  border-right: 1px solid #545454;
+  color: #f7f7f7;
+  font-size: 15px;
+  font-weight: normal;
+  padding: 0 18px 0 0;
+  text-transform:uppercase;
+  display:inline-block;
+  vertical-align:middle;
+  
+}
+
+.DPSHowTitle 
+{
+  color: #b1b1b1;
+  font-size: 1.1em;
+  font-weight: bold;
+  overflow: hidden;
+  padding: 3px 10px;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin:0px 0px 0px 10px;
+  display:inline-block;
+  vertical-align:middle;
+}
+.DPHeaderLeft
+{
+  float:left;
+  margin:11px 0px 11px 20px;
+}
+
+.DPHeaderRight
+{
+  float: right;
+  padding:10px 15px 0px 0px;
+  text-align:right;
+}
+
+.DPLink
+{
+  background-color:#3d3d3d;
+  border-radius:2px;
+  color: #dedede;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 8px;
+  text-transform: uppercase;
+  text-decoration:none;
+}
+
+.DPLink:hover
+{
+  background-color:#5D5D5D;
+  color:#dedede;
+}
+.DPWelcome
+{
+  color:#b1b1b1;
+  display: inline-block;
+  margin:0px 0px 0px 10px;
+}
+
+/*Sub Sections*/
+.SubSectionHeader
+{
+  position: relative;
+  display: block;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  color: #335;
+  background-color: #335;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.SubSectionHeaderText
+{
+  padding: 2px 5px 3px 4px;
+  background-color: #FFF;
+}
+
+.SubSectionHeaderLinks
+{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #335;
+}
+
+.SubSectionHeaderLink
+{
+  display: inline-block;
+  position: relative;
+  padding: 2px 5px 3px 4px;
+  color: #FFF;
+  margin-left: 15px;
+}
+.SubSectionHeaderLink:hover
+{
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+.SubSection
+{
+  position: relative;
+  display: block;
+  background-color: #f4f4f4;
+}
+
+.SubSectionContainer
+{
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #000;
+  padding: 3px 5px;
+  overflow: hidden;
+}
+
+.SubSectionContainer .Save,
+.SubSectionContainer .SaveHighlight
+{
+  float: right;
+  margin-right: 15px;
+}
+
+.SubSectionContainer a
+{
+  font-size: 10px;
+}
+
+.SubSectionContainer img
+{
+  float: left;
+}
+
+.SubSectionContent
+{
+  margin: 0 0 5px 15px;
+}
+
+
+.Collapsible
+{
+  position: relative;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  margin-top: 15px;
+}
+[data-openstate="0"] .SubSectionContent.Collapsible
+{
+  margin: 0;
+}
+[data-openstate="1"] .Collapsible
+{
+  height: auto;
+  overflow: visible;
+}
+
+.SubSectionField 
+{
+  position: relative;
+  display: inline-block;
+  font-size: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+}
+.SubSectionFieldLabel
+{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.SubSectionField input
+{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.SubSectionField label
+{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.SubSectionDelete
+{
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  height: 18px;
+  width: 18px;
+  background: url(/cfr/Images/DeleteX.gif) no-repeat center center;
+  cursor: pointer;
+}
+
+.SubSectionInlineLabel
+{
+  position: relative;
+  display: inline-block;
+  font-size: 10px;
+}
+
+.SubSectionInlineContent
+{
+  position: relative;
+  display: inline-block;
+  font-size: 10px;  
+}
+
+
+.GenericCellData
+{
+  font-size: 12px;
+}
+
+.subTableHeader
+{
+  background-color: #333;
+}     
+                                                       
+#NewPageSettings[data-copyfieldsstate="0"] [data-copyfieldsaction="1"],
+#NewPageSettings[data-copyfieldsstate="1"] [data-copyfieldsaction="0"],
+#NewPageSettings [data-copyfieldsaction="-1"],
+select[data-copyfieldsstate="0"] [data-copyfieldsaction="1"],
+select[data-copyfieldsstate="1"] [data-copyfieldsaction="0"]
+{
+  display: none;
+}
+
+.TAFlexTableCellCenter .SubSectionDelete
+{
+  display: inline-block;
+  float: none;
+  margin: 0;
+}
+
+/*Flex Table*/
+.TAFlexTable
+{
+  position: relative;
+  min-width: 500px;
+}
+
+.TAFlexTableHeader,
+.TAFlexTableRow
+{
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.TAFlexTableHeader
+{
+  font-weight: normal;
+  text-align: left;
+  color: rgb(102, 102, 102);
+  font-size: 11px;
+  background-color: rgb(235, 235, 235);
+  padding: 5px;
+  border-width: 0px;
+  border-style: outset;
+  border-color: white;
+  border-image: initial;
+}
+
+.TAFlexTableRow
+{
+  font-weight: normal;
+  font-size: 11px;
+  color: black;
+  vertical-align: top;
+  background-color: white;
+  text-align: left;
+  padding: 2px;
+}
+
+.TAFlexTableRow.Banded
+{
+  color: black;
+  background-color: rgb(246, 246, 246);
+}
+
+.TAFlexTableBody
+{
+  position: relative;
+  overflow: auto;
+}
+
+.TAFlexTableCell
+{
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+
+.TAFlexTableCellCenter
+{
+  text-align: center;
+  width: 100px;
+}
+.TAFlexTableCellRight
+{
+  text-align: right;
+  width: 100px;
+}
+
+table.CSSBanding tr:nth-child(odd),
+table.CSSBanding tr:nth-child(odd) .fieldName,
+table.CSSBanding tr:nth-child(odd) .fieldValue,
+table.CSSBanding tr:nth-child(odd) .fieldValueRight,
+table.CSSBanding tr:nth-child(odd) .fieldValueCenter,
+table.CSSBanding tr:nth-child(odd) .CSSBandedRow
+{
+  background-color: #F6F6F6;
+}
+
+table.CSSBanding tr:nth-child(even),
+table.CSSBanding tr:nth-child(even) .fieldName,
+table.CSSBanding tr:nth-child(even) .fieldValue,
+table.CSSBanding tr:nth-child(even) .fieldValueRight,
+table.CSSBanding tr:nth-child(even) .fieldValueCenter,
+table.CSSBanding tr:nth-child(even) .CSSBandedRow
+{
+  background-color: #FFFFFF;
+}
+
+[disabled], .Disabled
+{
+  opacity: .4;
+}
+
+.ValidationConfirmation
+{
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.ValidationConfirmationIcon
+{
+  position: relative;
+  flex: 0 0 auto;
+  height: 18px;
+  width: 18px;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+/*Loading...*/
+.ValidationConfirmationIcon[data-state="1"]
+{
+  background-image:url(/cfr/images/VTS/Axiom/Assets/AxiomLoading.gif);
+}
+/*Valid!*/
+.ValidationConfirmationIcon[data-state="2"]
+{
+  background-image:url(/cfr/images/VTS/Axiom/Assets/CheckDisplaylist.png);
+}
+/*Invalid!*/
+.ValidationConfirmationIcon[data-state="3"]
+{
+  background-image:url(/cfr/images/VTS/Axiom/Assets/CheckListDisplayUnchecked.png);
+}
+
+.ValidationConfirmationText
+{
+  flex: 1 1 auto;
+  margin-left: 5px;
+}
+.ValidationConfirmationIcon[data-state="2"] + .ValidationConfirmationText
+{
+  color: green;
+}
+.ValidationConfirmationIcon[data-state="3"] + .ValidationConfirmationText
+{
+  color: red;
+}
+
+/*Data Retention Buttons*/  
+.TAPTableListItem
+{
+  transition: background-color .25s linear;
+  position: relative;
+}
+
+.TAPTableListItem:hover 
+{
+  background-color: #f7f9fb;
+}                                                    
+.TAPTableListItem.Status0,  .Save.Status0,  #StatusCell[data-RetentionStatus="0"],  #StatusSelect[value="0"],  #StatusSelect [value="0"]  { background: #cec9be none; }  /* Cancelled */
+.TAPTableListItem.Status1,  .Save.Status1,  #StatusCell[data-RetentionStatus="1"],  #StatusSelect[value="1"],  #StatusSelect [value="1"]  { background: #e29898 none; }  /* Awaiting Approval */
+.TAPTableListItem.Status2,  .Save.Status2,  #StatusCell[data-RetentionStatus="2"],  #StatusSelect[value="2"],  #StatusSelect [value="2"]  { background: #e8bb53 none; }  /* On Hold */
+.TAPTableListItem.Status3,  .Save.Status3,  #StatusCell[data-RetentionStatus="3"],  #StatusSelect[value="3"],  #StatusSelect [value="3"]  { background: #96d781 none; }  /* Approved */
+.TAPTableListItem.Status10, .Save.Status10, #StatusCell[data-RetentionStatus="10"], #StatusSelect[value="10"], #StatusSelect [value="10"] { background: #e1eaed none; }  /* Completed */
+
+
+
+.TAPTableContent 
+{
+  font-size: 1rem;
+  padding: 0.5rem 0.15rem;
+  border-bottom: 2px solid #edf1f3;
+  color: #535d60;
+}
+
+.TAPTableBodyText 
+{
+  position: relative;
+  color: #535d60;
+  font-size: 1rem;
+}
+
+.TAPActionButton 
+{
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 22px 22px;
+  opacity: .4;
+  margin: 0 0 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: opacity cubic-bezier(0.4, 0, 1, 1) .25s;
+}
+
+.TAPActionButtonEdit
+{
+  background-image:url(/cfr/images/VTS/Axiom/Assets/CheckDisplaylist.png);
+}
+
+.TAPActionButtonLogs
+{           
+  background-image:url(/cfr/images/VTS/Axiom/Assets/CheckDisplaylist.png);
+}
+
+.TAPActionButtonNotes
+{                  
+  background-image:url(/cfr/images/VTS/Axiom/Assets/AxiomLoading.gif);
+}

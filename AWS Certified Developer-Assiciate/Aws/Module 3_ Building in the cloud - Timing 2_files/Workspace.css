@@ -1,0 +1,603 @@
+﻿body,html{
+  height:100%;
+}
+textarea{
+  font:inherit;
+}
+.Workspace {
+  position:relative;
+  font-size:11px;
+}
+#PanelBar {
+  position:absolute;
+  z-index:2001;
+}
+img.PanelButton {
+  width:32px;
+  height:32px;
+  padding:4px;
+  margin:2px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:100% 100%;
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbBlank {
+  width:32px;
+  height:32px;
+  padding:6px;
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbBlack {
+  width:32px;
+  height:32px;
+  padding:6px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgBlack.png);
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbBlack:hover {
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgBlackRO.png);
+}
+img.ThumbWhite {
+  width:32px;
+  height:32px;
+  padding:6px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgWhite.png);
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbWhite:hover {
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgWhiteRO.png);
+}
+img.ThumbRed {
+  width:32px;
+  height:32px;
+  padding:6px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgRed.png);
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbRed:hover {
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgRedRO.png);
+}
+img.ThumbYellow {
+  width:32px;
+  height:32px;
+  padding:6px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgYellow.png);
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbYellow:hover {
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgYellowRO.png);
+}
+img.ThumbGreen {
+  width:32px;
+  height:32px;
+  padding:6px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgGreen.png);
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbGreen:hover {
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgGreenRO.png);
+}
+img.ThumbBlue {
+  width:32px;
+  height:32px;
+  padding:6px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgBlue.png);
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbBlue:hover {
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgBlueRO.png);
+}
+img.ThumbDefault {
+  width:32px;
+  height:32px;
+  padding:6px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgBlack.png);
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbDefault:hover {
+  background-image:url(/cfr/images/VTS/Workspace/PanelBtnBgBlackRO.png);
+}
+img.ThumbSquare {
+  width:32px;
+  height:32px;
+  padding:6px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(/cfr/Images/VTS/Workspace/PanelBtnSquare0.png);
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbSquare:hover {
+  background-image:url(/cfr/Images/VTS/Workspace/PanelBtnSquare1.png);
+}
+img.ThumbDark {
+  width:32px;
+  height:32px;
+  padding:6px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(/cfr/Images/VTS/Workspace/PanelBtnDark0.png);
+  border-radius:6px;
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbDark:hover {
+  background-image:url(/cfr/Images/VTS/Workspace/PanelBtnDark1.png);
+}
+img.ThumbOrange {
+  width:32px;
+  height:32px;
+  padding:6px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(/cfr/Images/VTS/Workspace/PanelBtnOrange0.png);
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbOrange:hover {
+  background-image:url(/cfr/Images/VTS/Workspace/PanelBtnOrange1.png);
+}
+img.ThumbGreen2 {
+  width:32px;
+  height:32px;
+  padding:6px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(/cfr/Images/VTS/Workspace/PanelBtnGreen0.png);
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbGreen2:hover {
+  background-image:url(/cfr/Images/VTS/Workspace/PanelBtnGreen1.png);
+}
+img.ThumbGlossy {
+  width:32px;
+  height:32px;
+  padding:6px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(/cfr/Images/VTS/Workspace/PanelBtnGlossy0.png);
+  cursor:pointer;
+  vertical-align:top;
+}
+img.ThumbGlossy:hover {
+  background-image:url(/cfr/Images/VTS/Workspace/PanelBtnGlossy1.png);
+}
+img.RestoreBtn {
+  width:32px;
+  height:32px;
+  padding:6px;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(/cfr/images/VTS/Workspace/Restore.png);
+  cursor:pointer;
+  vertical-align:top;
+}
+#ThemeHelper {
+  position:absolute;
+  display:none;
+}
+#PanelMap {
+  position:absolute;
+  border:solid 1px Silver;
+  background-color:White;
+  z-index:1;
+  overflow:hidden;
+  opacity:.4;
+}
+#PanelMap:hover {
+  position:absolute;
+  border:solid 1px Silver;
+  background-color:White;
+  z-index:2002;
+  overflow:hidden;
+  opacity:.8;
+}
+#PanelMap div.PanelMapRect {
+  position:absolute;
+  border:solid 1px Gray;
+  background-color:Silver;
+}
+#PanelMap div.PanelMapViewPortActive {
+  position:absolute;
+  border:dotted 1px Green;
+  background-image:url(/cfr/images/1x1.gif);
+  z-index:2003;
+  cursor:default;
+}
+#PanelMap div.PanelMapViewPort {
+  position:absolute;
+  border:solid 1px Transparent;
+  background-image:url(/cfr/images/1x1.gif);
+  z-index:2003;
+  cursor:pointer;
+}
+#PanelMap div.PanelMapViewPort:hover {
+  position:absolute;
+  border:dotted 1px Green;
+  background-image:url(/cfr/images/1x1.gif);
+  z-index:2003;
+  cursor:pointer;
+}
+
+#ShiftNorth {
+  width:200px;
+  height:20px;
+  background-image:url(/cfr/images/VTS/Workspace/ShiftNorth.gif);
+}
+#ShiftEast {
+  width:20px;
+  height:200px;
+  background-image:url(/cfr/images/VTS/Workspace/ShiftEast.gif);
+}
+#ShiftSouth {
+  width:200px;
+  height:20px;
+  background-image:url(/cfr/images/VTS/Workspace/ShiftSouth.gif);
+}
+#ShiftWest {
+  width:20px;
+  height:200px;
+  background-image:url(/cfr/images/VTS/Workspace/ShiftWest.gif);
+}
+.ShiftBtn {
+  position:absolute;
+  border:solid 1px White;
+  background-position:center center;
+  background-repeat:no-repeat;
+  z-index:2002;
+  cursor:pointer;
+  opacity:.3;
+}
+.ShiftBtn:hover {
+  position:absolute;
+  border:solid 1px White;
+  background-position:center center;
+  background-repeat:no-repeat;
+  z-index:2002;
+  cursor:pointer;
+  opacity:.8;
+}
+
+#CoordDisplay {
+  position:absolute;
+  border:solid 1px Gray;
+  padding:2px;
+  background-color:White;
+  font-size:11px;
+  font-family:Monospace;
+  font-weight:bold;
+  color:Black;
+  z-index:3001;
+}
+
+#SnapTop {
+  position:absolute;
+  width:31px;
+  height:6px;
+  background-image:url(/cfr/images/VTS/Workspace/SnapTop.png);
+  background-position:center center;
+  z-index:3000;
+}
+#SnapRight {
+  position:absolute;
+  width:6px;
+  height:31px;
+  background-image:url(/cfr/images/VTS/Workspace/SnapRight.png);
+  background-position:center center;
+  z-index:3000;
+}
+#SnapBottom {
+  position:absolute;
+  width:31px;
+  height:6px;
+  background-image:url(/cfr/images/VTS/Workspace/SnapBottom.png);
+  background-position:center center;
+  z-index:3000;
+}
+#SnapLeft {
+  position:absolute;
+  width:6px;
+  height:31px;
+  background-image:url(/cfr/images/VTS/Workspace/SnapLeft.png);
+  background-position:center center;
+  z-index:3000;
+}
+
+.WorkspacePanel {
+  position:absolute;
+  overflow:hidden;
+}
+.WorkspacePanel div.Edge {
+  position:absolute;
+  background-image:url(/cfr/images/1x1.gif);
+  z-index:3001;
+}
+.WorkspacePanel div.TitleBar {
+  position:absolute;
+  cursor:default;
+  overflow:hidden;
+  white-space:nowrap;
+}
+.WorkspacePanel div.Content {
+  position:absolute;
+  overflow:hidden;
+}
+.WorkspacePanel span.PanelClose {
+  float:right;
+  padding:2px;
+  width:16px;
+  height:16px;
+  background-image:url(/cfr/images/VTS/Workspace/PanelClose.png);
+  background-repeat:no-repeat;
+  background-position:center center;
+  cursor:pointer;
+}
+.WorkspacePanel span.PanelMaximize {
+  float:right;
+  padding:2px;
+  width:16px;
+  height:16px;
+  background-image:url(/cfr/images/VTS/Workspace/PanelMaximize.png);
+  background-repeat:no-repeat;
+  background-position:center center;
+  cursor:pointer;
+}
+.WorkspacePanel span.PanelRestore {
+  float:right;
+  padding:2px;
+  width:16px;
+  height:16px;
+  background-image:url(/cfr/images/VTS/Workspace/PanelRestore.png);
+  background-repeat:no-repeat;
+  background-position:center center;
+  cursor:pointer;
+}
+.WorkspacePanel img.PanelIcon {
+  float:left;
+  width:16px;
+  height:16px;
+  display:none;
+}
+.WorkspacePanel p.PanelTitle {
+  padding:2px 2px 0px 4px;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.WorkspacePanel p.PanelGroupTab {
+  float:left;
+  margin-right:5px;
+  padding:2px 4px;
+  height:16px;
+  font-size:11px;
+  font-weight:bold;
+  color:Gray;
+  white-space:nowrap;
+  cursor:pointer;
+  overflow:hidden;
+}
+.WorkspacePanel p.PanelGroupTab:hover {
+  background-color:#eeeeee;
+  color:Black;
+}
+.WorkspacePanel p.PanelGroupTabActive {
+  float:left;
+  margin-right:5px;
+  padding:2px 4px;
+  height:16px;
+  background-color:White;
+  font-size:11px;
+  font-weight:bold;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.WorkspacePanel img.PanelTitle {
+  padding:4px;
+  width:32px;
+  height:32px;
+  overflow:hidden;
+}
+.WorkspacePanel img.PanelGroupTab {
+  float:left;
+  margin-right:5px;
+  padding:4px 8px;
+  height:32px;
+  width:32px;
+  cursor:pointer;
+  border-radius:4px 4px 0px 0px;
+}
+.WorkspacePanel img.PanelGroupTab:hover {
+  background-color:#eeeeee;
+}
+.WorkspacePanel img.PanelGroupTabActive {
+  float:left;
+  margin-right:5px;
+  padding:4px 8px;
+  height:32px;
+  width:32px;
+  background-color:White;
+  border-radius:4px 4px 0px 0px;
+}
+
+.WorkspacePanel div.DragHandle {
+  position:absolute;
+  z-index:3000;
+  background-image:url(/cfr/images/1x1.gif);
+  cursor:move;
+}
+.WorkspacePanel div.TouchTool {
+  position:absolute;
+  z-index:3000;
+  background-position:center center;
+  background-repeat:no-repeat;
+  opacity:.6;
+}
+.WorkspacePanel div.TouchEdge {
+  position:absolute;
+  width:32px;
+  height:32px;
+  background-image:url(/cfr/images/TouchMove.png);
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-color:White;
+  border-radius:8px;
+}
+
+#XpoCastWorkspaceBioContainer{
+  padding:5px;
+}
+#XpoCastWorkspaceAbstractContainer{
+  padding:5px;
+}
+#WorkspaceSpeakerBioContainer{
+  padding:5px;
+}
+#WorkspaceAbstractContainer{
+  padding:5px;
+}
+
+.EventDescription{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.EventAbstract{
+  font-family:Arial,Helvetica,sans-serif;
+  font-weight:normal;  
+}
+.ViewSpeakerName
+{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size: 13px;
+  margin:0px;
+  overflow: hidden;
+}
+.GetVCard
+{
+  font-family:Arial,Helvetica,sans-serif;
+  display:inline;
+  cursor:pointer;
+}
+.GetVCardLink
+{
+  font-family:Arial,Helvetica,sans-serif;
+  color:green;
+  font-size:10px;
+  text-decoration:underline;
+}
+
+.CommBlock{
+  margin:5px;
+  border:solid 1px Silver;
+  min-height:36px;
+  font-size:12px;
+  cursor:default;
+}
+.CommBlock p.Title{
+  font-weight:bold;
+  white-space:nowrap;
+}
+.CommBlock p.Links{
+  font-size:11px;
+}
+.CommBlock span.Link{
+  font-size:11px;
+  font-weight:normal;
+  cursor:pointer;
+}
+.CommBlock span.Link:hover{
+  text-decoration:underline;
+}
+
+.SubmitQuestionBtn{
+  border:1px solid silver;
+  padding:5px;
+  background-image:url(/cfr/images/VTS/Workspace/ThemeGrey2.jpg);
+  background-repeat: repeat-x;
+  background-color: rgb(151, 150, 150);  
+  font-family:Verdana,Arial,Helvetica,sans-serif;
+  font-size:11px;
+  cursor:pointer;
+}
+
+#SBTVExtraSpeakerInfo{
+  font-family:Arial,Helvetica,sans-serif;
+}
+#SBTVExtraSpeakerInfo center{
+  float:left;
+  text-align:left;
+  margin:0px 8px 0px 0px;
+}
+
+#XpoCastWorskspaceBio center{
+  float:left;
+  text-align:left;
+}
+
+img.SpeakerPhotoImage {
+  max-width:50px;
+  height:50px;
+  margin:0px 5px 0px 0px;
+}
+
+#SpeakerBioContainer {
+  font-family:Arial,Helvetica,sans-serif;
+  color: #545454;
+  font-size: 11px;
+  line-height: 14px;
+  margin: 0px 0px 10px 0px;
+}
+
+.SpeakerBioText {
+  font-family:Arial,Helvetica,sans-serif;
+  color: #545454;
+  font-size: 11px;
+  line-height: 14px;
+  margin: 0px;
+  min-height:40px;
+}
+
+img.XpoCastMediaControls {
+  width:25px;
+  height:25px;
+  background-image:url(/cfr/images/VTS/XpocastMediaControlBGIcon.png);
+  background-repeat: no-repeat;
+}
+img.AvatarImg {
+  width:180px;
+  height:180px;
+}
+span.AvatarEdit {
+  font-size:12px;
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+#ShareWidgetImg{
+  position:absolute;
+}

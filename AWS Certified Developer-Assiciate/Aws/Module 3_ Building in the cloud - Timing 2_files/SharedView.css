@@ -1,0 +1,1300 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(/cfr/fonts/Roboto/Regular/Roboto-Regular.ttf) format('truetype'), url(/cfr/fonts/Roboto/Regular/Roboto-Regular.woff) format('woff'), url(/cfr/fonts/Roboto/Regular/Roboto-Regular.woff2) format('woff2');
+    font-weight: 500;
+    line-height: 1;
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    src: url(/cfr/fonts/Roboto/Medium/Roboto-Medium.ttf) format('truetype'), url(/cfr/fonts/Roboto/Medium/Roboto-Medium.woff) format('woff'), url(/cfr/fonts/Roboto/Medium/Roboto-Medium.woff2) format('woff2');
+    line-height: 1;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Roboto Bold";
+    src: url(/cfr/fonts/Roboto/Bold/Roboto-Bold.ttf) format('truetype'), url(/cfr/fonts/Roboto/Bold/Roboto-Bold.woff) format('woff'), url(/cfr/fonts/Roboto/Bold/Roboto-Bold.woff2) format('woff2');
+    font-weight: 500;
+    line-height: 1;
+    font-weight: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --panel-primary-color: #1789e6;
+    --panel-secondary-color: #1568a0;
+    --panel-color-text-default: #535C60;
+    --panel-color-text-alt: #869195;
+    --panel-background-color: #ffffff;
+    --panel-background-alt: #E4EAEC;
+    --panel-font-family-regular: "Roboto";
+    --panel-font-family-medium: "Roboto Medium";
+    --panel-font-family-bold: "Roboto Bold";
+    --panel-font-size-1: 1.125rem;
+    --panel-font-size-2: 1rem;
+    --panel-font-size-3: .875rem;
+    --panel-font-size-4: .75rem;
+    --panel-spacing-x-large: 2.5rem;
+    --panel-spacing-large: 2rem;
+    --panel-spacing-medium: 1rem;
+    --panel-spacing-small: .5rem;
+    --panel-spacing-x-small: .25rem;
+    --panel-spacing-xx-small: .15rem;
+    --panel-mq-large: only screen and (min-width: 75em);
+    --panel-mq-medium: only screen and (min-width: 50em);
+    --panel-mq-small: only screen and (min-width: 25em);
+    --panel-border-color-alt: #2F3435;
+    --panel-border-color-default: #ecf0f2;
+    --panel-button-border-color: #535C60;
+    --panel-border-width-small: .0625rem solid;
+    --panel-border-width-large: .125rem solid;
+    --panel-container-shadow-1: 0px 2px 3px rgba(0, 0, 0, .2);
+    --panel-line-height-1: 1.125rem;
+    --panel-line-height-2: 1rem;
+    --panel-line-height-3: .875rem;
+    --panel-line-height-4: .75rem;
+}
+
+[data-theme='dark'] {
+    --panel-primary-color: #1789e6;
+    --panel-secondary-color: #1568a0;
+    --panel-color-text-default: #ffffff;
+    --panel-color-text-alt: #D0DDE2;
+    --panel-background-color: #2F3435;
+    --panel-background-alt: #535C60;
+    --panel-font-family-regular: "Roboto";
+    --panel-font-family-medium: "Roboto Medium";
+    --panel-font-family-bold: "Roboto Bold";
+    --panel-font-size-1: 1.125rem;
+    --panel-font-size-2: 1rem;
+    --panel-font-size-3: .875rem;
+    --panel-font-size-4: .75rem;
+    --panel-spacing-x-large: 2.5rem;
+    --panel-spacing-large: 2rem;
+    --panel-spacing-medium: 1rem;
+    --panel-spacing-small: .5rem;
+    --panel-spacing-x-small: .25rem;
+    --panel-spacing-xx-small: .15rem;
+    --panel-mq-large: only screen and (min-width: 75em);
+    --panel-mq-medium: only screen and (min-width: 50em);
+    --panel-mq-small: only screen and (min-width: 25em);
+    --panel-border-color-alt: #869195;
+    --panel-border-color-default: #535C60;
+    --panel-button-border-color: #D0DDE2;
+    --panel-border-width-small: .0625rem solid;
+    --panel-border-width-large: .125rem solid;
+    --panel-container-shadow-1: 0px 2px 3px rgba(0, 0, 0, .2);
+    --panel-line-height-1: 1.125rem;
+    --panel-line-height-2: 1rem;
+    --panel-line-height-3: .875rem;
+    --panel-line-height-4: .75rem;
+}
+
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    color: #535C60;
+    font-size: .875rem;
+}
+
+.SL_ListHolder {}
+
+.SL_ListRow {
+    border-bottom: .125rem solid #ecf0f2;
+    margin: 1rem;
+    list-style-type: none;
+}
+
+.SL_ListRowHolder {
+    display: flex;
+    margin: 1rem;
+}
+
+.SL_ListRowImageHolder {
+    width: 2.8rem;
+    box-sizing: border-box;
+    margin-right: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.SL_ListRowImageNumberBox {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #535d60;
+    color: #ffffff;
+    padding: 3px 7px;
+    font-weight: "Roboto Bold";
+    display: inline-block;
+    font-size: .8rem;
+    padding: .3rem .6rem;
+    box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, .28);
+}
+
+.SL_ListRowImageRounded {
+    border-radius: 100%;
+    width: 2.95rem;
+    height: 2.95rem;
+}
+
+.SL_ListRowImageRounded .SL_ListRowImage {
+    width: 2.95rem;
+    height: 2.95rem;
+}
+
+.SL_ListRowImageRectangle {
+    width: 4rem;
+    height: 2.95rem;
+}
+
+.SL_ListRowImageRectangle .SL_ListRowImage {
+    width: 4rem;
+    height: 2.95rem;
+}
+
+.SL_ListRowImage {
+    width: 2.8rem;
+    height: 2.8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: inline-block;
+}
+
+.SL_ListRowTopTextHolder {
+    min-height: 4rem;
+    flex: 1;
+}
+
+.SL_ListRowText1 {
+    color: #535C60;
+    font-family: "Roboto Bold";
+    margin-bottom: .15rem;
+    line-height: .875rem;
+}
+
+.SL_ListRowText2 {
+    color: #535C60;
+    margin-bottom: .15rem;
+}
+
+.SL_ListRowText3 {
+    color:#869195;
+    margin-bottom: .15rem;
+}
+
+.SL_ListRowActionsHolder {}
+
+.SL_ListRowActionButton {
+    padding: 0.28rem .7rem;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: "Roboto Bold";
+    border: .125rem solid #535C60;
+    font-size: .875rem;
+    background: transparent;
+    -webkit-border-radius: 0px;
+    margin-top: .25rem;
+    cursor: pointer;
+}
+
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked+.slider {
+    background-color: #66bb6a;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/*Page*/
+
+.GridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-auto-flow: row dense;
+    grid-gap: 1.8vw;
+    padding-bottom: 1px;
+    max-width: 1280px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+/*Existing panel styles, below will eventually be phased out and recreated to follow suite of handouts ui. */
+
+#AxiomWorkspaceAbstractContainer,
+#AxiomWorkspaceBioContainer,
+#AxiomWorkspaceChapterContainer,
+#AxiomWorkspaceAbstractContainer,
+.AxiomSpeakerListPanel,
+.AxiomMyCertificates
+{
+  font-size: .875rem;
+  text-transform: none;
+  font-family: Roboto, Arial, sans-serif;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #ffffff;
+  text-transform:none;
+  line-height:auto;
+  display: inline-block;
+  color: #535d60;
+  padding:10px;
+  display:block;  
+}
+
+/*Speaker Panel*/
+#AxiomWorkspaceBioContainer
+{
+  font-size: 1rem;
+  color: #2f3435;
+}
+.AxiomSPLRow
+{
+  display: block;
+  border-bottom: 2px solid #ecf0f2;
+  padding: 8px;
+  margin: 0 0 10px 0;
+  min-height: 80px;
+}
+.AxiomSPLImageHolder
+{
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  overflow: hidden;
+  float: left;
+  margin: 0 10px 7px 0px;
+  box-shadow: 0px 2px 3px rgba(0,0,0,.2);
+  position: relative;
+  background-color: #ecf0f2;
+}
+
+.AxiomSPLContentHolder
+{
+  overflow:hidden;
+}
+.AxiomSPLImage
+{
+  display: inline-block;
+  vertical-align: middle;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+.AxiomSPLName
+{
+  margin: 1px 0 0px 0px;
+  font-size: 1.214rem;
+}
+.AxiomSPLJobTitle
+{
+  margin: 0px 0 0px 0px;
+  font-size: .857rem;
+  color: #869195;
+}
+.AxiomSPLCompanyName
+{
+  margin: 0px 0 10px 0px;
+  font-size: .857rem;
+  color: #869195;
+}
+.AxiomSPLBio
+{
+  display: inline-block;
+  overflow: hidden;
+  font-size: .875rem;
+  color: #535d60;
+}
+.SL_ListRow
+{
+  border-bottom: 2px solid #ecf0f2;
+}
+.SL_ListRowActionButtonA
+{
+  box-shadow: -4px 6px 0 -4px rgba(0, 0, 0, 0.04);
+  border-color: #000000;
+}
+.SL_ListRowActionButtonText
+{
+  color: #000000;
+}
+
+/*Media Player Controls*/
+#AxiomMediaFrame
+{
+  width: 100%;
+  height:100%;
+  margin:auto;
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#AxiomFlashObject
+{
+  width: 100%;
+  height:100%;
+}
+
+.AxiomVideoHTML
+{
+  width: 100%;
+  height:100%;
+}
+
+.AxiomMediaPlayerContainer
+{
+  width: 100%;
+  height:100%;
+}
+
+.AxiomMediaPosterImage
+{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-repeat:  no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: none;
+  background-color:#000;
+}
+.AxiomMediaPosterImage[show=true]
+{display: block;}
+
+.AxiomMediaMessage
+{
+  position: absolute;
+  left:0rem;
+  top:0rem;
+  bottom: 0rem;
+  right: 0rem;
+  background-color: rgb(23, 24, 25);
+  color: #d0d6da;
+  text-transform: none;
+  font-size: 1.15rem;
+  display:none;
+  font-family: "Roboto Light";
+  margin: auto;
+  padding: 2rem 10%;
+  text-align: center;
+  vertical-align: middle;
+}
+.AxiomMediaMessage:before
+{
+  content:"";
+  display: inline-block;
+  width: 2.8rem;
+  height:2rem;
+  background: url(/cfr/images/VTS/Axiom/Assets/AlertLevel3.svg) no-repeat center top;
+  margin:auto;
+  vertical-align: middle;
+  background-size: 2.5rem 1.5rem;
+}
+
+.AxiomMediaMessage > br
+{
+  font-size:2.5rem
+}
+
+.AxiomMediaMessage[show="true"]
+{
+  display:block;
+}
+
+.AxiomMediaFullControls
+{
+  position:absolute;
+  bottom:0rem;
+  left:0rem;
+  right:0rem;
+  top:0rem;
+  opacity: 0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  transition: opacity ease .5s;
+  z-index: 2;
+}
+
+.AxiomMediaFullControls[show="false"]
+{
+  display:none;
+}
+
+.AxiomMediaFullControls[reveal="true"]
+{
+  opacity: 1;
+}
+
+
+.AxiomMediaBuffering
+{
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  z-index: 3;
+}
+
+.AxiomMediaBuffering[show="false"]
+{
+  display:none;
+}
+
+
+.AxiomMediaQualityLevels,
+.AxiomMediaSubtitleList
+{
+  position: absolute;
+  bottom: 2.85rem;
+  right: 1rem;
+  background-color: rgba(0,0,0,.94);
+  padding: 1rem 1.28rem;
+  display:none;
+  font-family: "Roboto";
+  z-index: 2;
+}
+
+.AxiomMediaQualityLevels[show="true"],
+.AxiomMediaSubtitleList[show="true"]
+{
+  display:flex;
+  flex-direction:column;
+}
+
+.AxiomMediaQualityLevelHeader
+{
+  color: #c7d0d4;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 0 0 .5rem 0;
+}
+
+.AxiomMediaQualityLevelSpacer
+{
+  margin: 0 0 0.5rem 0;
+  height: .15rem;
+  background-color: #3e4446;
+}
+
+.AxiomMediaQualityLevelRow,
+.AxiomMediaSubtitleTrackRow
+{
+  margin-bottom:.5rem;
+  display:flex;
+  cursor:pointer;
+  align-items: center;
+}
+.AxiomMediaQualityLevelRow
+{
+  text-transform:lowercase;
+}
+.AxiomMediaSubtitleTrackRow
+{
+  text-transform:initial;
+}
+
+
+
+.AxiomMediaQualityLevels[audio-only="true"] .AxiomMediaQualityLevelRow
+{
+  opacity: .28;
+  cursor:default;
+}
+
+.AxiomMediaQualityLevelRowCheck
+{
+  background-image: url('/cfr/images/VTS/AXIOM/Assets/CheckSmallBlue.svg');
+  background-repeat:no-repeat;
+  width:17px;
+  height:14px;
+  opacity:0;
+  margin: 0 .5rem 0 0;
+}
+
+.AxiomMediaQualityLevelRow[state="selected"] .AxiomMediaQualityLevelRowCheck,
+.AxiomMediaSubtitleTrackRow[state="selected"] .AxiomMediaQualityLevelRowCheck
+{
+  background-image: url('/cfr/images/VTS/AXIOM/Assets/CheckSmallBlue.svg');
+  background-position: center center;
+  opacity:1;
+  background-size: 10px 10px;
+  border: 2px solid #3baef0;
+  border-radius: 12px;
+  width: 10px;
+  height: 10px;
+  padding: 0.3rem;
+}
+
+.AxiomMediaQualityLevelRowLabel,
+.AxiomMediaSubtitleTrackRowLabel
+{
+  font-size:1rem;
+  color: #e4ebee;
+  font-family: "Roboto";
+  padding: .2rem;
+}
+.AxiomMediaQualityLevelRowLabel
+{
+  margin-left:auto;
+}
+
+.AxiomMediaQualityLevelRow[state="selected"] .AxiomMediaQualityLevelRowLabel,
+.AxiomMediaSubtitleTrackRow[state="selected"] .AxiomMediaSubtitleTrackRowLabel
+{
+  color:#3baef0;
+}
+
+.AxiomMediaQualityLevelRowLabel:hover,
+.AxiomMediaSubtitleTrackRowLabel:hover
+{
+  box-shadow: 0 2px 0px #3baef0;
+}
+
+.AxiomMediaQualityLevelRowSubLabel
+{ 
+  font-size:.85rem;
+  color:#969c9e;
+}
+
+.AxiomMediaQualityLevelRow[state="pending"] .AxiomMediaQualityLevelRowCheck
+{
+  background-image: none;
+  opacity:1;
+}
+
+.AxiomMediaQualityLevelRow[state="pending"] .AxiomMediaQualityLevelRowCheck:after
+{
+  position: absolute;
+  content: '';
+  height:12px;
+  width: 12px;
+  -webkit-animation: button-spin 0.6s linear;
+  animation: button-spin 0.6s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  border-color: #23a0d0 #23a0d0 #23a0d0 rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
+}
+
+@-webkit-keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.AxiomMediaTopControls
+{
+  height: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.AxiomMediaTopControls:before 
+{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  display: block;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+  bottom: 53px;
+}
+.AxiomMediaBottomControls 
+{
+  height: 2.2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0rem 1rem 0.1rem 1rem;
+}
+
+.AxiomMediaFullControls ~ .AxiomMediaBottomControls:before 
+{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  display: block;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+  bottom: 32px;
+  left: 0;
+}
+
+.AxiomMediaBtn
+{
+  height: 2.29rem;
+  width: 2.29rem;
+  padding: 0rem;
+  background: transparent;
+  border: 0rem;
+  outline: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.AxiomMediaBtn[active="false"]
+{
+  opacity:.28;
+}
+
+#AxiomMediaFullScreenBtn.AxiomMediaBtn
+{
+  margin:0 0 0 .7rem
+}
+
+#AxiomMediaPlayBtn.AxiomMediaBtn
+{
+  margin:0 .8rem;
+}
+
+#AxiomMediaPreviousBtn.AxiomMediaBtn
+{
+  margin:0 .2rem;
+}
+
+#AxiomMediaNextBtn.AxiomMediaBtn
+{
+  margin:0 1rem 0 .2rem;
+}
+
+#AxiomMediaTimeLabel
+{
+  color:white;
+  font-family: "Roboto Light";
+}
+#AxiomMediaAudioContainer
+{
+  height: 2.29rem;
+  display: flex;
+  align-items: center;
+  margin-right:.8rem;
+}
+
+#AxiomMediaAudioContainer:hover
+{
+  margin-right:.5rem;
+}
+
+#AxiomMediaAudioContainer:hover + #AxiomMediaTimeLabel
+{
+  font-size: .85rem;
+}
+
+#AxiomMediaVolumeBarContainer
+{
+  width:0px;
+  overflow:hidden;
+  transition:all ease .25s;
+  display: flex;
+  align-items: center;
+  height: 2.29rem;
+}
+
+#AxiomMediaAudioContainer:hover  #AxiomMediaMuteBtn + #AxiomMediaVolumeBarContainer
+{
+  width: 75px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.AxiomMediaBtn[active=true] 
+{
+  cursor:pointer;
+}
+
+#AxiomMediaMuteBtn
+{
+  background-image:url(/cfr/images/VTS/AXIOM/Assets/MediaPlayer/Mute.svg);
+  background-repeat:no-repeat;
+  background-position:center center;
+  width:17px;
+  height:14px;
+  transition:opacity ease .25s;
+  opacity:.7;
+}
+
+#AxiomMediaMuteBtn:hover
+{
+  opacity:1;
+}
+
+#AxiomMediaMuteBtn[data-toggle="on"] 
+{
+  background-image: url(/cfr/images/VTS/AXIOM/Assets/MediaPlayer/Mute.svg);
+}
+
+#AxiomMediaMuteBtn[data-toggle="off"] 
+{
+  background-image: url(/cfr/images/VTS/AXIOM/Assets/MediaPlayer/Unmute.svg);
+}
+
+#AxiomMediaPlayBtn[data-toggle="on"] 
+{
+  background-image: url(/cfr/images/VTS/AXIOM/Assets/MediaPlayer/Pause.svg);
+  background-repeat:no-repeat;
+  width:11px;
+  height:18px;
+  min-width:11px;
+}
+
+#AxiomMediaPlayBtn[data-toggle="off"] 
+{
+  background-image: url(/cfr/images/VTS/AXIOM/Assets/MediaPlayer/Play.svg);
+  background-repeat:no-repeat;
+  width:12px;
+  height:18px;
+  min-width:12px;
+}
+
+#AxiomMediaFullScreenBtn[data-toggle="on"] 
+{
+  background-image: url(/cfr/images/VTS/AXIOM/Assets/MediaPlayer/VideoCollapse.svg);
+  background-repeat:no-repeat;
+  width:20px;
+  height:18px;
+  min-width:20px;
+  background-position:center;
+}
+
+#AxiomMediaFullScreenBtn[data-toggle="off"] 
+{
+  background-image: url(/cfr/images/VTS/AXIOM/Assets/MediaPlayer/VideoExpand.svg);
+  background-repeat:no-repeat;
+  width:20px;
+  height:18px;
+  min-width:20px;
+  background-position:center;
+}
+
+#AxiomMediaPreviousBtn
+{
+  background-image: url(/cfr/images/VTS/AXIOM/Assets/MediaPlayer/Rw.svg);
+  width:10px;
+  height:12px;
+  min-width:10px;
+}
+
+#AxiomMediaPreviousBtn[active=true]
+{
+  background-image: url(/cfr/images/VTS/AXIOM/Assets/MediaPlayer/Rw.svg);
+  width:10px;
+  height:12px;
+  min-width:10px;
+}
+
+#AxiomMediaNextBtn
+{
+  background-image: url('/cfr/images/VTS/AXIOM/Assets/MediaPlayer/Ff.svg');
+  width:10px;
+  height:12px;
+  min-width:10px;
+}
+#AxiomMediaNextBtn[active=true]
+{
+  background-image: url('/cfr/images/VTS/AXIOM/Assets/MediaPlayer/Ff.svg');
+  width:10px;
+  height:12px;
+  min-width:10px;
+}
+
+#AxiomMediaPlayerModeBtn
+{
+  background-image: url(/cfr/images/VTS/AXIOM/Assets/MediaPlayer/ModeVideo.svg);
+  background-repeat:no-repeat;
+  background-position:center;
+  width:18px;
+  height:18px;
+  min-width:18px;
+  margin-left:auto;
+  cursor:default;
+  opacity: .7;
+}
+
+#AxiomMediaPlayerModeBtn[active="true"] 
+{
+  cursor:pointer;
+}
+
+#AxiomMediaPlayerModeBtn[data-toggle="off"] 
+{
+  background-image: url(/cfr/images/VTS/AXIOM/Assets/MediaPlayer/ModeAudio.svg);
+}
+
+.AxiomMediaQualityMeter[active=true]
+{
+  background-image: url(/cfr/Images/VTS/Axiom/Console/PresenterTool/SetupIcon.svg);
+  background-repeat:no-repeat;
+  background-position:center;
+  width:18px;
+  height:18px;
+  min-width: 18px;
+  cursor:pointer;
+  opacity:1;
+}
+
+.AxiomMediaQualityMeter[enabled=false]
+{
+  cursor:default;
+  opacity: .4;
+}
+
+.AxiomMediaSubtitlesBtn[active=true]
+{
+  background-image: url(/cfr/Images/VTS/Axiom/Console/PresenterTool/SubtitlesIcon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 16px;
+  cursor: pointer;
+  opacity: 1;
+  margin: 0 0 0 .7rem;
+}
+
+.AxiomMediaSubtitlesBtn[enabled=false]
+{
+  cursor:default;
+  opacity: .4;
+}
+
+.AxiomMediaBufferingSpinner
+{
+  position: absolute;
+  left:0rem;
+  top:0rem;
+  bottom: 0rem;
+  right: 0rem;
+  background-color: rgba(23, 24, 25, .8);
+  color: #d0d6da;
+  text-transform: none;
+  font-size: 1.15rem;
+  display:none;
+  font-family: "Roboto Light";
+  justify-content: center;
+  margin: auto;
+  align-items:center;
+}
+
+.AxiomMediaBufferingSpinner[show=true]
+{
+  display: flex;
+}
+
+.AxiomModal[data-state='1']
+{
+  z-index:1000;
+}
+
+.AxiomModal .AxiomHeading
+{
+  margin: 1.28rem 1rem;
+}
+
+/*CHAPTER PANEL*/
+#ChapterList
+{
+  margin:10px;
+}
+.ChapterContainer
+{
+}
+
+.ChapterThumbnailNode
+{
+  display:block;
+  background-color:#ffffff;
+  position:relative;
+  margin:0px 0px 10px 0px;
+  opacity:.5;
+  cursor:default;
+  box-sizing:border-box;
+  border-bottom:2px solid #ecf0f2;
+}
+
+.ActiveScroll .ChapterThumbnailNode
+{
+  -webkit-animation:Highlight ease .75s;
+  animation:Highlight ease .75s;
+}
+
+.ChapterThumbnailNode:after
+{
+  content:"";
+  clear:both;
+  width:0px;
+  display:block; 
+}
+
+.ChapterThumbnailNode.Active
+{
+  background-color::transparent;
+  cursor:default;
+  opacity:1;
+  -webkit-animation:Highlight ease 2.75s;
+  animation:Highlight ease 2.75s;
+}
+
+.ChapterThumbnailNode.Clickable
+{
+ cursor:pointer;
+ opacity:1;
+}
+
+.ChapterThumbnailNode.Clickable:hover
+{
+  background-color:#ecf0f2;
+}
+
+.ChapterThumbnailNode.Clickable:hover .ChapterThumbnailTitle
+{
+}
+
+.ChapterThumbnailNode.Clickable:hover .ChapterThumbnailTime
+{
+}
+
+.ChapterThumbnailCount
+{
+  position:absolute;
+  top:4px;
+  left:4px;
+}
+
+.ChapterThumbnailCountLabel
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #535d60;
+  color: #ffffff;
+  padding: 3px 7px;
+  font-weight: bold;
+  display: inline-block;
+  font-size: .8rem;
+  padding: .3rem .6rem;
+  box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, .28);
+}
+
+.ChapterThumbnailLeft
+{
+  float:left;
+  margin:4px 4px 4px 4px;
+}
+
+.ChapterThumbnailImageCell
+{
+}
+
+.ChapterThumbnailImage
+{
+  width:80px;
+}
+
+.ChapterThumbnailRight
+{
+  overflow:hidden;
+}
+
+.ChapterThumbnailTitle
+{
+  margin: 10px 0px 0px 0px;
+  display: block;
+  word-break: break-word;
+}
+
+.ChapterTextNode
+{
+  display:block;
+  background-color:#ffffff;
+  position:relative;
+  margin:0px 0px 10px 0px;
+  padding:10px;
+  opacity:.5;
+  cursor:default;
+  border-bottom:2px solid #ecf0f2;
+  padding:4px 10px 10px 10px;
+}
+
+.ChapterTextNode.Active
+{
+  cursor:default;
+  opacity:1;
+}
+
+.ChapterTextNode.Clickable
+{
+ cursor:pointer;
+ opacity:1;
+}
+
+.ChapterTextNode.Clickable:hover
+{
+  background-color:#ecf0f2;
+}
+
+.ChapterTextNode.Clickable:hover .ChapterTextTitle
+{
+}
+
+.ChapterTextNode.Clickable:hover .ChapterTextTime
+{
+}
+
+.ChapterTextCountLabel
+{
+  position:absolute;
+  top:4px;
+  left:4px;
+  background-color: #535d60;
+  color: #ffffff;
+  padding:3px 7px;
+  font-weight:bold;
+  display:inline-block;
+  font-size: .8rem;   
+  padding: .3rem .6rem;
+  box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, .28);
+}
+
+.ChapterTextTitle
+{
+  margin: 0px 0px 4px 24px;
+  padding: 0px 0 0 0;
+}
+
+.ChapterTextTime
+{
+  color: #858c8e;
+  padding: 2px 8px;
+  display: inline-block;
+  margin: 0px 0px 0px 18px;
+  font-size: 12px;
+}
+
+.ChapterThumbnailTime 
+{
+  color: #858c8e;
+  display: inline-block;
+  margin: 2px 0px 0px 0px;
+  font-size: 12px;
+}
+
+@-webkit-keyframes Highlight 
+{
+  from {background-color: #c9ebbc;}
+  to {background-color: #ffffff}
+}
+
+@keyframes Highlight 
+{
+  from {background-color: #c9ebbc;}
+  to {background-color: #ffffff}
+}
+
+.vp_ControlsSliderHolder
+{
+  height:100%;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.vp_ControlsSliderBar
+{
+  position: relative;
+  background-color: #23A0D0;
+  background: linear-gradient(to bottom, rgba(35,160,208,0) 0%,rgba(35,160,208,0) 32%,rgba(35,160,208,1) 33%,rgba(35,160,208,1) 66%,rgba(35,160,208,0) 67%,rgba(35,160,208,0) 100%);
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -moz-transform: scaleX(0.0);
+  -ms-transform: scaleX(0.0);
+  -webkit-transform: scaleX(0.0);
+  transform: scaleX(0.0);
+}
+
+.vp_ControlsSliderThumb
+{
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #3baef0;
+  padding: 0px;
+  border-style: solid;
+  border-color: #EAEAEA;
+  margin: -2px 0px;
+  border-radius: 14px;
+  border-width: 0px;
+  box-shadow:-2px 0px 8px rgba(0,0,0,.4);
+  cursor:pointer;
+}
+
+.AxiomMediaBar
+{
+  height: 12px;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(83,93,96,0) 0%,rgba(83,93,96,0) 32%,rgba(83,93,96,1) 33%,rgba(83,93,96,1) 66%,rgba(83,93,96,0) 67%,rgba(83,93,96,0) 100%);
+  cursor:pointer;
+}
+
+
+/*Social Share Widget*/
+
+.PanelSMContainer 
+{
+  padding: 10px;
+  text-align:center;
+}
+
+.PanelSM 
+{
+  padding: 20px;
+  display: inline-block;
+  margin: .2rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20px 20px;
+  cursor:pointer;
+}
+
+.PanelSM.Facebook 
+{
+  background-image: url(/cfr/images/VTS/Axiom/Assets/SocialShareWidgetFacebook.svg);
+  background-color:#3c5a99;
+}
+
+.PanelSM.Twitter 
+{
+  background-image: url(/cfr/images/VTS/Axiom/Assets/SocialShareWidgetTwitter.svg);
+  background-color:#5fa9dd;
+}
+
+.PanelSM.LinkedIn 
+{
+  background-image: url(/cfr/images/VTS/Axiom/Assets/SocialShareWidgetLinkedin.svg);
+  background-color:#0077b5;
+}
+
+.PanelSM.EMail 
+{
+  background-image: url(/cfr/images/VTS/Axiom/Assets/SocialShareWidgetMail.svg);
+  background-color:#2a6fd3;
+}
+
+.PanelSM.GPlus 
+{
+  background-image: url(/cfr/images/VTS/Axiom/Assets/SocialShareWidgetGoogle.svg);
+  background-color: #dc4e41;
+}
+
+.AxiomMediaSpacer
+{
+ margin-left:auto;
+}
+
+/*Loader Animation*/
+.AxiomLoadingAnimation
+{
+  box-shadow: inset 0 0 0 5px #007dbb;
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: AxiomMediaBufferingSpin 1.1s infinite linear;
+  animation: AxiomMediaBufferingSpin 1.1s infinite linear;
+  position:relative;
+  display:  flex;
+  align-items:  center;
+  justify-content: flex-end;
+  align-content:  center;
+  overflow:hidden;
+} 
+.AxiomLoadingAnimation {border-radius: 100%;width: 100px;height: 100px;z-index:0;} 
+.AxiomLoadingAnimation:before {content:"";background: #eeeeee;display:block;transform:translateX(-118px);/* position:absolute; */z-index:1;width: 50px;height:50px;left:0;right:0;bottom:0;top:0;transform: translateX(7px);}
+.AxiomLoadingAnimation:after {content:"";background: #ffffff;border-radius:100%;position:absolute;z-index:1;width:calc(100% - 10px);height:calc(100% - 10px);margin:auto;left:0;right:0;bottom:0;top:0;transform: translateX(0px);}  
+@-webkit-keyframes AxiomMediaBufferingSpin 
+{ 
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); } 
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } 
+} 
+@keyframes AxiomMediaBufferingSpin 
+{ 
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); } 
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } 
+}
+/*END*/
